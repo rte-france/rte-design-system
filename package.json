@@ -1,0 +1,16 @@
+{
+  "name": "rte-design-system",
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "sites/*"
+  ],
+
+  "devDependencies": {
+    "husky": "^9.1.6"
+  },
+  "scripts": {
+    "prepare": "husky"
+  }
+}
