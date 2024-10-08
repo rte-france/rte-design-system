@@ -4,4 +4,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-/* You can add global styles to this file, and also import other style files */
+/*
+ * Public API Surface of we-love-ds-angular
+ */
+
+export * from './lib/we-love-ds-angular.service';
+export * from './lib/we-love-ds-angular.component';
