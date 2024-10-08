@@ -8,10 +8,10 @@ const CONSOLE_RED_COLOR = '\x1b[31m%s\x1b[0m';
 
 // Check if branch matches naming convention
 const localBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
-const regex = /^master|main|(core|feature|fix|test)\/.*/;
+const regex = /^develop|main|(chore|feature|fix|test)\/.*/;
 
 if (!regex.test(localBranch)) {
-  console.error(CONSOLE_RED_COLOR, 'The branche name must respect the convention: (core|feature|fix|test)/<branch-name>');
+  console.error(CONSOLE_RED_COLOR, 'The branche name must respect the convention: (chore|feature|fix|test)/<branch-name>');
   console.error(`Branch name => ${localBranch}`);
   process.exit(1);
 }
