@@ -1,5 +1,5 @@
 {
-  "name": "welovedesign-site-test",
+  "name": "we-love-ds-site-test-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "weloveds": "*",
+    "we-love-ds-react": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

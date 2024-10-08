@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Button, Input, Label } from "weloveds";
+import { Button, Input, Label } from "we-love-ds-react";
 
 function App() {
   return (
