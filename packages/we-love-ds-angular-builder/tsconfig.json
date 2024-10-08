@@ -24,9 +24,14 @@
     ],
     "paths": {
       "we-love-ds-angular": [
-        "./dist/we-love-ds-angular"
+        "../we-love-ds-angular/dist/we-love-ds-angular"
       ]
     }
+  },
+  "exports": {
+    "we-love-ds-angular": [
+      "./dist/we-love-ds-angular"
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
