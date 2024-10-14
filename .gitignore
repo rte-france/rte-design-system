@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Project lib generated
+packages/rte-design-system-angular/*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

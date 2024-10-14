@@ -6,14 +6,14 @@
 
 import { TestBed } from '@angular/core/testing';
 
-import { WeLoveDsAngularService } from './we-love-ds-angular.service';
+import { RdsAngularService } from './rds-angular.service';
 
-describe('WeLoveDsAngularService', () => {
-  let service: WeLoveDsAngularService;
+describe('RdsAngularService', () => {
+  let service: RdsAngularService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WeLoveDsAngularService);
+    service = TestBed.inject(RdsAngularService);
   });
 
   it('should be created', () => {

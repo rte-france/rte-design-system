@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { Button, Input, Label } from "we-love-ds-react";
+import { Button, Input, Label } from "rte-design-system-react";
 
 function App() {
   return (

@@ -6,19 +6,19 @@
 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WeLoveDsAngularComponent } from './we-love-ds-angular.component';
+import { RdsAngularComponent } from './rds-angular.component';
 
-describe('WeLoveDsAngularComponent', () => {
-  let component: WeLoveDsAngularComponent;
-  let fixture: ComponentFixture<WeLoveDsAngularComponent>;
+describe('RdsAngularComponent', () => {
+  let component: RdsAngularComponent;
+  let fixture: ComponentFixture<RdsAngularComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WeLoveDsAngularComponent]
+      imports: [RdsAngularComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(WeLoveDsAngularComponent);
+    fixture = TestBed.createComponent(RdsAngularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

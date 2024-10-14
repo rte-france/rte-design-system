@@ -8,5 +8,5 @@
  * Public API Surface of we-love-ds-angular
  */
 
-export * from './lib/we-love-ds-angular.service';
-export * from './lib/we-love-ds-angular.component';
+export * from './lib/rds-angular.service';
+export * from './lib/rds-angular.component';

@@ -6,12 +6,12 @@
 
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {  WeLoveDsAngularComponent} from 'we-love-ds-angular';
+import { RdsAngularComponent } from 'rte-design-system-angular';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,WeLoveDsAngularComponent],
+  imports: [RouterOutlet,RdsAngularComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
