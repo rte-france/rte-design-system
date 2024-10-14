@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "we-love-ds-angular": {
+    "rte-design-system-angular": {
       "projectType": "library",
-      "root": "projects/we-love-ds-angular",
-      "sourceRoot": "projects/we-love-ds-angular/src",
+      "root": "projects/rte-design-system-angular",
+      "sourceRoot": "projects/rte-design-system-angular/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/we-love-ds-angular/ng-package.json"
+            "project": "projects/rte-design-system-angular/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/we-love-ds-angular/tsconfig.lib.prod.json"
+              "tsConfig": "projects/rte-design-system-angular/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/we-love-ds-angular/tsconfig.lib.json"
+              "tsConfig": "projects/rte-design-system-angular/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/we-love-ds-angular/tsconfig.spec.json",
+            "tsConfig": "projects/rte-design-system-angular/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

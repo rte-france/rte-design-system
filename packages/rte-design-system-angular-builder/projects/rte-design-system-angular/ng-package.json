@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../we-love-ds-angular/dist/we-love-ds-angular",
+  "dest": "../../../rte-design-system-angular",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

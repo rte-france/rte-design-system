@@ -23,14 +23,14 @@
       "dom"
     ],
     "paths": {
-      "we-love-ds-angular": [
-        "../we-love-ds-angular/dist/we-love-ds-angular"
+      "rte-design-system-angular": [
+        "../rte-design-system-angular/"
       ]
     }
   },
   "exports": {
-    "we-love-ds-angular": [
-      "./dist/we-love-ds-angular"
+    "rte-design-system-angular": [
+      "./dist"
     ]
   },
   "angularCompilerOptions": {

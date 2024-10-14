@@ -1,5 +1,5 @@
 {
-  "name": "we-love-ds-angular-builder",
+  "name": "rte-design-system-angular-builder",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

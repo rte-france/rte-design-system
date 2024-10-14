@@ -7,7 +7,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-we-love-ds-angular',
+  selector: 'lib-rds-angular',
   standalone: true,
   imports: [],
   template: `
@@ -17,6 +17,6 @@ import { Component } from '@angular/core';
   `,
   styles: ``
 })
-export class WeLoveDsAngularComponent {
+export class RdsAngularComponent {
 
 }
