@@ -13,45 +13,66 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "types": "./dist/src/index.d.ts"
     }
   },
   "typesVersions": {
     "*": {
       "*": [
-        "dist/index.d.ts"
+        "dist/src/index.d.ts"
       ]
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
-    "test": "",
+    "test": "vitest",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
+    "clsx": "^2.1.1",
+    "i18next": "^23.16.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
-    "@types/node": "^22.7.4",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^22.7.5",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.2",
+    "clsx": "^2.1.1",
     "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
     "glob": "^11.0.0",
     "globals": "^15.9.0",
+    "i18next": "^23.16.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^15.0.3",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
     "vite": "^5.4.8",
     "vite-plugin-dts": "^4.2.3",
-    "vite-plugin-lib-inject-css": "^2.1.1"
+    "vite-plugin-lib-inject-css": "^2.1.1",
+    "vite-plugin-svgr": "^4.2.0",
+    "vitest": "^2.1.3"
   }
 }
