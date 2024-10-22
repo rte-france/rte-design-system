@@ -1,0 +1,88 @@
+{
+  "components": {
+    "dropdown": {
+      "@delete": "Delete",
+      "@download": "Download",
+      "@edit": "Edit"
+    },
+    "headerItemList": {
+      "@result_one": "1 result",
+      "@result_other": "{{count}} results"
+    },
+    "lastModification": {
+      "@lastModification": "Last modification date"
+    },
+    "navbar": {
+      "@expand": "Agrandir le menu",
+      "@minimize": "Minimize menu"
+    },
+    "noItemFound": {
+      "@noResult": "No item match your search",
+      "@resetSearch": "Reset search"
+    },
+    "pagination": {
+      "@resultsPerPage": "Results per page"
+    },
+    "popover": {
+      "@close": "Close"
+    },
+    "projectInfo": {
+      "field": {
+        "description": {
+          "@invalidDescriptionLength": "The entered description is too long",
+          "@label": "Description"
+        },
+        "name": {
+          "@invalidProjectName": "Please enter a project name",
+          "@label": "Name",
+          "@projectNameAlreadyExists": "The project name is already in use, please enter a new one",
+          "@projectNameTooLong": "The entered name is too long"
+        },
+        "tags": {
+          "@invalidTags": "Please add at least one tag for the project.",
+          "@label": "Tags",
+          "@maxTagsNumberReached": "Max tags number reached."
+        }
+      }
+    },
+    "relativeDate": {
+      "@days_one": "{{count}} day ago",
+      "@days_other": "{{count}} days ago",
+      "@hours_one": "{{count}} hour ago",
+      "@hours_other": "{{count}} hours ago",
+      "@justNow": "Just now",
+      "@minutes_one": "{{count}} minute ago",
+      "@minutes_other": "{{count}} minutes ago",
+      "@months_one": "{{count}} month ago",
+      "@months_other": "{{count}} months ago",
+      "@relativeDateby": "{{date}} by",
+      "@years_one": "{{count}} year ago",
+      "@years_other": "{{count}} years ago"
+    },
+    "infoUnit": {
+      "@B": "B",
+      "@KB": "KB",
+      "@MB": "MB",
+      "@GB": "GB",
+      "@TB": "TB"
+    },
+    "search": {
+      "@empty": "No results found.\n Please modify search"
+    },
+    "tablePagination": {
+      "@of": "of"
+    },
+    "tags": {
+      "@addTag": "Add tag",
+      "@deleteAllTags": "Delete all tags",
+      "@noResult": "No result",
+      "@tags": "Tags"
+    },
+    "fileInput": {
+      "@requiredFile": "Required file",
+      "@typeError": "Incorrect file type",
+      "@sizeError": "Incorrect file size",
+      "@error": "Failed to upload file"
+    }
+  }
+}

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vitest", "@testing-library/jest-dom"],
     "module": "ESNext",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -18,6 +19,11 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@common/*": ["src/components/common/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "vite.config.ts", "vite-env.d.ts"]
 }

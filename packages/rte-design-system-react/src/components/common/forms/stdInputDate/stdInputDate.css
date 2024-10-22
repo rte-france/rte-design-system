@@ -1,0 +1,18 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+/* 
+Hide the calendar icon on date input in Firefox, from :
+https://codepen.io/sroucheray/pen/JjqLGER?editors=1100 
+*/
+
+@supports not selector(::-webkit-calendar-picker-indicator) {
+  input[type='datetime-local']:not(:disabled),
+  input[type='date']:not(:disabled) {
+    /* Clipping the calendar icon */
+    clip-path: rect(0 0 100% calc(100% - 22px));
+  }
+}
