@@ -14,7 +14,7 @@ import {
   SIZE_CLASSES,
   VARIANT_CLASSES,
   VARIANT_CLASSES_DISABLED,
-} from '../buttonClassBuilder';
+} from '../buttonClassBuilder.ts';
 
 describe('buttonClassBuilder function', () => {
   it('should have the common classes', () => {

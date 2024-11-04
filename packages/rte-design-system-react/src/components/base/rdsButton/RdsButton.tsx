@@ -5,10 +5,10 @@
  */
 
 import { Ref, forwardRef } from 'react';
-import { buttonClassBuilder, labelClassBuilder } from './buttonClassBuilder';
-import { RdsIconId } from '@/shared/utils/mappings/iconMaps';
-import { useRdsId } from '@/hooks/useRdsId';
-import { RdsIcon } from '../rdsIcon/RdsIcon';
+import { buttonClassBuilder, labelClassBuilder } from './buttonClassBuilder.ts';
+import { RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
+import { useRdsId } from '@/shared/hooks/useRdsId.ts';
+import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
 
 export type ButtonVariant = 'contained' | 'outlined' | 'dashed' | 'text' | 'transparent';
 export type ButtonSize = 'extraSmall' | 'small' | 'medium';
@@ -24,7 +24,7 @@ export type RdsButtonProps = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   onKeydown?: (e: React.KeyboardEvent<HTMLButtonElement>) => void;
   id?: string;
-  icon?: RdsIconId;
+  icon?: keyof typeof RdsIconId;
   position?: IconPosition;
 };
 

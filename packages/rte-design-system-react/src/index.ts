@@ -4,7 +4,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from './components';
-export * from './hooks';
-export * from './shared';
-export * from './types';
+import './index.css';
+export * from './components/index.ts';
+export * from './shared/hooks/index.ts';
+export * from './shared/index.ts';
+export * from './shared/types/index.ts';

@@ -9,12 +9,14 @@
     "dist"
   ],
   "sideEffects": [
-    "**/*.css"
+    "**/*.css",
+    "**/*.svg"
   ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/src/index.d.ts"
+      "types": "./dist/src/index.d.ts",
+      "css": "./dist/index.css"
     }
   },
   "typesVersions": {

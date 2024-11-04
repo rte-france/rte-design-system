@@ -4,33 +4,46 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/shared/utils/mappings/iconMaps';
-import {Icon, ExplicitIconProps, NonExplicitIconProps, PlainIconProps } from './Icon';
-import { useEffect } from 'react';
+import { IconComps, RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
+import { RotationOptionsType } from '@/shared/types/Tailwind.type.ts';
+import { TailwindColorClass } from '@/shared/types/TailwindColorClass.type.ts';
+import { Suspense } from 'react';
 
+export type ExplicitIconProps = {
+  isExplicit?: true;
+  alt?: undefined;
+};
+
+export type NonExplicitIconProps = {
+  isExplicit: false;
+  alt: string;
+};
+
+export type PlainIconProps = {
+  name: string;
+  url: string;
+  color?: TailwindColorClass;
+  width?: number;
+  height?: number;
+  rotationOptions?: RotationOptionsType;
+  rotate?: boolean;
+  filledColor?: boolean;
+};
 export type RdsIconProps = (ExplicitIconProps | NonExplicitIconProps) & {
-  name: RdsIconId;
+  name: keyof typeof RdsIconId | string;
 } & Omit<PlainIconProps, 'url'>;
 
-// const iconMap = (Object.keys(RdsIconId) as RdsIconId[]).reduce(async (acc, key:RdsIconId) => {
-//   acc[key] = await import(`/icons/rds/${key}.svg#icon`);
-//   return acc;
-// }, {} as Record<RdsIconId, string>);
-
 export const RdsIcon = (props: RdsIconProps) => {
-  const func = async ()=> {
-    const composant =  (
-      await import(`icons/rds/${props.name}.svg#icon`)
-    ).ReactComponent;
-    const composant2 =  await (
-      await import(`icons/rds/${props.name}.svg`)
-    ).ReactComponent;
-    console.log("🚀 QCA :  ~ func ~ composant:", composant);
-    console.log("🚀 QCA :  ~ func ~ composant2:", composant2);
+  const { name } = props;
+  if (!(name in RdsIconId)) {
+    return null;
   }
-  useEffect(() => {
-    func()
-  }, [])
-    return <Icon {...props} url={`/icons/rds/${props.name}.svg#icon`} />
-}
-
+  const Icon = IconComps[name as keyof typeof RdsIconId];
+  return (
+    <>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Icon {...props} />
+      </Suspense>
+    </>
+  );
+};

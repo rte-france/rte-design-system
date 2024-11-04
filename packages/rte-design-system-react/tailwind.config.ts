@@ -5,12 +5,11 @@
  */
 
 /** @type {import('tailwindcss').Config} */
-import capitalizeFirst from '@/shared/plugins/capitalizeFirst.plugin';
 import tailwindScrollbar from 'tailwind-scrollbar';
 
 export default {
   darkMode: 'selector',
-  prefix: 'rds',
+  prefix: 'rds-',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   safelist: [
     { pattern: /bg-server-(ok|ko|warn)/ },
@@ -306,8 +305,5 @@ export default {
       },
     },
   },
-  plugins: [
-    capitalizeFirst,
-    tailwindScrollbar({ nocompatible: true }),
-  ],
+  plugins: [tailwindScrollbar({ nocompatible: true })],
 };

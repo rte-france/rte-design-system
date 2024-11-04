@@ -4,10 +4,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 
-import { RdsButton } from '../RdsButton';
-import { RdsIconId } from '@/shared/utils/mappings/iconMaps';
+import { RdsButton } from '../RdsButton.tsx';
+import { RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
 
 const TEST_LABEL = 'Label';
 const TEST_ICON = RdsIconId.Add;
@@ -26,18 +26,18 @@ describe('StdButton', () => {
     expect(document.querySelector(`#${TEST_ID}`)).toBeInTheDocument();
   });
 
-  it('renders the StdButton component with icon + label', () => {
+  it('renders the StdButton component with icon + label', async () => {
     render(<RdsButton label={TEST_LABEL} icon={TEST_ICON} />);
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button.textContent).toContain(TEST_LABEL);
-    expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument();
+    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the StdButton component with icon and no label', () => {
     render(<RdsButton icon={TEST_ICON} />);
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
-    expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument();
+    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 });

@@ -4,7 +4,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from './rdsButton/RdsButton';
-export * from './rdsButton/buttonClassBuilder';
-export * from './rdsIcon/RdsIcon';
-export * from './rdsIcon/iconClassBuilder';
+export * from './rdsButton/RdsButton.tsx';
+export * from './rdsButton/buttonClassBuilder.ts';
+export * from './rdsIcon/RdsIcon.tsx';

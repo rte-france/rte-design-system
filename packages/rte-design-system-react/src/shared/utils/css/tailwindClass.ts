@@ -4,14 +4,27 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { PseudoClass, TailwindPrefix } from "@/types/Tailwind.type";
-import { TailwindColorClass } from "@/types/TailwindColorClass.type";
-import clsx from "clsx";
+import { PseudoClass, TailwindPrefix } from '@/shared/types/Tailwind.type.ts';
+import { TailwindColorClass } from '@/shared/types/TailwindColorClass.type.ts';
+import clsx from 'clsx';
 
-export const buildColorClass = (prefix: TailwindPrefix, pseudoClassMapper: Partial<Record<PseudoClass,TailwindColorClass>>) =>{
-  return clsx((Object.keys(pseudoClassMapper)as PseudoClass[]).map((pseudoClass) => {
-    const color = pseudoClassMapper[pseudoClass];
-    return `${pseudoClass}${prefix}-${color}`;
-  }
-  ));
-}
+const addPseudoClass = (pseudoClass: PseudoClass) => (pseudoClass ? `${pseudoClass}:` : '');
+const addSuffix = (suffix: string) => (suffix ? `-${suffix}` : '');
+export const buildColorClass = (
+  prefix: TailwindPrefix,
+  pseudoClassMapper: Partial<Record<PseudoClass, TailwindColorClass>>,
+) => {
+  return clsx(
+    (Object.keys(pseudoClassMapper) as PseudoClass[]).map((pseudoClass) => {
+      const color = pseudoClassMapper[pseudoClass];
+      return `${addPseudoClass(pseudoClass)}${prefix}-${color}`;
+    }),
+  );
+};
+export const buildTailwindClass = (prefix: TailwindPrefix, pseudoClasses: PseudoClass[], suffixList: string[]) => {
+  return pseudoClasses.flatMap((pseudoClass) => {
+    return suffixList.flatMap((suffix) => {
+      return `${addPseudoClass(pseudoClass)}rds-${prefix}${addSuffix(suffix)}`;
+    });
+  });
+};
