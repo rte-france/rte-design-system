@@ -12,7 +12,6 @@ export default {
   prefix: 'rds-',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   safelist: [
-    { pattern: /bg-server-(ok|ko|warn)/ },
     { pattern: /rotate-(0|1|2|3|6|45|90|180)/ },
     { pattern: /delay-(0|75|100|150|200|300|500|700|1000)/ },
     { pattern: /duration-(0|75|100|150|200|300|500|700|1000)/ },

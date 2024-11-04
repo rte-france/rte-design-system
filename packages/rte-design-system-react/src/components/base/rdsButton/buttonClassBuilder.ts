@@ -6,6 +6,7 @@
 
 import { clsx } from 'clsx';
 import type { ButtonColor, ButtonSize, ButtonVariant } from './RdsButton.tsx';
+import { buildTailwindClasses } from '@/shared/index.ts';
 
 export const COMMON_CLASSES =
   'rds-rounded rds-font-semibold rds-text-center rds-inline-flex rds-flex-row rds-items-center';
@@ -22,56 +23,111 @@ export const SINGLE_ICON_CLASSES = {
 };
 
 export const FOCUS_CLASSES = {
-  primary: 'focus:rds-outline focus:rds-outline-1 focus:rds-outline-offset-2 focus:rds-outline-primary-900',
-  secondary: 'focus:rds-outline focus:rds-outline-1 focus:rds-outline-offset-2 focus:rds-outline-gray-900',
-  danger: 'focus:rds-outline focus:rds-outline-1 focus:rds-outline-offset-2 focus:rds-outline-gray-900',
+  primary: buildTailwindClasses('outline', { focus: ['', '-1', 'offset-2', 'primary-900'] }),
+  secondary: buildTailwindClasses('outline', { focus: ['', '-1', 'offset-2', 'gray-900'] }),
+  danger: buildTailwindClasses('outline', { focus: ['', '-1', 'offset-2', 'gray-900'] }),
 };
+//stand for rds-outline | rds-outline-1 | rds-outline-offset-2 | rds-outline-primary-900 | rds-outline-gray-900
 
 export const VARIANT_CLASSES = {
   primary: {
-    contained:
-      'rds-bg-primary-600 hover:rds-bg-primary-700 active:rds-bg-primary-800 rds-text-gray-w rds-border rds-border-primary-600 rds-border-opacity-0',
-    outlined:
-      'rds-bg-gray-w hover:rds-bg-primary-50 active:rds-bg-primary-100 rds-text-primary-600 rds-border rds-border-primary-600',
-    dashed:
-      'rds-bg-transparent hover:rds-bg-primary-50 active:rds-bg-primary-100 text-primary-600 rds-border-dashed rds-border rds-border-primary-600',
-    text: 'rds-bg-transparent hover:rds-bg-primary-50 active:rds-bg-primary-100 rds-text-primary-600 rds-border rds-border-primary-600 rds-border-opacity-0',
-    transparent:
-      'rds-bg-transparent hover:rds-text-primary-700 active:rds-text-primary-900 rds-text-primary-600 rds-border rds-border-transparent',
+    contained: [
+      buildTailwindClasses('bg', { '': ['primary-600'], hover: ['primary-700'], active: ['primary-800'] }),
+      buildTailwindClasses('border', { '': ['', 'primary-600', 'opacity-0'] }),
+      buildTailwindClasses('text', { '': ['gray-w'] }),
+    ],
+    //stand for rds-bg-primary-600 | hover:rds-bg-primary-700 | active:rds-bg-primary-800 | rds-border |
+    //rds-border-primary-600 | rds-border-opacity-0 | rds-text-gray-w
+    outlined: [
+      buildTailwindClasses('bg', { '': ['gray-w'], hover: ['primary-50'], active: ['primary-100'] }),
+      buildTailwindClasses('border', { '': ['', 'primary-600'] }),
+      buildTailwindClasses('text', { '': ['primary-600'] }),
+    ],
+    //add rds-bg-gray-w | hover:rds-bg-primary-50 | active:rds-bg-primary-100 | rds-border-primary-600 | rds-text-primary-600
+    dashed: [
+      buildTailwindClasses('bg', { '': ['transparent'], hover: ['primary-50'], active: ['primary-100'] }),
+      buildTailwindClasses('border', { '': ['', 'dashed', 'primary-600'] }),
+      buildTailwindClasses('text', { '': ['primary-600'] }),
+    ],
+    //add rds-bg-transparent |rds-border-dashed
+    text: [
+      buildTailwindClasses('bg', { '': ['transparent'], hover: ['primary-50'], active: ['primary-100'] }),
+      buildTailwindClasses('border', { '': ['', 'opacity-0', 'primary-600'] }),
+      buildTailwindClasses('text', { '': ['primary-600'] }),
+    ],
+    //add rds-border-opacity-0
+    transparent: [
+      buildTailwindClasses('bg', { '': ['transparent'] }),
+      buildTailwindClasses('border', { '': ['', 'transparent'] }),
+      buildTailwindClasses('text', { '': ['primary-600'], hover: ['primary-700'], active: ['primary-900'] }),
+    ],
+    //add rds-border-transparent | hover:rds-text-primary-700 | active:rds-text-primary-900
   },
   secondary: {
-    contained:
-      'rds-bg-gray-200 hover:rds-bg-gray-300 active:rds-bg-gray-400 rds-border rds-border-gray-200 rds-border-opacity-0',
-    outlined:
-      'rds-bg-gray-w hover:rds-bg-gray-50 active:rds-bg-gray-100 rds-text-gray-600 rds-border rds-border-gray-600',
-    dashed:
-      'rds-bg-transparent hover:rds-bg-gray-50 active:rds-bg-gray-100 rds-text-gray-600 rds-border-dashed rds-border rds-border-gray-600',
-    text: 'rds-bg-transparent hover:rds-bg-gray-50 active:rds-bg-gray-100 rds-text-gray-600 rds-border rds-border-gray-200 rds-border-opacity-0',
-    transparent:
-      'rds-bg-transparent hover:rds-text-gray-700 active:rds-text-gray-600 text-gray-900 rds-border rds-border-transparent',
+    contained: [
+      buildTailwindClasses('bg', { '': ['gray-200'], hover: ['gray-300'], active: ['gray-400'] }),
+      buildTailwindClasses('border', { '': ['', 'gray-200', 'opacity-0'] }),
+    ],
+    //add rds-bg-gray-200 | hover:rds-bg-gray-300 | active:rds-bg-gray-400 | rds-border-gray-200
+    outlined: [
+      buildTailwindClasses('bg', { '': ['gray-w'], hover: ['gray-50'], active: ['gray-100'] }),
+      buildTailwindClasses('border', { '': ['', 'gray-600'] }),
+      buildTailwindClasses('text', { '': ['gray-600'] }),
+    ],
+    //add rds-bg-gray-w | hover:rds-bg-gray-50 | active:rds-bg-gray-100 | rds-border-gray-600 | rds-text-gray-600
+    dashed: [
+      buildTailwindClasses('bg', { '': ['transparent'], hover: ['gray-50'], active: ['gray-100'] }),
+      buildTailwindClasses('border', { '': ['', 'dashed', 'gray-600'] }),
+      buildTailwindClasses('text', { '': ['gray-600'] }),
+    ],
+    //add rds-bg-transparent | rds-border-dashed
+    text: [
+      buildTailwindClasses('bg', { '': ['transparent'], hover: ['gray-50'], active: ['gray-100'] }),
+      buildTailwindClasses('border', { '': ['', 'opacity-0', 'gray-200'] }),
+      buildTailwindClasses('text', { '': ['gray-600'] }),
+    ],
+    //add rds-border-opacity-0
+    transparent: [
+      buildTailwindClasses('bg', { '': ['transparent'] }),
+      buildTailwindClasses('border', { '': ['', 'transparent'] }),
+      buildTailwindClasses('text', { '': ['gray-900'], hover: ['gray-700'], active: ['gray-600'] }),
+    ],
+    //add hover:rds-text-gray-700 | active:rds-text-gray-600
   },
   danger: {
-    contained:
-      'rds-bg-error-700 hover:rds-bg-error-800 active:rds-bg-error-900 rds-border rds-border-gray-200 rds-border-opacity-0',
-    outlined:
-      'rds-bg-gray-w hover:rds-bg-error-50 active:rds-bg-error-100 rds-text-error-700 rds-border rds-border-error-700',
-    dashed:
-      'rds-bg-transparent hover:rds-bg-error-50 active:rds-bg-error-100 rds-text-error-700 rds-border-dashed rds-border rds-border-error-700',
-    text: 'rds-bg-transparent hover:rds-bg-error-50 active:rds-bg-error-100 rds-text-error-700 rds-border rds-border-error-700 rds-border-opacity-0',
-    transparent:
-      'rds-bg-transparent hover:rds-text-gray-700 active:rds-text-gray-600 rds-text-gray-900 rds-border rds-border-transparent',
+    contained: [
+      buildTailwindClasses('bg', { '': ['error-700'], hover: ['error-800'], active: ['error-900'] }),
+      buildTailwindClasses('border', { '': ['', 'opacity-0', 'gray-200'] }),
+    ],
+    outlined: [
+      buildTailwindClasses('bg', { '': ['gray-w'], hover: ['error-50'], active: ['error-100'] }),
+      buildTailwindClasses('border', { '': ['', 'error-700'] }),
+    ],
+    dashed: [
+      buildTailwindClasses('bg', { '': ['gray-w'], hover: ['error-50'], active: ['error-100'] }),
+      buildTailwindClasses('border', { '': ['', 'dashed', 'error-700'] }),
+      buildTailwindClasses('text', { '': ['error-700'] }),
+    ],
+    text: [
+      buildTailwindClasses('bg', { '': ['transparent'], hover: ['error-50'], active: ['error-100'] }),
+      buildTailwindClasses('border', { '': ['', 'opacity-0', 'error-700'] }),
+      buildTailwindClasses('text', { '': ['error-700'] }),
+    ],
+    transparent: [
+      buildTailwindClasses('bg', { '': ['transparent'], hover: ['gray-700'], active: ['gray-600'] }),
+      buildTailwindClasses('border', { '': ['', 'transparent'] }),
+      buildTailwindClasses('text', { '': ['gray-900'] }),
+    ],
   },
 };
 
+export const VARIANT_CLASSES_COMMON_DISABLED = 'rds-border rds-cursor-not-allowed rds-pointer-events-none';
 export const VARIANT_CLASSES_DISABLED = {
-  contained:
-    'rds-bg-gray-200 rds-text-gray-500 rds-border rds-border-gray-500 rds-border-opacity-0 rds-cursor-not-allowed rds-pointer-events-none',
-  outlined:
-    'rds-bg-gray-200 text-gray-500 rds-border rds-border-gray-500 rds-cursor-not-allowed rds-pointer-events-none',
-  dashed:
-    'rds-bg-gray-200 text-gray-500 rds-border-dashed rds-border rds-border-gray-500 rds-cursor-not-allowed rds-pointer-events-none',
-  text: 'rds-bg-gray-200 text-gray-500 rds-border rds-border-gray-500 rds-border-opacity-0 rds-cursor-not-allowed rds-pointer-events-none',
-  transparent: 'text-gray-500 rds-border rds-border-transparent rds-cursor-not-allowed rds-pointer-events-none',
+  contained: 'rds-bg-gray-200 rds-text-gray-500 rds-border-gray-500 rds-border-opacity-0',
+  outlined: 'rds-bg-gray-200 text-gray-500 rds-border-gray-500',
+  dashed: 'rds-bg-gray-200 text-gray-500 rds-border-dashed rds-border-gray-500',
+  text: 'rds-bg-gray-200 text-gray-500 rds-border-gray-500 rds-border-opacity-0',
+  transparent: 'text-gray-500 rds-border-transparent',
 };
 
 export const LABEL_CLASSES_COMMON = 'rds-inline-flex rds-capitalize-first rds-line-clamp-1 rds-text-nowrap';
@@ -91,7 +147,7 @@ export const buttonClassBuilder = (
   const baseClasses = clsx(COMMON_CLASSES, !hasLabel && SINGLE_ICON_CLASSES[size], SIZE_CLASSES[size]);
 
   if (disabled) {
-    return clsx(baseClasses, VARIANT_CLASSES_DISABLED[variant]);
+    return clsx(baseClasses, VARIANT_CLASSES_COMMON_DISABLED, VARIANT_CLASSES_DISABLED[variant]);
   }
   return clsx(baseClasses, VARIANT_CLASSES[color][variant], FOCUS_CLASSES[color]);
 };

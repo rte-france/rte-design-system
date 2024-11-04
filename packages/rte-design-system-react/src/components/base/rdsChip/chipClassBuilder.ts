@@ -48,11 +48,10 @@ const FOCUS_CLOSE_BUTTON_CLASSES =
   'focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-gray-900 focus-visible:rounded';
 
 export const PADDING_X = {
-  paddingLeftWithoutIcon: 'pl-1.5',
+  paddingLeftDefault: 'pl-1.5',
   paddingLeftWithIcon: 'pl-0.75',
-  paddingRightWithoutCloseButton: 'pr-1.5',
+  paddingRightDefault: 'pr-1.5',
   paddingRightWithCloseButton: 'pr-0.5',
-  paddingDefault: 'px-1.5',
 };
 
 const paddingChip = (
@@ -60,11 +59,8 @@ const paddingChip = (
   icon?: keyof typeof RdsIconId,
   onClose?: MouseEventHandler<HTMLButtonElement>,
 ): string => {
-  if (!onClose && ((icon && !label) || (!icon && label))) {
-    return PADDING_X.paddingDefault;
-  }
-  const paddingLeft = icon ? PADDING_X.paddingLeftWithIcon : PADDING_X.paddingLeftWithoutIcon;
-  const paddingRight = onClose ? PADDING_X.paddingRightWithCloseButton : PADDING_X.paddingRightWithoutCloseButton;
+  const paddingLeft = icon && !icon === !label ? PADDING_X.paddingLeftWithIcon : PADDING_X.paddingLeftDefault;
+  const paddingRight = onClose ? PADDING_X.paddingRightWithCloseButton : PADDING_X.paddingRightDefault;
   return clsx(paddingLeft, paddingRight);
 };
 

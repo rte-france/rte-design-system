@@ -21,10 +21,12 @@ export const buildColorClass = (
     }),
   );
 };
-export const buildTailwindClass = (prefix: TailwindPrefix, pseudoClasses: PseudoClass[], suffixList: string[]) => {
-  return pseudoClasses.flatMap((pseudoClass) => {
-    return suffixList.flatMap((suffix) => {
-      return `${addPseudoClass(pseudoClass)}rds-${prefix}${addSuffix(suffix)}`;
-    });
-  });
+export const buildTailwindClasses = (prefix: TailwindPrefix, pseudoClasses: Partial<Record<PseudoClass, string[]>>) => {
+  return (Object.entries(pseudoClasses) as [PseudoClass, string[]][])
+    .flatMap(([pseudoClass, suffixList]) => {
+      return suffixList.flatMap((suffix) => {
+        return `${addPseudoClass(pseudoClass)}rds-${prefix}${addSuffix(suffix)}`;
+      });
+    })
+    .join(' ');
 };

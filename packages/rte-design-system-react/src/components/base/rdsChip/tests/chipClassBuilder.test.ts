@@ -37,71 +37,51 @@ const generateClasses = (input: typeof defaultConf) =>
 
 describe('generateClasses function', () => {
   it('should have the common classes', () => {
-    expect(generateClasses(defaultConf).chipClasses.includes(COMMON_CLASSES)).toBe(true);
+    expect(generateClasses(defaultConf).chipClasses).toContain(COMMON_CLASSES);
   });
   it('should have the proper variant and type classes', () => {
-    expect(generateClasses(defaultConf).chipClasses.includes(STATUS_CLASSES.primary)).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, status: 'secondary' }).chipClasses.includes(STATUS_CLASSES.secondary),
-    ).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, status: 'success', onClose: noop }).chipClasses.includes(
-        STATUS_CLASSES.success,
-      ),
-    ).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, status: 'error', onClose: noop }).chipClasses.includes(STATUS_CLASSES.error),
-    ).toBe(true);
-    expect(
-      generateClasses({ status: 'primary', isActive: false, label: 'text' }).chipClasses.includes(
-        PADDING_X.paddingDefault,
-      ),
-    ).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, onClose: noop, icon: undefined }).chipClasses.includes(
-        PADDING_X.paddingRightWithCloseButton,
-      ),
-    ).toBe(true);
-    expect(generateClasses(defaultConf).chipClasses.includes(PADDING_X.paddingLeftWithIcon)).toBe(true);
-    expect(generateClasses(defaultConf).chipClasses.includes(ACTIVE_CLASSES.primary)).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, status: 'secondary' }).chipClasses.includes(ACTIVE_CLASSES.secondary),
-    ).toBe(true);
-    expect(generateClasses({ ...defaultConf, status: 'success' }).chipClasses.includes(ACTIVE_CLASSES.success)).toBe(
-      true,
+    expect(generateClasses(defaultConf).chipClasses).toContain(STATUS_CLASSES.primary);
+    expect(generateClasses({ ...defaultConf, status: 'secondary' }).chipClasses).toContain(STATUS_CLASSES.secondary);
+    expect(generateClasses({ ...defaultConf, status: 'success', onClose: noop }).chipClasses).toContain(
+      STATUS_CLASSES.success,
     );
-    expect(generateClasses({ ...defaultConf, status: 'error' }).chipClasses.includes(ACTIVE_CLASSES.error)).toBe(true);
+    expect(generateClasses({ ...defaultConf, status: 'error', onClose: noop }).chipClasses).toContain(
+      STATUS_CLASSES.error,
+    );
+    expect(generateClasses({ status: 'primary', isActive: false, label: 'text' }).chipClasses).toContain(
+      PADDING_X.paddingLeftDefault,
+    );
+    expect(generateClasses({ ...defaultConf, onClose: noop, icon: undefined }).chipClasses).toContain(
+      PADDING_X.paddingRightWithCloseButton,
+    );
+    expect(generateClasses(defaultConf).chipClasses).toContain(PADDING_X.paddingLeftWithIcon);
+    expect(generateClasses(defaultConf).chipClasses).toContain(ACTIVE_CLASSES.primary);
+    expect(generateClasses({ ...defaultConf, status: 'secondary' }).chipClasses).toContain(ACTIVE_CLASSES.secondary);
+    expect(generateClasses({ ...defaultConf, status: 'success' }).chipClasses).toContain(ACTIVE_CLASSES.success);
+    expect(generateClasses({ ...defaultConf, status: 'error' }).chipClasses).toContain(ACTIVE_CLASSES.error);
   });
   it('should have the active keyboard classes', () => {
-    expect(
-      generateClasses({ ...defaultConf, isActive: true }).chipClasses.includes(ACTIVE_KEYBOARD_CLASSES.primary),
-    ).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, isActive: true, status: 'secondary' }).chipClasses.includes(
-        ACTIVE_KEYBOARD_CLASSES.secondary,
-      ),
-    ).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, isActive: true, status: 'success' }).chipClasses.includes(
-        ACTIVE_KEYBOARD_CLASSES.success,
-      ),
-    ).toBe(true);
-    expect(
-      generateClasses({ ...defaultConf, isActive: true, status: 'error' }).chipClasses.includes(
-        ACTIVE_KEYBOARD_CLASSES.error,
-      ),
-    ).toBe(true);
+    expect(generateClasses({ ...defaultConf, isActive: true }).chipClasses).toContain(ACTIVE_KEYBOARD_CLASSES.primary);
+    expect(generateClasses({ ...defaultConf, isActive: true, status: 'secondary' }).chipClasses).toContain(
+      ACTIVE_KEYBOARD_CLASSES.secondary,
+    );
+    expect(generateClasses({ ...defaultConf, isActive: true, status: 'success' }).chipClasses).toContain(
+      ACTIVE_KEYBOARD_CLASSES.success,
+    );
+    expect(generateClasses({ ...defaultConf, isActive: true, status: 'error' }).chipClasses).toContain(
+      ACTIVE_KEYBOARD_CLASSES.error,
+    );
   });
   it("shouldn't have the active keyboard classes", () => {
-    expect(generateClasses(defaultConf).chipClasses.includes(ACTIVE_KEYBOARD_CLASSES.primary)).toBe(false);
-    expect(
-      generateClasses({ ...defaultConf, status: 'secondary' }).chipClasses.includes(ACTIVE_KEYBOARD_CLASSES.secondary),
-    ).toBe(false);
-    expect(
-      generateClasses({ ...defaultConf, status: 'success' }).chipClasses.includes(ACTIVE_KEYBOARD_CLASSES.success),
-    ).toBe(false);
-    expect(
-      generateClasses({ ...defaultConf, status: 'error' }).chipClasses.includes(ACTIVE_KEYBOARD_CLASSES.error),
-    ).toBe(false);
+    expect(generateClasses(defaultConf).chipClasses).not.toContain(ACTIVE_KEYBOARD_CLASSES.primary);
+    expect(generateClasses({ ...defaultConf, status: 'secondary' }).chipClasses).not.toContain(
+      ACTIVE_KEYBOARD_CLASSES.secondary,
+    );
+    expect(generateClasses({ ...defaultConf, status: 'success' }).chipClasses).not.toContain(
+      ACTIVE_KEYBOARD_CLASSES.success,
+    );
+    expect(generateClasses({ ...defaultConf, status: 'error' }).chipClasses).not.toContain(
+      ACTIVE_KEYBOARD_CLASSES.error,
+    );
   });
 });
