@@ -4,4 +4,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+export * from './hooks/index.ts';
+export * from './types/index.ts';
 export * from './utils/index.ts';

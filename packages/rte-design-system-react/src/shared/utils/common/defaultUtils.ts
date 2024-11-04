@@ -4,5 +4,4 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from './components/useRdsId.ts';
-export { default as useActiveKeyboard } from './keybord/useActiveKeyboard.ts';
+export const noop = () => {};
