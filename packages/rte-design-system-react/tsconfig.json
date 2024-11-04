@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "NodeNext",
     "skipLibCheck": true,
@@ -12,11 +12,12 @@
     "noFallthroughCasesInSwitch": true,
     "allowUmdGlobalAccess": true,
     "jsx": "react-jsx",
-    "types": ["vitest/globals", "@testing-library/jest-dom", "./dist/src/index.d.ts"],
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "Node16",
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -26,6 +27,9 @@
     "paths": {
       "@/*": ["src/*"]
     }
+  },
+  "build": {
+    "target": "ES2022"
   },
   "include": ["src", "tailwind.config.js"]
 }

@@ -31,6 +31,7 @@ export default defineConfig({
     alias: { '@': './' },
   },
   build: {
+    target: 'esnext',
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'rte-design-system-react',

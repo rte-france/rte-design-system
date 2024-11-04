@@ -4,8 +4,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import translationsEn from './public/i18n/en.json';
-import translationsFr from './public/i18n/fr.json';
+import translationsEn from '../public/i18n/en.json';
+import translationsFr from '../public/i18n/fr.json';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -20,7 +20,7 @@ const resources = {
 
 await i18n.use(initReactI18next).init({
   resources,
-  fallbackLng: ["fr", "en", "dev"],
+  fallbackLng: ['fr', 'en', 'dev'],
   lng: 'fr',
   interpolation: {
     escapeValue: false,

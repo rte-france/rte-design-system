@@ -8,7 +8,7 @@ import { IconToggle, RotationOptionsType, TailwindColorClass } from '@/shared/in
 import { useCallback } from 'react';
 import { RdsIconButton } from '../rdsIconButton/RdsIconButton.tsx';
 
-type StdIconButtonToggleProps = {
+type RdsIconButtonToggleProps = {
   icons: IconToggle;
   onClick: (newActiveStatus: boolean) => void;
   activeColor?: TailwindColorClass;
@@ -19,7 +19,14 @@ type StdIconButtonToggleProps = {
   id?: string;
 };
 
-const StdIconButtonToggle = ({ icons, onClick, activeColor, active, disabled, id }: StdIconButtonToggleProps) => {
+export const RdsIconButtonToggle = ({
+  icons,
+  onClick,
+  activeColor,
+  active,
+  disabled,
+  id,
+}: RdsIconButtonToggleProps) => {
   const [inactiveIcon, activeIcon] = icons;
 
   const handleOnClick = useCallback(() => {
@@ -38,5 +45,3 @@ const StdIconButtonToggle = ({ icons, onClick, activeColor, active, disabled, id
     </div>
   );
 };
-
-export default StdIconButtonToggle;
