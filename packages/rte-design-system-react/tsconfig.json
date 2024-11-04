@@ -10,6 +10,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "allowUmdGlobalAccess": true,
     "jsx": "react-jsx",
     "types": ["vitest/globals", "@testing-library/jest-dom", "./dist/src/index.d.ts"],
 
