@@ -6,7 +6,7 @@
 
 import { clsx } from 'clsx';
 import type { ButtonColor, ButtonSize, ButtonVariant } from './RdsButton.tsx';
-import { buildTailwindClasses } from '@/shared/index.ts';
+import { buildTailwindClasses } from '@/utils/index.ts';
 
 export const COMMON_CLASSES =
   'rds-rounded rds-font-semibold rds-text-center rds-inline-flex rds-flex-row rds-items-center';

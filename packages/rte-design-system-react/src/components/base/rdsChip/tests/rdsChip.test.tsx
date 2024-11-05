@@ -5,8 +5,8 @@
  */
 
 import { render, screen, waitFor } from '@testing-library/react';
-import { RdsIconId } from '@/shared/index.ts';
-import RdsChip from '@/components/base/rdsChip/RdsChip.tsx';
+import { RdsIconId } from '@/utils/index.ts';
+import { RdsChip } from '@/components/base/rdsChip/RdsChip.tsx';
 
 const TEST_LABEL = 'Label';
 const TEST_ICON = RdsIconId.Add;

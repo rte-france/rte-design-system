@@ -8,7 +8,7 @@
   <path d="" />
 </svg>;
 
-import { IconProps } from '@/shared/types/icons/iconsProps.ts';
+import { IconProps } from '@/types/icons/iconsProps.ts';
 import { iconClassBuilder } from '../iconClassBuilder.ts';
 
 export const Help = (props: IconProps) => {

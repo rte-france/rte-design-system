@@ -4,10 +4,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { IconProps } from '@/shared/types/icons/iconsProps.ts';
+import { IconProps } from '@/types/icons/iconsProps.ts';
 import { iconClassBuilder } from '../iconClassBuilder.ts';
 
-export const ArrowCircleDown = (props: IconProps) => {
+export const ArrowCircleDownFilled = (props: IconProps) => {
   const {
     width = 24,
     height = 24,

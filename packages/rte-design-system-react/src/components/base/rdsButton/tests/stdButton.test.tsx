@@ -7,7 +7,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 
 import { RdsButton } from '../RdsButton.tsx';
-import { RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
+import { RdsIconId } from '@/utils/mappings/iconMaps.ts';
 
 const TEST_LABEL = 'Label';
 const TEST_ICON = RdsIconId.Add;
@@ -34,7 +34,7 @@ describe('StdButton', () => {
     waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
-  it('renders the StdButton component with icon and no label', () => {
+  it('renders the StdButton component with icon and no label', async () => {
     render(<RdsButton icon={TEST_ICON} />);
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();

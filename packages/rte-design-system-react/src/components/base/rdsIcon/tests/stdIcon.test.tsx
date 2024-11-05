@@ -7,7 +7,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 
 import { RdsIcon } from '../RdsIcon.tsx';
-import { RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
+import { RdsIconId } from '@/utils/mappings/iconMaps.ts';
 
 const TEST_ICON = RdsIconId.Add;
 

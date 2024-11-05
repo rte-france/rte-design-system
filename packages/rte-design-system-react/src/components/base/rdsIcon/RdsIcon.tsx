@@ -4,20 +4,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { IconComps, RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
-import { RotationOptionsType } from '@/shared/types/Tailwind.type.ts';
-import { TailwindColorClass } from '@/shared/types/TailwindColorClass.type.ts';
+import { IconComps, RdsIconId } from '@/utils/mappings/iconMaps.ts';
+import { RotationOptionsType } from '@/types/Tailwind.type.ts';
+import { TailwindColorClass } from '@/types/TailwindColorClass.type.ts';
 import { Suspense } from 'react';
-
-export type ExplicitIconProps = {
-  isExplicit?: true;
-  alt?: undefined;
-};
-
-export type NonExplicitIconProps = {
-  isExplicit: false;
-  alt: string;
-};
+import { ExplicitIconProps, NonExplicitIconProps } from '@/types/index.ts';
 
 export type PlainIconProps = {
   name: string;

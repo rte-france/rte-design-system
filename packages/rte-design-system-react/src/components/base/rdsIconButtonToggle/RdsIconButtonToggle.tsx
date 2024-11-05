@@ -4,9 +4,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { IconToggle, RotationOptionsType, TailwindColorClass } from '@/shared/index.ts';
+import { IconToggle } from '@/utils/index.ts';
 import { useCallback } from 'react';
 import { RdsIconButton } from '../rdsIconButton/RdsIconButton.tsx';
+import { TailwindColorClass, RotationOptionsType } from '@/types/index.ts';
 
 type RdsIconButtonToggleProps = {
   icons: IconToggle;
@@ -34,7 +35,7 @@ export const RdsIconButtonToggle = ({
   }, [active, onClick]);
 
   return (
-    <div className="h-fit w-fit">
+    <div className="rds-h-fit rds-w-fit">
       <RdsIconButton
         id={id}
         icon={active ? activeIcon : inactiveIcon}

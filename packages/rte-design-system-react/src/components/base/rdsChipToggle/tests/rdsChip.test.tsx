@@ -6,7 +6,7 @@
 
 import { render, screen, waitFor } from '@testing-library/react';
 import { RdsChipToggle } from '@/components/base/rdsChipToggle/RdsChipToggle.tsx';
-import { RdsIconId, noop } from '@/shared/index.ts';
+import { RdsIconId, noop } from '@/utils/index.ts';
 
 const TEST_LABEL = 'Label';
 const TEST_VALUE = 'value';
@@ -32,7 +32,7 @@ describe('RdsChipToggle', () => {
     expect((chip as HTMLInputElement).value).toBe(TEST_VALUE);
   });
 
-  it('renders the RdsChipToggle component with icon + label', () => {
+  it('renders the RdsChipToggle component with icon + label', async () => {
     render(<RdsChipToggle value={TEST_VALUE} onChange={noop} label={TEST_LABEL} icon={TEST_ICON} />);
     const chip = screen.getByRole('listitem');
     expect(chip).toBeDefined();

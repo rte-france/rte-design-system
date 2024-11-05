@@ -4,33 +4,35 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/shared/index.ts';
+import { RdsIconId } from '@/utils/index.ts';
 import {
-  ACTIVE_STATUS_CLASSES,
-  chipClassBuilder,
-  COMMON_CLASSES,
-  HOVER_STATUS_CLASSES,
-  PADDING_X_CLASSES,
-  STATUS_CLASSES,
+  CHIP_TOOGLE_ACTIVE_STATUS_CLASSES,
+  chipToggleClassBuilder,
+  CHIP_TOOGLE_COMMON_CLASSES,
+  CHIP_TOOGLE_HOVER_STATUS_CLASSES,
+  CHIP_TOOGLE_PADDING_X_CLASSES,
+  CHIP_TOOGLE_STATUS_CLASSES,
 } from '../chipToggleClassBuilder.ts';
 
 describe('generateClasses function', () => {
   it('should have the common classes', () => {
-    expect(chipClassBuilder('primary').chipClasses).toContain(COMMON_CLASSES);
+    expect(chipToggleClassBuilder('primary').chipClasses).toContain(CHIP_TOOGLE_COMMON_CLASSES);
   });
   test.each([['primary'], ['secondary'], ['success'], ['error']] as const)(
     'should have the proper classes for %s',
     (status) => {
-      expect(chipClassBuilder(status).chipClasses).toContain(STATUS_CLASSES[status]);
-      expect(chipClassBuilder(status).chipClasses).toContain(HOVER_STATUS_CLASSES[status]);
-      expect(chipClassBuilder(status).chipClasses).toContain(ACTIVE_STATUS_CLASSES[status]);
+      expect(chipToggleClassBuilder(status).chipClasses).toContain(CHIP_TOOGLE_STATUS_CLASSES[status]);
+      expect(chipToggleClassBuilder(status).chipClasses).toContain(CHIP_TOOGLE_HOVER_STATUS_CLASSES[status]);
+      expect(chipToggleClassBuilder(status).chipClasses).toContain(CHIP_TOOGLE_ACTIVE_STATUS_CLASSES[status]);
     },
   );
 
   it('should have the proper variant and type classes', () => {
-    expect(chipClassBuilder('primary', 'test').chipClasses).toContain(PADDING_X_CLASSES.paddingDefault);
-    expect(chipClassBuilder('primary', 'test', RdsIconId.Add).chipClasses).toContain(
-      PADDING_X_CLASSES.paddingLeftWithIcon,
+    expect(chipToggleClassBuilder('primary', 'test').chipClasses).toContain(
+      CHIP_TOOGLE_PADDING_X_CLASSES.paddingDefault,
+    );
+    expect(chipToggleClassBuilder('primary', 'test', RdsIconId.Add).chipClasses).toContain(
+      CHIP_TOOGLE_PADDING_X_CLASSES.paddingLeftWithIcon,
     );
   });
 });

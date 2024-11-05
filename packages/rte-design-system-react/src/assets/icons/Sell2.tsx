@@ -8,7 +8,7 @@
   <path d="" fill="black" />
   <path d="" fill="black" />
 </svg>;
-import { IconProps } from '@/shared/types/icons/iconsProps.ts';
+import { IconProps } from '@/types/icons/iconsProps.ts';
 import { iconClassBuilder } from '../iconClassBuilder.ts';
 
 export const Sell2 = (props: IconProps) => {

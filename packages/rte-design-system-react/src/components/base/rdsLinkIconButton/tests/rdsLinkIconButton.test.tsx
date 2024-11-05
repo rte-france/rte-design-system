@@ -4,9 +4,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { screen } from '@testing-library/react';
-import { RdsIconId } from '@/shared/index.ts';
-import { RenderWrapper } from '@/shared/tests/testUtils.tsx';
+import { screen, waitFor } from '@testing-library/react';
+import { RdsIconId } from '@/utils/index.ts';
+import { RenderWrapper } from '@/tests/testUtils.tsx';
 import { RdsLinkIconButton } from '../RdsLinkIconButton.tsx';
 
 const TEST_ICON = RdsIconId.Add;
@@ -14,13 +14,13 @@ const TEST_ID = 'my-link';
 const TEST_HREF_EXTERNAL = 'https://www.rte-france.com/';
 const TEST_HREF_INTERNAL = '/test-route';
 
-describe('RdsLinkIconButton', () => {
-  it('renders the default RdsLinkIconButton component with icon', () => {
+describe('RdsLinkIconButton', async () => {
+  it('renders the default RdsLinkIconButton component with icon', async () => {
     RenderWrapper.create(<RdsLinkIconButton icon={TEST_ICON} href={TEST_HREF_EXTERNAL} location="external" />)
       .withRouter()
       .render();
     expect(screen.getByRole('link')).toBeDefined();
-    expect(screen.getByTitle(TEST_ICON)).toBeDefined();
+    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
   });
 
   it('renders the RdsLinkIconButton component with the proper id when specified', () => {

@@ -5,11 +5,13 @@
  */
 
 import { Link } from 'react-router-dom';
-import { RdsIconId, TailwindColorClass, useRdsId } from '@/shared/index.ts';
+import { RdsIconId } from '@/utils/index.ts';
 import { IconButtonSize, IconButtonVariant } from '../rdsIconButton/RdsIconButton.tsx';
 import { iconButtonClassBuilder } from '../rdsIconButton/iconButtonClassBuilder.ts';
 
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
+import { TailwindColorClass } from '@/types/TailwindColorClass.type.ts';
+import { useRdsId } from '@/hooks/index.ts';
 
 const ICON_SIZE: Record<IconButtonSize, number> = {
   extraSmall: 12,

@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { IconProps } from '@/shared/types/icons/iconsProps.ts';
+import { IconProps } from '@/types/icons/iconsProps.ts';
 import { iconClassBuilder } from '../iconClassBuilder.ts';
 
 export const Delete = (props: IconProps) => {

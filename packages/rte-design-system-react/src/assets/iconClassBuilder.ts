@@ -5,7 +5,7 @@
  */
 
 import { clsx } from 'clsx';
-import { Delay, Duration, Rotate, RotationOptionsType } from '@/shared/types/Tailwind.type.ts';
+import { Delay, Duration, Rotate, RotationOptionsType } from '@/types/Tailwind.type.ts';
 
 export const POINTER_CLASS = 'pointer-events-none';
 

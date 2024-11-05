@@ -4,9 +4,9 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { screen } from '@testing-library/react';
-import { RdsIconId } from '@/shared/index.ts';
-import { RenderWrapper } from '@/shared/tests/testUtils.tsx';
+import { screen, waitFor } from '@testing-library/react';
+import { RdsIconId } from '@/utils/index.ts';
+import { RenderWrapper } from '@/tests/testUtils.tsx';
 import { RdsLinkButton } from '../RdsLinkButton.tsx';
 
 const TEST_LABEL = 'Label';
@@ -34,7 +34,7 @@ describe('RdsLinkButton', () => {
     expect(document.querySelector(`#${TEST_ID}`)).toBeInTheDocument();
   });
 
-  it('renders the RdsLinkButton component with icon + label', () => {
+  it('renders the RdsLinkButton component with icon + label', async () => {
     RenderWrapper.create(
       <RdsLinkButton label={TEST_LABEL} icon={TEST_ICON} href={TEST_HREF_EXTERNAL} location="external" />,
     )
@@ -43,16 +43,16 @@ describe('RdsLinkButton', () => {
     const link = screen.getByRole('link');
     expect(link).toBeInTheDocument();
     expect(link.textContent).toContain(TEST_LABEL);
-    expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument();
+    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
-  it('renders the RdsLinkButton component with icon and no label', () => {
+  it('renders the RdsLinkButton component with icon and no label', async () => {
     RenderWrapper.create(<RdsLinkButton icon={TEST_ICON} href={TEST_HREF_EXTERNAL} location="external" />)
       .withRouter()
       .render();
     const link = screen.getByRole('link');
     expect(link).toBeInTheDocument();
-    expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument();
+    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the RdsLinkButton component with the expected href attribute', () => {

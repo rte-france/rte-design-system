@@ -28,7 +28,9 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './testSetup.ts',
-    alias: { '@': './' },
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   build: {
     target: 'esnext',

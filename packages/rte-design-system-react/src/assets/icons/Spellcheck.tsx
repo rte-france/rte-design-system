@@ -7,7 +7,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" id="icon" height="24" viewBox="0 -960 960 960" width="24">
   <path d="" />
 </svg>;
-import { IconProps } from '@/shared/types/icons/iconsProps.ts';
+import { IconProps } from '@/types/icons/iconsProps.ts';
 import { iconClassBuilder } from '../iconClassBuilder.ts';
 
 export const Spellcheck = (props: IconProps) => {

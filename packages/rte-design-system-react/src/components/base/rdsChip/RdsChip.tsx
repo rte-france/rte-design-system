@@ -4,11 +4,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/shared/index.ts';
+import { RdsIconId } from '@/utils/index.ts';
 import { MouseEventHandler } from 'react';
 import { chipClassBuilder } from './chipClassBuilder.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
-import { useActiveKeyboard, useRdsId } from '@/shared/hooks/index.ts';
+import { useActiveKeyboard, useRdsId } from '@/hooks/index.ts';
 
 export type ChipStatus = 'primary' | 'secondary' | 'success' | 'error';
 
@@ -24,7 +24,7 @@ export type RdsChipProps = {
 const CHIP_ICON_SIZE = 16;
 const CLOSE_ICON_SIZE = 12;
 
-const RdsChip = ({ id: propsId, label, status = 'primary', icon, onClose, onClick }: RdsChipProps) => {
+export const RdsChip = ({ id: propsId, label, status = 'primary', icon, onClose, onClick }: RdsChipProps) => {
   const id = useRdsId('chip', propsId);
   const [handlerKeyboardEvent, isActiveKeyboard] = useActiveKeyboard<HTMLSpanElement>((e) => onClick?.(e), { id });
   const { labelClasses, chipClasses, closeButtonClasses } = chipClassBuilder(
@@ -63,5 +63,3 @@ const RdsChip = ({ id: propsId, label, status = 'primary', icon, onClose, onClic
     </span>
   );
 };
-
-export default RdsChip;

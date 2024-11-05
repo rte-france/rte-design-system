@@ -4,19 +4,19 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 
-import { noop, RdsIconId } from '@/shared/index.ts';
+import { noop, RdsIconId } from '@/utils/index.ts';
 import { RdsIconButton } from '../RdsIconButton.tsx';
 
 const TEST_ICON = RdsIconId.Add;
 const TEST_ID = 'my-button';
 
 describe('RdsIconButton', () => {
-  it('renders the default RdsIconButton component with icon', () => {
+  it('renders the default RdsIconButton component with icon', async () => {
     render(<RdsIconButton icon={TEST_ICON} onClick={noop} />);
     expect(screen.getByRole('button')).toBeDefined();
-    expect(screen.getByTitle(TEST_ICON)).toBeDefined();
+    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
   });
 
   it('renders the RdsIconButton with the proper id when specified', () => {

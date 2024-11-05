@@ -6,9 +6,9 @@
 
 import { Ref, forwardRef } from 'react';
 import { buttonClassBuilder, labelClassBuilder } from './buttonClassBuilder.ts';
-import { RdsIconId } from '@/shared/utils/mappings/iconMaps.ts';
+import { RdsIconId } from '@/utils/mappings/iconMaps.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
-import { useRdsId } from '@/shared/index.ts';
+import { useRdsId } from '@/hooks/index.ts';
 
 export type ButtonVariant = 'contained' | 'outlined' | 'dashed' | 'text' | 'transparent';
 export type ButtonSize = 'extraSmall' | 'small' | 'medium';

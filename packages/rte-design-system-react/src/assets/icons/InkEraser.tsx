@@ -7,7 +7,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" id="icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
   <path d="" />
 </svg>;
-import { IconProps } from '@/shared/types/icons/iconsProps.ts';
+import { IconProps } from '@/types/icons/iconsProps.ts';
 import { iconClassBuilder } from '../iconClassBuilder.ts';
 
 export const InkEraser = (props: IconProps) => {

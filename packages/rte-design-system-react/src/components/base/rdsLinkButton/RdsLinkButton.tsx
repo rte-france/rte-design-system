@@ -4,11 +4,12 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId, useRdsId } from '@/shared/index.ts';
+import { RdsIconId } from '@/utils/index.ts';
 import { ButtonColor, ButtonSize, ButtonVariant, IconPosition } from '../rdsButton/RdsButton.tsx';
 import { buttonClassBuilder, labelClassBuilder } from '../rdsButton/buttonClassBuilder.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
 import { Link } from 'react-router-dom';
+import { useRdsId } from '@/hooks/index.ts';
 
 const ICON_SIZE: Record<ButtonSize, number> = {
   extraSmall: 16,
