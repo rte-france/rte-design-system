@@ -7,20 +7,20 @@
 import { clsx } from 'clsx';
 import { IconButtonVariant } from './RdsIconButton.tsx';
 
-export const COMMON_CLASSES = 'flex items-center bg-transparent rounded-sm';
+export const COMMON_CLASSES = 'rds-flex rds-items-center rds-bg-transparent rds-rounded-sm';
 
-export const FOCUS_CLASSES = 'focus-visible:outline focus-visible:outline-1 focus-visible:outline-gray-900';
+export const FOCUS_CLASSES = 'focus-visible:rds-outline focus-visible:rds-outline-1 focus-visible:rds-outline-gray-900';
 
 export const VARIANT_CLASSES = {
-  default: 'text-gray-700 hover:text-gray-800',
-  danger: 'text-gray-700 hover:bg-error-600 hover:text-gray-w',
-  white: 'text-gray-w hover:text-gray-100', // Temporary variant. Will be removed once the good one is designed
+  default: 'rds-text-gray-700 hover:rds-text-gray-800',
+  danger: 'rds-text-gray-700 hover:rds-bg-error-600 hover:rds-text-gray-w',
+  white: 'rds-text-gray-w hover:rds-text-gray-100', // Temporary variant. Will be removed once the good one is designed
 };
 
 export const APPEAR_EFFECT_CLASSES =
-  'duration-50 opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100';
+  'rds-duration-50 rds-opacity-0 rds-transition-opacity group-hover:rds-opacity-100 focus-visible:rds-opacity-100';
 
-export const VARIANT_CLASSES_DISABLED = 'text-gray-500 cursor-not-allowed pointer-events-none';
+export const VARIANT_CLASSES_DISABLED = 'rds-text-gray-500 rds-cursor-not-allowed rds-pointer-events-none';
 
 export const iconButtonClassBuilder = (variant: IconButtonVariant, disabled: boolean, appearEffect: boolean): string =>
   disabled

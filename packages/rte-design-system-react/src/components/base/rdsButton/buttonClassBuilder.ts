@@ -127,7 +127,7 @@ export const VARIANT_CLASSES_DISABLED = {
   outlined: 'rds-bg-gray-200 text-gray-500 rds-border-gray-500',
   dashed: 'rds-bg-gray-200 text-gray-500 rds-border-dashed rds-border-gray-500',
   text: 'rds-bg-gray-200 text-gray-500 rds-border-gray-500 rds-border-opacity-0',
-  transparent: 'text-gray-500 rds-border-transparent',
+  transparent: 'rds-text-gray-500 rds-border-transparent',
 };
 
 export const LABEL_CLASSES_COMMON = 'rds-inline-flex rds-capitalize-first rds-line-clamp-1 rds-text-nowrap';

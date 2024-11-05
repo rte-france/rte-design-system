@@ -9,42 +9,42 @@ import { clsx } from 'clsx';
 import { ChipStatus } from '@/components/base/rdsChip/RdsChip.tsx';
 
 export const COMMON_CLASSES =
-  'h-3 py-0.5 select-none rounded-full font-semibold inline-flex gap-0.75 items-center align-middle border-2 peer-focus-visible:outline peer-focus-visible:outline-1 peer-focus-visible:outline-offset-1 peer-focus-visible:outline-gray-900 group-hover:cursor-pointer group-hover:shadow-2';
+  'rds-h-3 rds-py-0.5 rds-select-none rds-rounded-full rds-font-semibold rds-inline-flex rds-gap-0.75 rds-items-center rds-align-middle rds-border-2 peer-focus-visible:rds-outline peer-focus-visible:rds-outline-1 peer-focus-visible:rds-outline-offset-1 peer-focus-visible:rds-outline-gray-900 group-hover:rds-cursor-pointer group-hover:rds-shadow-2';
 
-const COMMON_BORDER_CLASSES = 'border border-transparent';
+const COMMON_BORDER_CLASSES = 'rds-border rds-border-transparent';
 
-const COMMON_LABEL_CLASSES = 'text-caption font-normal leading-none';
+const COMMON_LABEL_CLASSES = 'rds-text-caption rds-font-normal rds-leading-none';
 
 export const STATUS_CLASSES = {
-  primary: 'bg-gray-200 text-gray-700',
-  secondary: 'bg-primary-100 text-primary-700',
-  success: 'bg-success-200 text-success-700',
-  error: 'bg-error-100 text-error-700',
+  primary: 'rds-bg-gray-200 rds-text-gray-700',
+  secondary: 'rds-bg-primary-100 rds-text-primary-700',
+  success: 'rds-bg-success-200 rds-text-success-700',
+  error: 'rds-bg-error-100 rds-text-error-700',
 };
 
 export const HOVER_STATUS_CLASSES = {
-  primary: 'group-hover:bg-gray-300 text-gray-900',
-  secondary: 'group-hover:bg-primary-200 text-primary-900',
-  success: 'group-hover:bg-success-300 text-success-900',
-  error: 'group-hover:bg-error-200 text-error-900',
+  primary: 'group-hover:rds-bg-gray-300 rds-text-gray-900',
+  secondary: 'group-hover:rds-bg-primary-200 rds-text-primary-900',
+  success: 'group-hover:rds-bg-success-300 rds-text-success-900',
+  error: 'group-hover:rds-bg-error-200 rds-text-error-900',
 };
 
 export const ACTIVE_STATUS_CLASSES = {
   primary:
-    'group-active:border-primary-600 peer-checked:border-primary-600 group-active:text-gray-900 peer-checked:text-gray-900 ',
+    'group-active:rds-border-primary-600 peer-checked:rds-border-primary-600 group-active:rds-text-gray-900 peer-checked:rds-text-gray-900 ',
   secondary:
-    'group-active:border-primary-600 peer-checked:border-primary-600 group-active:text-primary-900 peer-checked:text-primary-900',
+    'group-active:rds-border-primary-600 peer-checked:rds-border-primary-600 group-active:rds-text-primary-900 peer-checked:rds-text-primary-900',
   success:
-    'group-active:border-success-600 peer-checked:border-success-600 group-active:text-success-900 peer-checked:text-success-900',
+    'group-active:rds-border-success-600 peer-checked:rds-border-success-600 group-active:rds-text-success-900 peer-checked:rds-text-success-900',
   error:
-    ' group-active:border-error-600 peer-checked:border-error-600 group-active:text-error-900 peer-checked:text-error-900',
+    ' group-active:rds-border-error-600 peer-checked:rds-border-error-600 group-active:rds-text-error-900 peer-checked:rds-text-error-900',
 };
 
 export const PADDING_X_CLASSES = {
-  paddingLeftWithoutIcon: 'pl-1.5',
-  paddingLeftWithIcon: 'pl-0.75',
-  paddingRight: 'pr-1.5',
-  paddingDefault: 'px-1.5',
+  paddingLeftWithoutIcon: 'rds-pl-1.5',
+  paddingLeftWithIcon: 'rds-pl-0.75',
+  paddingRight: 'rds-pr-1.5',
+  paddingDefault: 'rds-px-1.5',
 };
 
 const paddingChip = (label?: string, icon?: keyof typeof RdsIconId): string => {

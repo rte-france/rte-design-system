@@ -18,40 +18,40 @@ const COMMON_LABEL_CLASSES = 'rds-text-caption rds-font-normal rds-leading-none'
 
 export const ACTIVE_CLASSES = {
   primary:
-    'hover:bg-gray-300 hover:cursor-pointer active:border-primary-600 active:bg-gray-200 hover:text-gray-900 active:text-gray-900',
+    'hover:rds-bg-gray-300 hover:rds-cursor-pointer active:rds-border-primary-600 active:rds-bg-gray-200 hover:rds-text-gray-900 active:rds-text-gray-900',
   secondary:
-    'hover:bg-primary-200 hover:cursor-pointer active:border-primary-600 active:bg-primary-100 hover:text-primary-900 active:text-primary-900',
+    'hover:rds-bg-primary-200 hover:rds-cursor-pointer active:rds-border-primary-600 active:rds-bg-primary-100 hover:rds-text-primary-900 active:rds-text-primary-900',
   success:
-    'hover:bg-success-300 hover:cursor-pointer active:border-success-600 active:bg-success-200 hover:text-success-900 active:text-success-900',
+    'hover:rds-bg-success-300 hover:rds-cursor-pointer active:rds-border-success-600 active:rds-bg-success-200 hover:rds-text-success-900 active:rds-text-success-900',
   error:
-    'hover:bg-error-200 hover:cursor-pointer active:border-error-600 active:bg-error-100 hover:text-error-900 active:text-error-900',
+    'hover:rds-bg-error-200 hover:rds-cursor-pointer active:rds-border-error-600 active:rds-bg-error-100 hover:rds-text-error-900 active:rds-text-error-900',
 };
 
 export const ACTIVE_KEYBOARD_CLASSES = {
-  primary: 'bg-gray-200 border-primary-600',
-  secondary: 'bg-primary-100 border-primary-600',
-  success: ' bg-success-200 border-success-600',
-  error: 'bg-error-100 border-error-600',
+  primary: 'rds-bg-gray-200 border-primary-600',
+  secondary: 'rds-bg-primary-100 border-primary-600',
+  success: 'rds-bg-success-200 border-success-600',
+  error: 'rds-bg-error-100 border-error-600',
 };
 
 export const STATUS_CLASSES = {
-  primary: 'bg-gray-200 text-gray-700',
-  secondary: 'bg-primary-100 text-primary-700',
-  success: 'bg-success-100 text-success-700',
-  error: 'bg-error-100 text-error-700',
+  primary: 'rds-bg-gray-200 rds-text-gray-700',
+  secondary: 'rds-bg-primary-100 rds-text-primary-700',
+  success: 'rds-bg-success-100 rds-text-success-700',
+  error: 'rds-bg-error-100 rds-text-error-700',
 };
 
 const CLOSE_BUTTON_CLASSES =
-  'align-center flex h-1.5 w-1.5 flex-col items-center justify-center text-gray-600 rounded-full hover:bg-gray-400 hover:text-gray-700 active:bg-gray-500 active:text-gray-800';
+  'rds-align-center rds-flex rds-h-1.5 rds-w-1.5 rds-flex-col rds-items-center rds-justify-center rds-text-gray-600 rds-rounded-full hover:rds-bg-gray-400 hover:rds-text-gray-700 active:rds-bg-gray-500 active:rds-text-gray-800';
 
 const FOCUS_CLOSE_BUTTON_CLASSES =
-  'focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-gray-900 focus-visible:rounded';
+  'focus-visible:rds-outline focus-visible:rds-outline-1 focus-visible:rds-outline-offset-0 focus-visible:rds-outline-gray-900 focus-visible:rds-rounded';
 
 export const PADDING_X = {
-  paddingLeftDefault: 'pl-1.5',
-  paddingLeftWithIcon: 'pl-0.75',
-  paddingRightDefault: 'pr-1.5',
-  paddingRightWithCloseButton: 'pr-0.5',
+  paddingLeftDefault: 'rds-pl-1.5',
+  paddingLeftWithIcon: 'rds-pl-0.75',
+  paddingRightDefault: 'rds-pr-1.5',
+  paddingRightWithCloseButton: 'rds-pr-0.5',
 };
 
 const paddingChip = (
