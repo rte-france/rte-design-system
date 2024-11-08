@@ -21,7 +21,7 @@ export const InkEraser = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Ink Eraser',
     isExplicit = true,
   } = props;
 

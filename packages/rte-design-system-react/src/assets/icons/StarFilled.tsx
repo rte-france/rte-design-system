@@ -18,7 +18,7 @@ export const StarFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'StarFilled',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const ContentCopy = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ContentCopy',
     isExplicit = true,
   } = props;
 

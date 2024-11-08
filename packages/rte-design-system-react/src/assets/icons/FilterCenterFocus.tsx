@@ -18,7 +18,7 @@ export const FilterCenterFocus = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'FilterCenterFocus',
     isExplicit = true,
   } = props;
 

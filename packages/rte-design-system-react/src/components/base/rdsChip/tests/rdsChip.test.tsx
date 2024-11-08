@@ -10,7 +10,7 @@ import { RdsChip } from '@/components/base/rdsChip/RdsChip.tsx';
 
 const TEST_LABEL = 'Label';
 const TEST_ICON = RdsIconId.Add;
-const TEST_CLOSE = 'close';
+const TEST_CLOSE = RdsIconId.Close;
 const TEST_ID = 'my-chip';
 const testOnClose = () => {};
 
@@ -32,7 +32,7 @@ describe('Rds Chip', () => {
     const chip = screen.getByRole('listitem');
     expect(chip).toBeInTheDocument();
     expect(screen.getByText(TEST_LABEL)).toBeInTheDocument();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the Rds Chip component with label + delete', async () => {
@@ -40,7 +40,7 @@ describe('Rds Chip', () => {
     const chip = screen.getByRole('listitem');
     expect(chip).toBeInTheDocument();
     expect(screen.getByText(TEST_LABEL)).toBeInTheDocument();
-    waitFor(() => expect(screen.getByTitle(TEST_CLOSE)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_CLOSE)).toBeInTheDocument());
   });
 
   it('renders the Rds Chip component with icon + label + delete', async () => {
@@ -48,14 +48,14 @@ describe('Rds Chip', () => {
     const chip = screen.getByRole('listitem');
     expect(chip).toBeInTheDocument();
     expect(screen.getByText(TEST_LABEL)).toBeInTheDocument();
-    waitFor(() => expect(screen.getByTitle(TEST_CLOSE)).toBeInTheDocument());
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_CLOSE)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the Rds Chip component with icon only', async () => {
     render(<RdsChip icon={TEST_ICON} />);
     const chip = screen.getByRole('listitem');
     expect(chip).toBeInTheDocument();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 });

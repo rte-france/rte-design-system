@@ -14,6 +14,6 @@ const TEST_ICON = RdsIconId.Add;
 describe('RdsIcon', () => {
   it('renders RdsIcon component', async () => {
     render(<RdsIcon name={TEST_ICON} />);
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 });

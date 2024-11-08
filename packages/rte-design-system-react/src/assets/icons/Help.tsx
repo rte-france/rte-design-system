@@ -22,7 +22,7 @@ export const Help = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Help',
     isExplicit = true,
   } = props;
 

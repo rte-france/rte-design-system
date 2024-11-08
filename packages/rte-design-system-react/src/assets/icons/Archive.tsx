@@ -18,7 +18,7 @@ export const Archive = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Archive',
     isExplicit = true,
   } = props;
 

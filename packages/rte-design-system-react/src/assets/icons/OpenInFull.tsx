@@ -18,7 +18,7 @@ export const OpenInFull = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'OpenInFull',
     isExplicit = true,
   } = props;
 

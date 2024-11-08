@@ -18,7 +18,7 @@ export const Cancel = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Cancel',
     isExplicit = true,
   } = props;
 

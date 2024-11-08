@@ -18,7 +18,7 @@ export const Palette = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Palette',
     isExplicit = true,
   } = props;
 

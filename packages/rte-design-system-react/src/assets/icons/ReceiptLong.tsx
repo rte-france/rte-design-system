@@ -18,7 +18,7 @@ export const ReceiptLong = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ReceiptLong',
     isExplicit = true,
   } = props;
 

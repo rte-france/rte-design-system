@@ -18,7 +18,7 @@ export const ImportContacts = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ImportContacts',
     isExplicit = true,
   } = props;
 

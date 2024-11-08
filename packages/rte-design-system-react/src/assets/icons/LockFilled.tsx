@@ -18,7 +18,7 @@ export const LockFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'LockFilled',
     isExplicit = true,
   } = props;
 

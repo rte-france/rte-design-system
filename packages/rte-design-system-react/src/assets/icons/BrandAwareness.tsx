@@ -18,7 +18,7 @@ export const BrandAwareness = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'BrandAwareness',
     isExplicit = true,
   } = props;
 

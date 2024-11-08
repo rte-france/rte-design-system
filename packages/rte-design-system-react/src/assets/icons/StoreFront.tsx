@@ -18,7 +18,7 @@ export const StoreFront = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'StoreFront',
     isExplicit = true,
   } = props;
 

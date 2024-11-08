@@ -18,7 +18,7 @@ export const Report = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Report',
     isExplicit = true,
   } = props;
 

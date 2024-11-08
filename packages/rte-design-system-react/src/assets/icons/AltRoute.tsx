@@ -18,7 +18,7 @@ export const AltRoute = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'AltRoute',
     isExplicit = true,
   } = props;
 

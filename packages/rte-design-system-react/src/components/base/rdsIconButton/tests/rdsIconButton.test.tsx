@@ -16,7 +16,7 @@ describe('RdsIconButton', () => {
   it('renders the default RdsIconButton component with icon', async () => {
     render(<RdsIconButton icon={TEST_ICON} onClick={noop} />);
     expect(screen.getByRole('button')).toBeDefined();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
   });
 
   it('renders the RdsIconButton with the proper id when specified', () => {

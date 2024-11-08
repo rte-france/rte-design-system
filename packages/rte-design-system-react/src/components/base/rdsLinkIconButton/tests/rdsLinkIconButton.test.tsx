@@ -20,7 +20,7 @@ describe('RdsLinkIconButton', async () => {
       .withRouter()
       .render();
     expect(screen.getByRole('link')).toBeDefined();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
   });
 
   it('renders the RdsLinkIconButton component with the proper id when specified', () => {

@@ -18,7 +18,7 @@ export const FolderShared = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'FolderShared',
     isExplicit = true,
   } = props;
 

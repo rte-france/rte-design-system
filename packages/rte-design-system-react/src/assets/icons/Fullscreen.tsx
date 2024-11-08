@@ -18,7 +18,7 @@ export const Fullscreen = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Fullscreen',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const KeepOff = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'KeepOff',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const SubdirectoryArrowRight = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'SubdirectoryArrowRight',
     isExplicit = true,
   } = props;
 

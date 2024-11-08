@@ -18,7 +18,7 @@ export const Database = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Database',
     isExplicit = true,
   } = props;
 

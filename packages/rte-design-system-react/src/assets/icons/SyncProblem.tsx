@@ -18,7 +18,7 @@ export const SyncProblem = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'SyncProblem',
     isExplicit = true,
   } = props;
 

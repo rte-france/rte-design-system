@@ -21,7 +21,7 @@ export const StarOff = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'StarOff',
     isExplicit = true,
   } = props;
 

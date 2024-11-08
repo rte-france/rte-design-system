@@ -18,7 +18,7 @@ export const MoreVert = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'MoreVert',
     isExplicit = true,
   } = props;
 

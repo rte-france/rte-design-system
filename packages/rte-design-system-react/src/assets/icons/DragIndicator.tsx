@@ -18,7 +18,7 @@ export const DragIndicator = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'DragIndicator',
     isExplicit = true,
   } = props;
 

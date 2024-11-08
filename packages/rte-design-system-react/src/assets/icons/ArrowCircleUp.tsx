@@ -18,7 +18,7 @@ export const ArrowCircleUp = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ArrowCircleUp',
     isExplicit = true,
   } = props;
 

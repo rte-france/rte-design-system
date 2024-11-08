@@ -18,7 +18,7 @@ export const Schedule = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Schedule',
     isExplicit = true,
   } = props;
 

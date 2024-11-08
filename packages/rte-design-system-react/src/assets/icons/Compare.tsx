@@ -18,7 +18,7 @@ export const Compare = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Compare',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const PlaylistAddCheck = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PlaylistAddCheck',
     isExplicit = true,
   } = props;
 

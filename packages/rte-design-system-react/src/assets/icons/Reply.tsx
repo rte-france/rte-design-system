@@ -18,7 +18,7 @@ export const Reply = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Reply',
     isExplicit = true,
   } = props;
 

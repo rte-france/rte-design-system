@@ -14,11 +14,11 @@ describe('RdsIconButtonToggle', () => {
   it('render the component with the unfilled icon', async () => {
     render(<RdsIconButtonToggle icons={TEST_ICONS} onClick={noop} />);
 
-    waitFor(() => expect(screen.getByTitle(TEST_ICONS[0])).toBeDefined());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICONS[0])).toBeDefined());
   });
   it('render the component with the filled icon', async () => {
     render(<RdsIconButtonToggle icons={TEST_ICONS} onClick={noop} active />);
 
-    waitFor(() => expect(screen.getByTitle(TEST_ICONS[1])).toBeDefined());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICONS[1])).toBeDefined());
   });
 });

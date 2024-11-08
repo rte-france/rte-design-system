@@ -18,7 +18,7 @@ export const CrownFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'CrownFilled',
     isExplicit = true,
   } = props;
 

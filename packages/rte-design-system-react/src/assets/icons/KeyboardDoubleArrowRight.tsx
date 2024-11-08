@@ -18,7 +18,7 @@ export const KeyboardDoubleArrowRight = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'KeyboardDoubleArrowRight',
     isExplicit = true,
   } = props;
 

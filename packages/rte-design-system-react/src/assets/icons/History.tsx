@@ -18,7 +18,7 @@ export const History = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'History',
     isExplicit = true,
   } = props;
 

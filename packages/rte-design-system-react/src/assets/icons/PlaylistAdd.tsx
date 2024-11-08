@@ -18,7 +18,7 @@ export const PlaylistAdd = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PlaylistAdd',
     isExplicit = true,
   } = props;
 

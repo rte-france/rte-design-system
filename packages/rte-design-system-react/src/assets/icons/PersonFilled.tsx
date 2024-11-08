@@ -18,7 +18,7 @@ export const PersonFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PersonFilled',
     isExplicit = true,
   } = props;
 

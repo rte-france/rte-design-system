@@ -18,7 +18,7 @@ export const FormatListBulleted = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'FormatListBulleted',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const Weight = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Weight',
     isExplicit = true,
   } = props;
 

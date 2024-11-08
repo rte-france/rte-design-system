@@ -18,7 +18,7 @@ export const ArrowCircleDownFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ArrowCircleDownFilled',
     isExplicit = true,
   } = props;
 

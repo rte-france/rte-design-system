@@ -18,7 +18,7 @@ export const Download = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Download',
     isExplicit = true,
   } = props;
 

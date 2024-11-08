@@ -18,7 +18,7 @@ export const WarningFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'WarningFilled',
     isExplicit = true,
   } = props;
 

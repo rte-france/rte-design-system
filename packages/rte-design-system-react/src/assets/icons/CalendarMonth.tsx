@@ -18,7 +18,7 @@ export const CalendarMonth = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'CalendarMonth',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const Refresh = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Refresh',
     isExplicit = true,
   } = props;
 

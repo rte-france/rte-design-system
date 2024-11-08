@@ -18,7 +18,7 @@ export const Send = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Send',
     isExplicit = true,
   } = props;
 

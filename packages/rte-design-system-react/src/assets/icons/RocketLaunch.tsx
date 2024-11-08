@@ -18,7 +18,7 @@ export const RocketLaunch = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'RocketLaunch',
     isExplicit = true,
   } = props;
 

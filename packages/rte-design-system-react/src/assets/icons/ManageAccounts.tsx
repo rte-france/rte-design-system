@@ -18,7 +18,7 @@ export const ManageAccounts = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ManageAccounts',
     isExplicit = true,
   } = props;
 

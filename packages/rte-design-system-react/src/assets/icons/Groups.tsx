@@ -18,7 +18,7 @@ export const Groups = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Groups',
     isExplicit = true,
   } = props;
 

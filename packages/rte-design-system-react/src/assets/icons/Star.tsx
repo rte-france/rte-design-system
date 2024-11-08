@@ -18,7 +18,7 @@ export const Star = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Star',
     isExplicit = true,
   } = props;
 

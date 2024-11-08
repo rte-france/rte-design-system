@@ -18,7 +18,7 @@ export const SyncAlt = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'SyncAlt',
     isExplicit = true,
   } = props;
 

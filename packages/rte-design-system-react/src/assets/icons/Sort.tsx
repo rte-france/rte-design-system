@@ -18,7 +18,7 @@ export const Sort = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Sort',
     isExplicit = true,
   } = props;
 

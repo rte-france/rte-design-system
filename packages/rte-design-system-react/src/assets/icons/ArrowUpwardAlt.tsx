@@ -18,7 +18,7 @@ export const ArrowUpwardAlt = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ArrowUpwardAlt',
     isExplicit = true,
   } = props;
 

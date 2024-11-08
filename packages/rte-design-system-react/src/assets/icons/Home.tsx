@@ -22,7 +22,7 @@ export const Home = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Home',
     isExplicit = true,
   } = props;
 

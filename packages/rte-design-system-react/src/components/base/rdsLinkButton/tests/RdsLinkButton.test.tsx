@@ -43,7 +43,7 @@ describe('RdsLinkButton', () => {
     const link = screen.getByRole('link');
     expect(link).toBeInTheDocument();
     expect(link.textContent).toContain(TEST_LABEL);
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the RdsLinkButton component with icon and no label', async () => {
@@ -52,7 +52,7 @@ describe('RdsLinkButton', () => {
       .render();
     const link = screen.getByRole('link');
     expect(link).toBeInTheDocument();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the RdsLinkButton component with the expected href attribute', () => {

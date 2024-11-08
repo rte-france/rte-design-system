@@ -37,13 +37,13 @@ describe('RdsChipToggle', () => {
     const chip = screen.getByRole('listitem');
     expect(chip).toBeDefined();
     expect(screen.getByText(TEST_LABEL)).toBeDefined();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
   });
 
   it('renders the RdsChipToggle component with icon only', async () => {
     render(<RdsChipToggle value={TEST_VALUE} onChange={noop} icon={TEST_ICON} />);
     const chip = screen.getByRole('listitem');
     expect(chip).toBeDefined();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeDefined());
   });
 });

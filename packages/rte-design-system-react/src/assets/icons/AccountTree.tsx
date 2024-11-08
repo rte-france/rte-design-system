@@ -18,7 +18,7 @@ export const AccountTree = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'AccountTree',
     isExplicit = true,
   } = props;
 

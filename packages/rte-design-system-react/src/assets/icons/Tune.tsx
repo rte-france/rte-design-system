@@ -18,7 +18,7 @@ export const Tune = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Tune',
     isExplicit = true,
   } = props;
 

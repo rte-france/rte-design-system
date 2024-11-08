@@ -18,7 +18,7 @@ export const Hourglass = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Hourglass',
     isExplicit = true,
   } = props;
 

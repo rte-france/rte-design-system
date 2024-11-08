@@ -30,6 +30,6 @@ describe('RdsTagList', () => {
 
   it('renders the default RdsTagList with the icon tags', async () => {
     render(<RdsTagList id={TEST_ID} tags={TEST_TAGS_LIST} icon={RdsIconId.Sell} />);
-    waitFor(() => expect(screen.getByTitle(RdsIconId.Sell)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(RdsIconId.Sell)).toBeInTheDocument());
   });
 });

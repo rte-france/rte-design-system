@@ -18,7 +18,7 @@ export const MoreHoriz = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'MoreHoriz',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const RestoreFromTrash = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'RestoreFromTrash',
     isExplicit = true,
   } = props;
 

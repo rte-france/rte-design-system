@@ -31,13 +31,13 @@ describe('StdButton', () => {
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button.textContent).toContain(TEST_LABEL);
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 
   it('renders the StdButton component with icon and no label', async () => {
     render(<RdsButton icon={TEST_ICON} />);
     const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 });

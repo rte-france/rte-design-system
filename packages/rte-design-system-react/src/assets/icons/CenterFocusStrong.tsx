@@ -18,7 +18,7 @@ export const CenterFocusStrong = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'CenterFocusStrong',
     isExplicit = true,
   } = props;
 

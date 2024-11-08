@@ -18,7 +18,7 @@ export const FolderOpen = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Folder Open',
     isExplicit = true,
   } = props;
 

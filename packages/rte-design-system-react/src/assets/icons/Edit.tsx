@@ -18,7 +18,7 @@ export const Edit = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Edit',
     isExplicit = true,
   } = props;
 

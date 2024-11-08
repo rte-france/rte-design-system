@@ -18,7 +18,7 @@ export const Person = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Person',
     isExplicit = true,
   } = props;
 

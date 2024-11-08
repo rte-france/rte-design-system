@@ -18,7 +18,7 @@ export const Lock = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Lock',
     isExplicit = true,
   } = props;
 

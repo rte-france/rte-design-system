@@ -18,7 +18,7 @@ export const HorizontalRule = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'HorizontalRule',
     isExplicit = true,
   } = props;
 

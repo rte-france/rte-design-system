@@ -18,7 +18,7 @@ export const PlayCircle = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PlayCircle',
     isExplicit = true,
   } = props;
 

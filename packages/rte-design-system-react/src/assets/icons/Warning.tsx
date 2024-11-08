@@ -18,7 +18,7 @@ export const Warning = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Warning',
     isExplicit = true,
   } = props;
 

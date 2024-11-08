@@ -18,7 +18,7 @@ export const PublishedWithChanges = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PublishedWithChanges',
     isExplicit = true,
   } = props;
 

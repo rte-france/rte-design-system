@@ -18,7 +18,7 @@ export const Unarchive = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Unarchive',
     isExplicit = true,
   } = props;
 

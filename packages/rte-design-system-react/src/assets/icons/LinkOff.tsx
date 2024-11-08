@@ -18,7 +18,7 @@ export const LinkOff = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'LinkOff',
     isExplicit = true,
   } = props;
 

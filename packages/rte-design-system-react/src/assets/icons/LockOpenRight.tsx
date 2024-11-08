@@ -18,7 +18,7 @@ export const LockOpenRight = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'LockOpenRight',
     isExplicit = true,
   } = props;
 

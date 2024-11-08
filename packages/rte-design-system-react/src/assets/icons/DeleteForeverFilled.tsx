@@ -18,7 +18,7 @@ export const DeleteForeverFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'DeleteForeverFilled',
     isExplicit = true,
   } = props;
 

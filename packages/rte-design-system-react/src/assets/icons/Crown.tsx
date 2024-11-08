@@ -18,7 +18,7 @@ export const Crown = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Crown',
     isExplicit = true,
   } = props;
 

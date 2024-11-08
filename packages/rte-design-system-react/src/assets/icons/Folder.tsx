@@ -18,7 +18,7 @@ export const Folder = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Folder',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const Search = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Search',
     isExplicit = true,
   } = props;
 

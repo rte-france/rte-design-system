@@ -18,7 +18,7 @@ export const GridView = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'GridView',
     isExplicit = true,
   } = props;
 

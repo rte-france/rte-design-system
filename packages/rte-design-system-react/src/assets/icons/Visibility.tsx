@@ -18,7 +18,7 @@ export const Visibility = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Visibility',
     isExplicit = true,
   } = props;
 

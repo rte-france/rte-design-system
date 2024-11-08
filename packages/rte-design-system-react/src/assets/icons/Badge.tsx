@@ -18,7 +18,7 @@ export const Badge = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Badge',
     isExplicit = true,
   } = props;
 

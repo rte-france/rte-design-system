@@ -18,7 +18,7 @@ export const ContentPaste = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ContentPaste',
     isExplicit = true,
   } = props;
 

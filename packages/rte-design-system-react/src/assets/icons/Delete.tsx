@@ -18,7 +18,7 @@ export const Delete = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Delete',
     isExplicit = true,
   } = props;
 

@@ -21,7 +21,7 @@ export const Spellcheck = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Spellcheck',
     isExplicit = true,
   } = props;
 

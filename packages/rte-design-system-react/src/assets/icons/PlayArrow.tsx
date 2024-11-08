@@ -18,7 +18,7 @@ export const PlayArrow = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PlayArrow',
     isExplicit = true,
   } = props;
 

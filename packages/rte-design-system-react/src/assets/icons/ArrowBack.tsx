@@ -18,7 +18,7 @@ export const ArrowBack = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'ArrowBack',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const Login = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Login',
     isExplicit = true,
   } = props;
 

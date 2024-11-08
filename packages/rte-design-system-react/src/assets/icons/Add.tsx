@@ -18,7 +18,7 @@ export const Add = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Add',
     isExplicit = true,
   } = props;
 

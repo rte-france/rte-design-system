@@ -18,7 +18,7 @@ export const PushPin = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'PushPin',
     isExplicit = true,
   } = props;
 

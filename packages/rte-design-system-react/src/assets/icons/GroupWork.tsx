@@ -18,7 +18,7 @@ export const GroupWork = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'GroupWork',
     isExplicit = true,
   } = props;
 

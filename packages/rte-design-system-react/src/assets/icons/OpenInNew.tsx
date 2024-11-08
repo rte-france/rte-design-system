@@ -18,7 +18,7 @@ export const OpenInNew = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'OpenInNew',
     isExplicit = true,
   } = props;
 

@@ -18,7 +18,7 @@ export const Save = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Save',
     isExplicit = true,
   } = props;
 

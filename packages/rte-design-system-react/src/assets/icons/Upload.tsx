@@ -18,7 +18,7 @@ export const Upload = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Upload',
     isExplicit = true,
   } = props;
 

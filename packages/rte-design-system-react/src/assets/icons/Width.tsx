@@ -18,7 +18,7 @@ export const Width = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Width',
     isExplicit = true,
   } = props;
 

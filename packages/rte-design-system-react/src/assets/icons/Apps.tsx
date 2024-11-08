@@ -18,7 +18,7 @@ export const Apps = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Apps',
     isExplicit = true,
   } = props;
 

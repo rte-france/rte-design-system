@@ -20,6 +20,6 @@ describe('RdsTag', () => {
 
   it('renders the default RdsTag component with the close button', async () => {
     render(<RdsTag label={TEST_LABEL} id={TEST_ID} onDelete={noop} />);
-    waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 });

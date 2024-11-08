@@ -18,7 +18,7 @@ export const Close = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Close',
     isExplicit = true,
   } = props;
 

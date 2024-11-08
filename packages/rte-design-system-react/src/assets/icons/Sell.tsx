@@ -18,7 +18,7 @@ export const Sell = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'Sell',
     isExplicit = true,
   } = props;
 

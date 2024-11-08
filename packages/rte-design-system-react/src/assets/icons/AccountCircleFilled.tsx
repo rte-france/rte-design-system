@@ -18,7 +18,7 @@ export const AccountCircleFilled = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'AccountCircleFilled',
     isExplicit = true,
   } = props;
 

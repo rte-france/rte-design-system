@@ -18,7 +18,7 @@ export const FilterAlt = (props: IconProps) => {
     rotate,
     className = '',
     description = '',
-    alt,
+    alt = 'FilterAlt',
     isExplicit = true,
   } = props;
 
