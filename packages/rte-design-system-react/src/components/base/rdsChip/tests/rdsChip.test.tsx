@@ -48,7 +48,7 @@ describe('Rds Chip', () => {
     const chip = screen.getByRole('listitem');
     expect(chip).toBeInTheDocument();
     expect(screen.getByText(TEST_LABEL)).toBeInTheDocument();
-    await waitFor(() => expect(screen.getByTitle(TEST_CLOSE)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getAllByTitle(TEST_CLOSE)[0]).toBeInTheDocument());
     await waitFor(() => expect(screen.getByTitle(TEST_ICON)).toBeInTheDocument());
   });
 

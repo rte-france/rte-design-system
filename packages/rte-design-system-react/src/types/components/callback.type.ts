@@ -4,6 +4,4 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from './keybord/index.ts';
-export * from './form/index.ts';
-export * from './components/index.ts';
+export type RdsChangeHandler<TValue> = (value: TValue) => void | Promise<void>;
