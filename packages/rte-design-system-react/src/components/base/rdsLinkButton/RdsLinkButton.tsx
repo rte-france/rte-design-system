@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { ButtonColor, ButtonSize, ButtonVariant, IconPosition } from '../rdsButton/RdsButton.tsx';
 import { buttonClassBuilder, labelClassBuilder } from '../rdsButton/buttonClassBuilder.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
@@ -27,7 +27,7 @@ type RdsLinkButtonProps = {
   color?: ButtonColor;
   size?: ButtonSize;
   id?: string;
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   position?: IconPosition;
 };
 

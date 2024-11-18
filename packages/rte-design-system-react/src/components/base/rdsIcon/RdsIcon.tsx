@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { IconComps, RdsIconId } from '@/utils/mappings/iconMaps.ts';
+import { IconComps, RdsIconId, RdsIconIdKey } from '@/utils/mappings/iconMaps.ts';
 import { RotationOptionsType } from '@/types/Tailwind.type.ts';
 import { TailwindColorClass } from '@/types/TailwindColorClass.type.ts';
 import { Suspense } from 'react';
@@ -21,7 +21,7 @@ export type PlainIconProps = {
   filledColor?: boolean;
 };
 export type RdsIconProps = (ExplicitIconProps | NonExplicitIconProps) & {
-  name: keyof typeof RdsIconId | string;
+  name: RdsIconIdKey | string;
 } & Omit<PlainIconProps, 'url'>;
 
 export const RdsIcon = (props: RdsIconProps) => {
@@ -29,7 +29,7 @@ export const RdsIcon = (props: RdsIconProps) => {
   if (!(name in RdsIconId)) {
     return null;
   }
-  const Icon = IconComps[name as keyof typeof RdsIconId];
+  const Icon = IconComps[name as RdsIconIdKey];
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>

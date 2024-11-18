@@ -4,10 +4,10 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { MouseEvent } from 'react';
 
-export const joinId = (content: string | keyof typeof RdsIconId) => content.split(' ').join('-');
+export const joinId = (content: string | RdsIconIdKey) => content.split(' ').join('-');
 
 export const getToggleFocusHandlers = (setState: React.Dispatch<React.SetStateAction<boolean>>) => ({
   onFocus: () => {

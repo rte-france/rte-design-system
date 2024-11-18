@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { tagListClassBuilder } from './tagListClassBuilder.ts';
@@ -19,7 +19,7 @@ import { useRdsId } from '@/hooks/index.ts';
 
 type RdsTagListProps = {
   tags: string[];
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   tooltipText?: string;
   onDelete?: (tag: string) => void;
   id?: string;

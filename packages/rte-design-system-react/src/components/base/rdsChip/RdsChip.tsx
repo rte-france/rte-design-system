@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconId, RdsIconIdKey } from '@/utils/index.ts';
 import { MouseEventHandler } from 'react';
 import { chipClassBuilder } from './chipClassBuilder.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
@@ -16,7 +16,7 @@ export type RdsChipProps = {
   id?: string;
   status?: ChipStatus;
   label?: string;
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   onClick?: (e: React.MouseEvent<HTMLSpanElement> | React.KeyboardEvent<HTMLSpanElement>) => void;
   onClose?: MouseEventHandler<HTMLButtonElement>;
 };

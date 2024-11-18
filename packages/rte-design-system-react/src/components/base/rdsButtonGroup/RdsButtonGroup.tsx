@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { RdsButton } from '../rdsButton/RdsButton.tsx';
 
 export type ButtonGroupVariant = 'contained' | 'outlined';
@@ -13,7 +13,7 @@ export type ButtonGroupSize = 'medium' | 'small';
 export interface LimitedRdsButtonProps {
   label: string;
   disabled?: boolean;
-  startIcon?: keyof typeof RdsIconId;
+  startIcon?: RdsIconIdKey;
 }
 
 export const RdsButtonGroup = (props: LimitedRdsButtonProps) => (

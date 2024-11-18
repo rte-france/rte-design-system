@@ -5,7 +5,7 @@
  */
 
 import { Link } from 'react-router-dom';
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { IconButtonSize, IconButtonVariant } from '../rdsIconButton/RdsIconButton.tsx';
 import { iconButtonClassBuilder } from '../rdsIconButton/iconButtonClassBuilder.ts';
 
@@ -23,7 +23,7 @@ export type RdsLinkIconButtonProps = {
   href: string;
   location: 'internal' | 'external';
   targetBlank?: boolean;
-  icon: keyof typeof RdsIconId;
+  icon: RdsIconIdKey;
   size?: IconButtonSize;
   variant?: IconButtonVariant;
   disabled?: boolean;

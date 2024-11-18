@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { clsx } from 'clsx';
 import { MouseEventHandler } from 'react';
 import { ChipStatus } from './RdsChip.tsx';
@@ -54,11 +54,7 @@ export const CHIP_PADDING_X = {
   paddingRightWithCloseButton: 'rds-pr-0.5',
 };
 
-const paddingChip = (
-  label?: string,
-  icon?: keyof typeof RdsIconId,
-  onClose?: MouseEventHandler<HTMLButtonElement>,
-): string => {
+const paddingChip = (label?: string, icon?: RdsIconIdKey, onClose?: MouseEventHandler<HTMLButtonElement>): string => {
   const paddingLeft = icon && !icon === !label ? CHIP_PADDING_X.paddingLeftWithIcon : CHIP_PADDING_X.paddingLeftDefault;
   const paddingRight = onClose ? CHIP_PADDING_X.paddingRightWithCloseButton : CHIP_PADDING_X.paddingRightDefault;
   return clsx(paddingLeft, paddingRight);
@@ -68,7 +64,7 @@ export const chipClassBuilder = (
   status: ChipStatus,
   isActive: boolean,
   label?: string,
-  icon?: keyof typeof RdsIconId,
+  icon?: RdsIconIdKey,
   onClick?: (e: React.MouseEvent<HTMLSpanElement> | React.KeyboardEvent<HTMLSpanElement>) => void,
   onClose?: MouseEventHandler<HTMLButtonElement>,
 ) => ({

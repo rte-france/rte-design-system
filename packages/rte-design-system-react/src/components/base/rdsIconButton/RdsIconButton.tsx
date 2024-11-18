@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { iconButtonClassBuilder } from './iconButtonClassBuilder.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
 import { TailwindColorClass, RotationOptionsType } from '@/types/index.ts';
@@ -14,7 +14,7 @@ export type IconButtonVariant = 'default' | 'danger' | 'white'; // White is temp
 export type IconButtonSize = 'extraSmall' | 'small' | 'medium';
 
 export interface RdsIconButtonProps {
-  icon: keyof typeof RdsIconId;
+  icon: RdsIconIdKey;
   size?: IconButtonSize;
   variant?: IconButtonVariant;
   disabled?: boolean;
