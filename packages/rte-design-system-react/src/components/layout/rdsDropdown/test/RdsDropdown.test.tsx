@@ -37,7 +37,7 @@ describe('RdsDropdown', () => {
     const list = generateFakeDropdownList(3);
     render(<RdsDropdown id={TEST_ID} items={list} />);
     expect(screen.getAllByRole('option').length).toBe(list.length);
-    expect(document.querySelector(`#${list[0].id}`)).toBeInTheDocument();
-    expect(screen.getByText(list[0].label)).toBeInTheDocument();
+    expect(document.querySelector(`#${list[0]?.id}`)).toBeInTheDocument();
+    expect(screen.getByText(list[0]!.label)).toBeInTheDocument();
   });
 });
