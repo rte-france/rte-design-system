@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { chipToggleClassBuilder } from './chipToggleClassBuilder.ts';
 import { RdsIcon } from '@/components/base/rdsIcon/RdsIcon.tsx';
 import { ChipStatus } from '@/components/base/rdsChip/RdsChip.tsx';
@@ -16,7 +16,7 @@ export type RdsChipToggleProps = {
   value: string;
   status?: ChipStatus;
   label?: string;
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   onChange: (isChecked: boolean, value: string) => void;
 };
 

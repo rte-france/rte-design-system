@@ -6,7 +6,7 @@
 
 import { Ref, forwardRef } from 'react';
 import { buttonClassBuilder, labelClassBuilder } from './buttonClassBuilder.ts';
-import { RdsIconId } from '@/utils/mappings/iconMaps.ts';
+import { RdsIconIdKey } from '@/utils/mappings/iconMaps.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
 import { useRdsId } from '@/hooks/index.ts';
 
@@ -24,7 +24,7 @@ export type RdsButtonProps = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   onKeydown?: (e: React.KeyboardEvent<HTMLButtonElement>) => void;
   id?: string;
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   position?: IconPosition;
 };
 

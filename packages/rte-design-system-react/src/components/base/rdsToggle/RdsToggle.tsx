@@ -9,13 +9,13 @@ import { ChangeEventHandler, useState } from 'react';
 import { toggleClassBuilder } from './toggleClassBuilder.ts';
 import { getToggleFocusHandlers, joinId } from './utils.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconId, RdsIconIdKey } from '@/utils/index.ts';
 
 export type ToggleItem = {
   id?: string;
   value?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
-  content: keyof typeof RdsIconId | string;
+  content: RdsIconIdKey | string;
 };
 
 export interface RdsToggleProps {

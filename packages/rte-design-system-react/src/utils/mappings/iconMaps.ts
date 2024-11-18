@@ -374,7 +374,9 @@ export const RdsIconId = {
   KeyboardDoubleArrowUp: 'KeyboardDoubleArrowUp',
 } as const;
 
-export const IconComps: Record<keyof typeof RdsIconId, LazyExoticComponent<(props: IconProps) => JSX.Element>> = {
+export type RdsIconIdKey = keyof typeof RdsIconId;
+
+export const IconComps: Record<RdsIconIdKey, LazyExoticComponent<(props: IconProps) => JSX.Element>> = {
   [RdsIconId.KeyboardDoubleArrowDownward]: KeyboardDoubleArrowDownward,
   [RdsIconId.ArrowCircleDown]: ArrowCircleDown,
   [RdsIconId.ArrowCircleUp]: ArrowCircleUp,
@@ -499,7 +501,7 @@ export const IconComps: Record<keyof typeof RdsIconId, LazyExoticComponent<(prop
   [RdsIconId.Width]: Width,
 };
 
-export type IconToggle = [keyof typeof RdsIconId, keyof typeof RdsIconId];
+export type IconToggle = [RdsIconIdKey, RdsIconIdKey];
 
 export const rdsFavoriteIcon: Record<string, IconToggle> = {
   star: [RdsIconId.Star, RdsIconId.StarFilled],

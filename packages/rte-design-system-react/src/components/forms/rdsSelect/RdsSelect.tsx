@@ -5,7 +5,7 @@
  */
 
 import { useRdsId } from '@/hooks/index.ts';
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconId, RdsIconIdKey } from '@/utils/index.ts';
 import { selectClassBuilder } from './selectClassBuilder.ts';
 import { RdsButton, RdsIcon } from '@/components/base/index.ts';
 import { stopPropagation } from '@/utils/event/stopPropagation.ts';
@@ -20,7 +20,7 @@ type RdsSelectProps = {
   showLabel?: boolean;
   isActive?: boolean;
   id?: string;
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   displayValue?: string;
   onClick?: (e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void;
   onClear?: (e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>) => void;

@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { RdsIconId } from '@/utils/index.ts';
+import { RdsIconIdKey } from '@/utils/index.ts';
 import { clsx } from 'clsx';
 import { ChipStatus } from '@/components/base/rdsChip/RdsChip.tsx';
 
@@ -47,7 +47,7 @@ export const CHIP_TOOGLE_PADDING_X_CLASSES = {
   paddingDefault: 'rds-px-1.5',
 };
 
-const paddingChip = (label?: string, icon?: keyof typeof RdsIconId): string => {
+const paddingChip = (label?: string, icon?: RdsIconIdKey): string => {
   if ((icon && !label) || (!icon && label)) {
     return CHIP_TOOGLE_PADDING_X_CLASSES.paddingDefault;
   }
@@ -57,7 +57,7 @@ const paddingChip = (label?: string, icon?: keyof typeof RdsIconId): string => {
   return clsx(paddingLeft, CHIP_TOOGLE_PADDING_X_CLASSES.paddingRight);
 };
 
-export const chipToggleClassBuilder = (status: ChipStatus, label?: string, icon?: keyof typeof RdsIconId) => ({
+export const chipToggleClassBuilder = (status: ChipStatus, label?: string, icon?: RdsIconIdKey) => ({
   chipClasses: clsx(
     CHIP_TOOGLE_COMMON_CLASSES,
     CHIP_TOOGLE_COMMON_BORDER_CLASSES,

@@ -14,7 +14,7 @@ import {
   CHIP_STATUS_CLASSES,
   chipClassBuilder,
 } from '../chipClassBuilder.ts';
-import { noop, RdsIconId } from '@/utils/index.ts';
+import { noop, RdsIconId, RdsIconIdKey } from '@/utils/index.ts';
 
 const defaultConf = {
   status: 'primary',
@@ -27,7 +27,7 @@ const defaultConf = {
   status: ChipStatus;
   isActive: boolean;
   label?: string;
-  icon?: keyof typeof RdsIconId;
+  icon?: RdsIconIdKey;
   onClick?: (e: React.MouseEvent<HTMLSpanElement> | React.KeyboardEvent<HTMLSpanElement>) => void;
   onClose?: MouseEventHandler<HTMLButtonElement>;
 };
