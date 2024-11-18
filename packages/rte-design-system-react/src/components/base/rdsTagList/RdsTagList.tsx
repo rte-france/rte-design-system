@@ -63,11 +63,12 @@ export const RdsTagList = ({
       <div className={tagListClasses} ref={containerRef} role="list">
         {tags.map((tag, idx) => (
           <span
+            role="listitem"
             ref={(r) => (tagsRef.current[idx] = r)}
             className={idx >= tagsNumber ? 'rds-hidden' : ''}
             key={tag.toLowerCase()}
           >
-            <RdsTag label={tags[idx]} onDelete={onDelete ? () => onDelete(tag) : undefined} />
+            <RdsTag label={tags.at(idx) || ''} onDelete={onDelete ? () => onDelete(tag) : undefined} />
           </span>
         ))}
         <span className="rds-flex">

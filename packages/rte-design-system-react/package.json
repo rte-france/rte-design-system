@@ -37,12 +37,18 @@
     "preview": "vite preview",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {
+    "@floating-ui/react": "^0.26.28",
+    "@tanstack/react-query": "^5.60.5",
+    "@tanstack/react-table": "^8.20.5"
+  },
   "peerDependencies": {
     "clsx": "^2.1.1",
     "i18next": "^23.16.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-i18next": "^15.0.3"
+    "react-i18next": "^15.0.3",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@changesets/cli": "^1.2.0",
@@ -68,6 +74,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^15.0.3",
+    "react-router-dom": "^6.28.0",
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.5.3",

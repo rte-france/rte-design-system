@@ -45,7 +45,7 @@ const useTimeout = (callback: () => void, delay = 1000) => {
     set();
   }, [clear, set]);
 
-  return [reset, clear];
+  return { reset, clear };
 };
 
 export default useTimeout;

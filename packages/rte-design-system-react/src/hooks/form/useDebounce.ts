@@ -18,7 +18,7 @@ import useTimeout from './useTimeout.ts';
  */
 const useDebounce = (callback: () => void | Promise<void>, whatchingDependency: unknown, delay = 200) => {
   const callbackRef = useRef(callback);
-  const [reset, clear] = useTimeout(() => void callbackRef.current(), delay);
+  const { reset, clear } = useTimeout(() => void callbackRef.current(), delay);
 
   useEffect(() => {
     reset();

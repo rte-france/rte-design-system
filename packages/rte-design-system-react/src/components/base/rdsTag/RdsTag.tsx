@@ -20,7 +20,7 @@ export const RdsTag = ({ id: propsId, label, onDelete }: RdsTagProps) => {
   const id = useRdsId('tag', propsId);
 
   return (
-    <span className={tagClasses} id={id} role="listitem">
+    <span className={tagClasses} id={id}>
       <label className="rds-overflow-hidden rds-text-ellipsis rds-whitespace-pre rds-text-overnote">{label}</label>
       {onDelete && (
         <span className="rds-px-0.25">
