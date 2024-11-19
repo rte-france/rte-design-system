@@ -14,7 +14,7 @@ type OptionsActiveKeyboard = {
 };
 
 export const useActiveKeyboard = <T extends HTMLElement>(
-  handlerKeyup: (e: KeyboardEvent<T>) => void,
+  handlerKeyup: (e: KeyboardEvent<T>) => void = () => {},
   options: OptionsActiveKeyboard = {},
 ) => {
   const { id, interactiveKeyCodes } = options;
@@ -39,12 +39,10 @@ export const useActiveKeyboard = <T extends HTMLElement>(
     setIsActiveKeyboard(false);
   };
 
-  return [{ onKeyDown, onKeyUp, onBlur }, isActiveKeyboard] as [
-    {
-      onKeyDown: (e: React.KeyboardEvent<T>) => void;
-      onKeyUp: (e: React.KeyboardEvent<T>) => void;
-      onBlur: () => void;
-    },
-    boolean,
-  ];
+  return { onKeyDown, onKeyUp, onBlur, isActiveKeyboard } as {
+    onKeyDown: (e: React.KeyboardEvent<T>) => void;
+    onKeyUp: (e: React.KeyboardEvent<T>) => void;
+    onBlur: () => void;
+    isActiveKeyboard: boolean;
+  };
 };

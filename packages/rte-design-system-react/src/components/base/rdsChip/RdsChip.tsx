@@ -26,7 +26,9 @@ const CLOSE_ICON_SIZE = 12;
 
 export const RdsChip = ({ id: propsId, label, status = 'primary', icon, onClose, onClick }: RdsChipProps) => {
   const id = useRdsId('chip', propsId);
-  const [handlerKeyboardEvent, isActiveKeyboard] = useActiveKeyboard<HTMLSpanElement>((e) => onClick?.(e), { id });
+  const { onBlur, onKeyDown, onKeyUp, isActiveKeyboard } = useActiveKeyboard<HTMLSpanElement>((e) => onClick?.(e), {
+    id,
+  });
   const { labelClasses, chipClasses, closeButtonClasses } = chipClassBuilder(
     status,
     isActiveKeyboard,
@@ -43,7 +45,9 @@ export const RdsChip = ({ id: propsId, label, status = 'primary', icon, onClose,
       role="listitem"
       onClick={onClick}
       id={id}
-      {...handlerKeyboardEvent}
+      onBlur={onBlur}
+      onKeyDown={onKeyDown}
+      onKeyUp={onKeyUp}
     >
       {icon && <RdsIcon name={icon} width={CHIP_ICON_SIZE} height={CHIP_ICON_SIZE} />}
       {label && <span className={labelClasses}>{label}</span>}
