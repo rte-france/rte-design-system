@@ -43,7 +43,9 @@ export const RdsTabItem = ({
   button,
 }: RdsTabItemProps) => {
   const id = useRdsId('tbi', propsId);
-  const [handlerKeyboardEvent, isActiveKeyboard] = useActiveKeyboard<HTMLDivElement>(() => onClick?.(name), { id });
+  const { onBlur, onKeyDown, onKeyUp, isActiveKeyboard } = useActiveKeyboard<HTMLDivElement>(() => onClick?.(name), {
+    id,
+  });
   const { contentContainerClasses, borderClasses } = tabItemClassBuilder(
     tabType,
     isActiveKeyboard,
@@ -59,7 +61,9 @@ export const RdsTabItem = ({
         id={id}
         onClick={() => onClick(name)}
         tabIndex={disabled ? -1 : 0}
-        {...handlerKeyboardEvent}
+        onBlur={onBlur}
+        onKeyDown={onKeyDown}
+        onKeyUp={onKeyUp}
       >
         {icon && <RdsIcon name={icon} width={ICON_SIZE} height={ICON_SIZE} />}
         {label && <span className="whitespace-nowrap">{label}</span>}
