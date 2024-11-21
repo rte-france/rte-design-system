@@ -40,7 +40,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime', 'tailwindcss'],
+      external: ['react', 'react/jsx-runtime', 'react-router-dom'],
       input: Object.fromEntries(
         glob
           .sync('src/**/*.{ts,tsx}', {

@@ -4,6 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+import './index.css';
 export * from './assets/index.ts';
 export * from './components/index.ts';
 export * from './contexts/index.ts';

@@ -3,10 +3,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
-import { RouterProvider } from "react-router-dom";
-import { router } from "./routes";
-function App() {
-  return <RouterProvider router={router} fallbackElement={"Loading..."} />;
-}
 
-export default App;
+import { RdsIconId, RdsLinkIconButton } from "rte-design-system-react";
+
+export function RdsLinkIconButtonDemo() {
+  return <RdsLinkIconButton href="/" icon={RdsIconId.AltRoute} location="external" />;
+}
