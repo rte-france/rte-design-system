@@ -21,6 +21,7 @@ type DeepKeyOf<T> = (
 
 type DotPrefix<T extends string> = T extends '' ? '' : `-${T}`;
 
+export const NO_PREFIX = '';
 type ColorsObject = typeof tailwindConfig.theme.colors;
 export type TailwindColorClass = DeepKeyOf<ColorsObject>;
 

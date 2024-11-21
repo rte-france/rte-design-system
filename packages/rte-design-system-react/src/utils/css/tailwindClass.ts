@@ -10,10 +10,10 @@ import clsx from 'clsx';
 
 const addPseudoClass = (pseudoClass: PseudoClass) => (pseudoClass ? `${pseudoClass}:` : '');
 const addSuffix = (suffix: string) => (suffix ? `-${suffix}` : '');
-export const buildColorClass = (
-  prefix: TailwindPrefix,
-  pseudoClassMapper: Partial<Record<PseudoClass, TailwindColorClass>>,
-) => {
+
+export type PseudoClassColorMapper = Partial<Record<PseudoClass, TailwindColorClass>>;
+
+export const buildColorClass = (prefix: TailwindPrefix, pseudoClassMapper: PseudoClassColorMapper) => {
   return clsx(
     (Object.keys(pseudoClassMapper) as PseudoClass[]).map((pseudoClass) => {
       const color = pseudoClassMapper[pseudoClass];
