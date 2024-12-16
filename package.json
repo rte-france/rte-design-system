@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "type": "module",
   "workspaces": [
-    "packages/*",
+    "packages/rte-design-system-angular",
+    "packages/rte-design-system-react",
     "sites/*"
   ],
-
   "devDependencies": {
     "husky": "^9.1.6"
   },

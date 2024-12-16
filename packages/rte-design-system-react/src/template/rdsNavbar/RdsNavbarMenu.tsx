@@ -1,0 +1,26 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+import { MenuNavItem } from '@/types/template/menuNavItem.type.ts';
+import { ItemStyleConfig } from './navbar.type.tsx';
+import { RdsNavbarMenuItem } from './RdsNavbarMenuItem.tsx';
+
+type StdNavbarMenuProps = {
+  menuItems: MenuNavItem[];
+  expanded?: boolean;
+  itemsStyleConfig?: {
+    itemContent?: ItemStyleConfig;
+    itemBackground?: ItemStyleConfig;
+  };
+};
+
+export const RdsNavbarMenu = ({ menuItems, expanded = true, itemsStyleConfig = {} }: StdNavbarMenuProps) => (
+  <section>
+    {menuItems.map((item) => (
+      <RdsNavbarMenuItem item={item} key={item.key} expanded={expanded} itemsStyleConfig={itemsStyleConfig} />
+    ))}
+  </section>
+);

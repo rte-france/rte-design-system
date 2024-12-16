@@ -1,0 +1,26 @@
+{
+  "components": {
+    "popover": {
+      "@close": "Fermer"
+    },
+    "tags": {
+      "@tags": "Tags"
+    },
+    "pagination": {
+      "@resultsPerPage": "Résultats par page"
+    },
+    "tablePagination": {
+      "@of": "sur"
+    },
+    "fileInput": {
+      "@error": "Échec lors du téléversement du fichier"
+    },
+    "search": {
+      "@empty": "Aucun résultat.\n Veuillez modifier la recherche"
+    },
+    "navbar": {
+      "@expand": "Agrandir le menu",
+      "@minimize": "Réduire le menu"
+    }
+  }
+}

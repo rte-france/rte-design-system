@@ -1,0 +1,49 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.ts';
+
+<Meta of={ButtonStories} name="Doc fonctionnelle" />
+
+# Buttons
+
+Les boutons communiquent les actions que les utilisateurs peuvent effectuer tout au long d'une interface utilisateur.
+Ils doivent indiquer qu'ils peuvent déclencher une action. Ils doivent être faciles à trouver parmi d'autres éléments, y compris d'autres boutons.
+L'action et l'état d'un bouton doivent être clairs.
+
+## Types
+
+Boutons textes, filaires, pleins et toggles
+
+R.GO propose 4 types de boutons :
+
+- **Bouton Texte** (faible accentuation)
+  Les boutons de texte sont généralement utilisés pour des actions moins importantes.
+
+  <Canvas of={ButtonStories.Text} />
+
+- **Bouton filaire** (accent moyen)
+  Les boutons soulignés sont utilisés pour plus d'accentuation que les boutons de texte en raison du trait.
+
+  <Canvas of={ButtonStories.Outlined} />
+
+- **Bouton plein** (accentuation élevée)
+  Les boutons contenus sont plus accentués, car ils utilisent un remplissage et une ombre de couleur.
+
+  <Canvas of={ButtonStories.Contained} />
+
+- **Bouton à bascule** (toggle)
+  Les boutons à bascule regroupent un ensemble d'actions en utilisant la disposition et l'espacement. Ils sont moins utilisés que les autres types de boutons.
+
+## Boutons avec ou sans icône
+
+R.GO propose 2 types de boutons :
+
+- **Boutons neutres** (sans icône)
+  Les boutons de texte sont généralement utilisés pour des actions moins importantes.
+
+  <Canvas of={ButtonStories.Contained} />
+
+- **Bouton avec icône**
+  Les boutons soulignés sont utilisés pour plus d'accentuation que les boutons de texte en raison du trait.
+
+  <Canvas of={ButtonStories.ContainedWithIcon} />
