@@ -12,13 +12,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - working-directory: packages/rte-design-system-react 
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
-      - run: npm test
+      - name: Install dependencies
+        working-directory: packages/rte-design-system-react 
+        run: npm ci
+      - name: Run test
+        working-directory: packages/rte-design-system-react 
+        run: npm test
 
   publish-gpr:
     needs: build
@@ -27,13 +30,16 @@ jobs:
       contents: read
       packages: write
     steps:
-      - working-directory: packages/rte-design-system-react 
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+      - name: Install dependencies
+        working-directory: packages/rte-design-system-react 
+        run: npm ci
+      - name: Publish
+        working-directory: packages/rte-design-system-react 
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
