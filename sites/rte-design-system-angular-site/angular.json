@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "preserveSymlinks":false,
             "outputPath": "dist/rte-design-system-angular-site",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -91,5 +92,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

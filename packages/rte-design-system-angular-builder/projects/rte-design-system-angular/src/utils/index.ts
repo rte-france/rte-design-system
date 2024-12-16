@@ -4,4 +4,4 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-@import '../../../packages/rte-design-system-angular-builder/projects/rte-design-system-angular/src/style.css';
+export * from './css/index';
