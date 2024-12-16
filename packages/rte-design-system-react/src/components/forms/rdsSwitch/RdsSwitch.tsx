@@ -26,7 +26,7 @@ export interface RdsSwitchProps {
   disabled?: boolean;
 }
 
-const RdsSwitch = (props: RdsSwitchProps) => {
+export const RdsSwitch = (props: RdsSwitchProps) => {
   const { id: propsId, name, value, label, defaultChecked, checked, onChange, disabled, size = 'medium' } = props;
   const inputRef = useRef<HTMLInputElement>(null);
   const { setValue: setStateValue } = useInputFormState(checked, defaultChecked, onChange, (checkedStatus) => {
@@ -57,7 +57,7 @@ const RdsSwitch = (props: RdsSwitchProps) => {
         defaultChecked={checked}
         disabled={disabled}
       />
-      {label && <span className="sr-only">{label}</span>}
+      {label && <span className="rds-sr-only">{label}</span>}
       <div className={backgroundClasses} />
       <div className={slideClasses}>
         <div className={iconContainerClasses}>
@@ -67,5 +67,3 @@ const RdsSwitch = (props: RdsSwitchProps) => {
     </label>
   );
 };
-
-export default RdsSwitch;

@@ -5,25 +5,25 @@
  */
 
 import {
-  BUTTON_CLASSES,
-  COMMON_NUMBER_CLASSES,
-  NUMBER_CLASSES,
+  PAGINATION_BUTTON_CLASSES,
+  PAGINATION_COMMON_NUMBER_CLASSES,
+  PAGINATION_NUMBER_CLASSES,
   paginationButtonClassBuilder,
 } from '../paginationButtonClassBuilder.ts';
 
 describe('paginationButtonClassBuilder function', () => {
   it('should have button classes', () => {
-    expect(paginationButtonClassBuilder(true).buttonClasses).toBe(BUTTON_CLASSES);
-    expect(paginationButtonClassBuilder(false).buttonClasses).toBe(BUTTON_CLASSES);
+    expect(paginationButtonClassBuilder(true).buttonClasses).toBe(PAGINATION_BUTTON_CLASSES);
+    expect(paginationButtonClassBuilder(false).buttonClasses).toBe(PAGINATION_BUTTON_CLASSES);
   });
 
   it('should have the common number classes', () => {
-    expect(paginationButtonClassBuilder(true).numberClasses.includes(COMMON_NUMBER_CLASSES)).toBe(true);
-    expect(paginationButtonClassBuilder(false).numberClasses.includes(COMMON_NUMBER_CLASSES)).toBe(true);
+    expect(paginationButtonClassBuilder(true).numberClasses.includes(PAGINATION_COMMON_NUMBER_CLASSES)).toBe(true);
+    expect(paginationButtonClassBuilder(false).numberClasses.includes(PAGINATION_COMMON_NUMBER_CLASSES)).toBe(true);
   });
 
   it('should have the proper number active classes', () => {
-    expect(paginationButtonClassBuilder(true).numberClasses.includes(NUMBER_CLASSES.active)).toBe(true);
-    expect(paginationButtonClassBuilder(false).numberClasses.includes(NUMBER_CLASSES.default)).toBe(true);
+    expect(paginationButtonClassBuilder(true).numberClasses.includes(PAGINATION_NUMBER_CLASSES.active)).toBe(true);
+    expect(paginationButtonClassBuilder(false).numberClasses.includes(PAGINATION_NUMBER_CLASSES.default)).toBe(true);
   });
 });

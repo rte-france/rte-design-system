@@ -8,7 +8,6 @@ import { useRdsId } from '@/hooks/index.ts';
 import { navbarClassBuilder } from './navbarClassBuilder.ts';
 import { NO_PREFIX } from '@/types/TailwindColorClass.type.ts';
 import { PropsWithChildren, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { MenuNavItem } from '@/types/template/menuNavItem.type.ts';
 import { NavbarConfig } from './navbar.type.tsx';
 import { RdsNavbarTextHeader } from './RdsNavbarTextHeader.tsx';
@@ -17,6 +16,7 @@ import { NavbarContext } from './navbarContext.ts';
 import { RdsDivider } from '@/components/layout/rdsDivider/RdsDivider.tsx';
 import { RdsNavbarMenu } from './RdsNavbarMenu.tsx';
 import { RdsNavbarController } from './RdsNavbarController.tsx';
+import i18n from '@/i18n.ts';
 
 export type RdsNavbarProps = {
   topItems: MenuNavItem[];
@@ -34,7 +34,6 @@ export const RdsNavbar = ({
   children,
 }: PropsWithChildren<RdsNavbarProps>) => {
   const [expanded, setExpanded] = useState(true);
-  const { t } = useTranslation();
 
   const toggleExpanded = () => {
     setExpanded((oldExpanded) => !oldExpanded);
@@ -47,7 +46,7 @@ export const RdsNavbar = ({
   const id = useRdsId('navbar', propsId);
   const controllerId = `${id}-controller`;
   const headerId = `${id}-header`;
-  const controllerLabel = expanded ? t('components.navbar.@minimize') : t('components.navbar.@expand');
+  const controllerLabel = expanded ? i18n.t('components.navbar.@minimize') : i18n.t('components.navbar.@expand');
 
   return (
     <nav className={navbarClasses} id={id} aria-label={config.header.appName}>

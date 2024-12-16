@@ -7,45 +7,46 @@
 import { clsx } from 'clsx';
 import { SwitchSize } from './RdsSwitch.tsx';
 
-export const COMMON_BG_CLASSES = 'peer bg-gray-300';
+export const COMMON_BG_CLASSES = 'rds-peer rds-bg-gray-300';
 
 export const ENABLED_BG_CLASSES =
-  'peer-checked:bg-primary-600 group-hover:bg-gray-400 group-hover:peer-checked:bg-primary-700 group-active:bg-gray-500 group-active:peer-checked:bg-primary-800';
-export const DISABLED_BG_CLASSES = 'cursor-not-allowed peer-checked:bg-primary-100';
+  'peer-checked:rds-bg-primary-600 group-hover:rds-bg-gray-400 group-hover:peer-checked:rds-bg-primary-700 group-active:rds-bg-gray-500 group-active:peer-checked:rds-bg-primary-800';
+export const DISABLED_BG_CLASSES = 'rds-cursor-not-allowed peer-checked:rds-bg-primary-100';
 
 export const BG_FOCUS_CLASSES =
-  'peer-focus-visible:outline peer-focus-visible:outline-1 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-900 peer-focus-visible:peer-checked:outline-primary-900';
+  'peer-focus-visible:rds-outline peer-focus-visible:rds-outline-1 peer-focus-visible:rds-outline-offset-2 peer-focus-visible:rds-outline-gray-900 peer-focus-visible:peer-checked:rds-outline-primary-900';
 
-const COMMON_LABEL_CLASSES = 'group relative inline-flex cursor-pointer items-center';
-const COMMON_INPUT_CLASSES = 'peer sr-only';
+const COMMON_LABEL_CLASSES = 'rds-group rds-relative rds-inline-flex rds-cursor-pointer rds-items-center';
+const COMMON_INPUT_CLASSES = 'rds-peer rds-sr-only';
 
 export const COMMON_SLIDE_CLASSES =
-  'peer absolute start-[-1px] border-1 box-content border bg-gray-w peer-checked:[&_div]:visible ease-out duration-300 transition-all';
+  'rds-peer rds-absolute rds-start-[-1px] rds-border-1 rds-box-content rds-border rds-bg-gray-w peer-checked:[&_div]:rds-visible rds-ease-out rds-duration-300 rds-transition-all';
 export const ENABLED_SLIDE_UNCHECKED_CLASSES =
-  'border-gray-500 group-hover:border-gray-600 group-active:border-gray-700';
-export const DISABLED_SLIDE_UNCHECKED_CLASSES = 'border-gray-300 bg-gray-100 cursor-default cursor-not-allowed';
+  'rds-border-gray-500 group-hover:rds-border-gray-600 group-active:rds-border-gray-700';
+export const DISABLED_SLIDE_UNCHECKED_CLASSES = 'rds-border-gray-300 rds-bg-gray-100 rds-cursor-not-allowed';
 
 export const ENABLED_SLIDE_CHECKED_CLASSES =
-  'text-primary-700 group-hover:peer-checked:text-primary-800 group-active:peer-checked:text-primary-900 group-hover:peer-checked:border-primary-800 group-active:peer-checked:border-primary-900 peer-checked:border-primary-700';
+  'rds-text-primary-700 group-hover:peer-checked:rds-text-primary-800 group-active:peer-checked:rds-text-primary-900 group-hover:peer-checked:rds-border-primary-800 group-active:peer-checked:rds-border-primary-900 peer-checked:rds-border-primary-700';
 export const DISABLED_SLIDE_CHECKED_CLASSES =
-  'peer-checked:border-primary-200 peer-checked:text-primary-200 peer-checked:bg-gray-w cursor-not-allowed';
+  'peer-checked:rds-border-primary-200 peer-checked:rds-text-primary-200 peer-checked:rds-bg-gray-w rds-cursor-not-allowed';
 
-export const COMMON_CHECK_CONTAINER_CLASSES = 'invisible flex justify-center items-center';
+export const COMMON_CHECK_CONTAINER_CLASSES = 'rds-invisible rds-flex rds-justify-center rds-items-center';
 
 export const BG_CLASSES = {
-  small: 'w-4 h-1.5 rounded',
-  medium: 'w-5 h-2 rounded-md',
+  small: 'rds-w-4 rds-h-1.5 rds-rounded',
+  medium: 'rds-w-5 rds-h-2 rds-rounded-md',
 };
 
 export const SLIDE_CLASSES = {
-  small: 'rounded peer-checked:translate-x-2.5 shadow-switch-unchecked-small peer-checked:shadow-switch-checked-small',
+  small:
+    'rds-rounded peer-checked:rds-translate-x-2.5 rds-shadow-switch-unchecked-small peer-checked:rds-shadow-switch-checked-small',
   medium:
-    'rounded-md peer-checked:translate-x-3 shadow-switch-unchecked-medium peer-checked:shadow-switch-checked-medium',
+    'rds-rounded-md peer-checked:rds-translate-x-3 rds-shadow-switch-unchecked-medium peer-checked:rds-shadow-switch-checked-medium',
 };
 
 export const ICON_CONTAINER_CLASSES = {
-  small: 'w-1.5 h-1.5',
-  medium: 'w-2 h-2',
+  small: 'rds-w-1.5 rds-h-1.5',
+  medium: 'rds-w-2 rds-h-2',
 };
 
 export const ICON_SIZE: Record<string, number> = {

@@ -40,7 +40,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime', 'tailwindcss'],
+      external: ['react', 'react/jsx-runtime', 'tailwindcss', 'react-router-dom'],
       input: Object.fromEntries(
         glob
           .sync('src/**/*.{ts,tsx}', {
@@ -58,7 +58,11 @@ export default defineConfig({
       output: {
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
-        globals: { react: 'React', 'react/jsx-runtime': 'jsx', tailwindcss: 'tailwindcss' },
+        globals: {
+          react: 'React',
+          'react/jsx-runtime': 'jsx',
+          tailwindcss: 'tailwindcss',
+        },
       },
     },
 

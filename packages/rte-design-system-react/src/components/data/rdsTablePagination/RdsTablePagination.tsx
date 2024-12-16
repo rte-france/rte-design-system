@@ -6,8 +6,8 @@
 
 import { RdsButton } from '@/components/base/index.ts';
 import { useRdsId } from '@/hooks/index.ts';
+import i18n from '@/i18n.ts';
 import { RdsIconId } from '@/utils/index.ts';
-import { useTranslation } from 'react-i18next';
 
 export type RdsTablePaginationProps = {
   id?: string;
@@ -24,7 +24,6 @@ export const RdsTablePagination = ({
   current,
   onChange,
 }: RdsTablePaginationProps) => {
-  const { t } = useTranslation();
   const id = useRdsId('table-pagination', propsId);
 
   const intervalStart = current * intervalSize + 1;
@@ -41,7 +40,7 @@ export const RdsTablePagination = ({
   return (
     <div className="flex items-center gap-2" id={id} role="navigation">
       <label className="text-overnote font-semibold">
-        {intervalStart}-{intervalEnd} {t('components.tablePagination.@of')} {count}
+        {intervalStart}-{intervalEnd} {i18n.t('components.tablePagination.@of')} {count}
       </label>
       <div className="flex items-center gap-2">
         <RdsButton

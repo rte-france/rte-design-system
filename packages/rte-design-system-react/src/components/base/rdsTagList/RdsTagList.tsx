@@ -6,7 +6,6 @@
 
 import { RdsIconIdKey } from '@/utils/index.ts';
 import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { tagListClassBuilder } from './tagListClassBuilder.ts';
 import { RdsIcon } from '../rdsIcon/RdsIcon.tsx';
 import { RdsTag } from '../rdsTag/RdsTag.tsx';
@@ -16,6 +15,7 @@ import { countMaxItemsToFitInContainer } from '@/utils/common/dom/displayUtils.t
 import { RdsTextTooltip } from '@/components/layout/rdsTextTooltip/RdsTextTooltip.tsx';
 import { RdsPopover } from '@/components/layout/rdsPopover/RdsPopover.tsx';
 import { useRdsId } from '@/hooks/index.ts';
+import i18n from '@/i18n.ts';
 
 type RdsTagListProps = {
   tags: string[];
@@ -37,7 +37,6 @@ export const RdsTagList = ({
   onDelete,
   autoExpends = false,
 }: RdsTagListProps) => {
-  const { t } = useTranslation();
   const [isReady, setIsReady] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const tagsRef = useRef<(HTMLSpanElement | null)[]>([]);
@@ -54,9 +53,9 @@ export const RdsTagList = ({
   }, [tags, autoExpends]);
 
   return (
-    <div id={id} className="rds-flex rds-h-full rds-w-full rds-gap-1">
+    <div id={id} className="rds-flex rds-grow rds-basis-full">
       {icon && (
-        <RdsTextTooltip text={tooltipText ?? t('components.tags.@tags')}>
+        <RdsTextTooltip text={tooltipText ?? i18n.t('components.tags.@tags')}>
           <RdsIcon name={icon} width={ICON_SIZE} height={ICON_SIZE} color="gray-700" />
         </RdsTextTooltip>
       )}
@@ -85,7 +84,7 @@ export const RdsTagList = ({
                   color="secondary"
                   variant="outlined"
                   size="extraSmall"
-                  label={`+ ${isReady ? tags.length - tagsNumber : '00000'}`}
+                  label={`+ ${isReady ? tags.length - tagsNumber : '0'}`}
                   id={`${id}-popover-trigger`}
                 />
               </RdsPopover.Trigger>
@@ -98,7 +97,7 @@ export const RdsTagList = ({
               </RdsPopover.Content>
               <RdsPopover.Footer>
                 <RdsButton
-                  label={t('components.popover.@close')}
+                  label={i18n.t('components.popover.@close')}
                   size="extraSmall"
                   onClick={() => setShowPopover(false)}
                   id={`${id}-popover-close`}

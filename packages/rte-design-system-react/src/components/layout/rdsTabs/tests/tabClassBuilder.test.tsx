@@ -6,18 +6,18 @@
 
 import { RdsIconId } from '@/utils/index.ts';
 import {
-  ACTIVE_CLASSES,
-  BORDER_CLASSES,
-  COMMON_BORDER_CLASSES,
-  COMMON_CONTENT_CONTAINER_CLASSES,
+  TAB_ACTIVE_CLASSES,
+  TAB_BORDER_CLASSES,
+  TAB_COMMON_BORDER_CLASSES,
+  TAB_COMMON_CONTENT_CONTAINER_CLASSES,
   COMMON_LIST_BUTTON_CLASSES,
-  CONTENT_CONTAINER_CLASSES,
-  DISABLED_CLASSES,
-  ENABLED_CLASSES,
-  KEYBOARD_ACTIVE_CLASSES,
-  KEYBOARD_BORDER_ACTIVE_CLASSES,
-  PADDING_X,
-  PADDING_Y,
+  TAB_CONTENT_CONTAINER_CLASSES,
+  TAB_DISABLED_CLASSES,
+  TAB_ENABLED_CLASSES,
+  TAB_KEYBOARD_ACTIVE_CLASSES,
+  TAB_KEYBOARD_BORDER_ACTIVE_CLASSES,
+  TAB_PADDING_X,
+  TAB_PADDING_Y,
   PRIMARY_BORDER_BUTTON_CLASSES,
   tabItemClassBuilder,
   tabListClassBuilder,
@@ -56,80 +56,96 @@ describe('tabListClassBuilder function', () => {
 describe('tabItemClassBuilder function', () => {
   it('should have the common classes', () => {
     expect(
-      tabItemClassBuilder('primary', false).contentContainerClasses.includes(COMMON_CONTENT_CONTAINER_CLASSES),
+      tabItemClassBuilder('primary', false).contentContainerClasses.includes(TAB_COMMON_CONTENT_CONTAINER_CLASSES),
     ).toBe(true);
     expect(
-      tabItemClassBuilder('secondary', false).contentContainerClasses.includes(COMMON_CONTENT_CONTAINER_CLASSES),
+      tabItemClassBuilder('secondary', false).contentContainerClasses.includes(TAB_COMMON_CONTENT_CONTAINER_CLASSES),
     ).toBe(true);
   });
 
   it('should have the proper border and rounded classes', () => {
     expect(
-      tabItemClassBuilder('primary', false).contentContainerClasses.includes(CONTENT_CONTAINER_CLASSES.primary),
+      tabItemClassBuilder('primary', false).contentContainerClasses.includes(TAB_CONTENT_CONTAINER_CLASSES.primary),
     ).toBe(true);
     expect(
-      tabItemClassBuilder('secondary', false).contentContainerClasses.includes(CONTENT_CONTAINER_CLASSES.secondary),
+      tabItemClassBuilder('secondary', false).contentContainerClasses.includes(TAB_CONTENT_CONTAINER_CLASSES.secondary),
     ).toBe(true);
 
-    expect(tabItemClassBuilder('primary', false).borderClasses.includes(COMMON_BORDER_CLASSES)).toBe(true);
+    expect(tabItemClassBuilder('primary', false).borderClasses.includes(TAB_COMMON_BORDER_CLASSES)).toBe(true);
   });
 
   it('should have the proper primary padding classes', () => {
-    expect(tabItemClassBuilder('primary', false).contentContainerClasses.includes(PADDING_X.paddingWithText)).toBe(
+    expect(tabItemClassBuilder('primary', false).contentContainerClasses.includes(TAB_PADDING_X.paddingWithText)).toBe(
       true,
     );
     expect(
-      tabItemClassBuilder('primary', false, RdsIconId.Add).contentContainerClasses.includes(PADDING_X.paddingWithIcon),
+      tabItemClassBuilder('primary', false, RdsIconId.Add).contentContainerClasses.includes(
+        TAB_PADDING_X.paddingWithIcon,
+      ),
     ).toBe(true);
-    expect(tabItemClassBuilder('primary', false).contentContainerClasses.includes(PADDING_Y.primary)).toBe(true);
+    expect(tabItemClassBuilder('primary', false).contentContainerClasses.includes(TAB_PADDING_Y.primary)).toBe(true);
   });
 
   it('should have the proper secondary padding classes', () => {
-    expect(tabItemClassBuilder('secondary', false).contentContainerClasses.includes(PADDING_X.paddingWithText)).toBe(
-      true,
-    );
+    expect(
+      tabItemClassBuilder('secondary', false).contentContainerClasses.includes(TAB_PADDING_X.paddingWithText),
+    ).toBe(true);
     expect(
       tabItemClassBuilder('secondary', false, RdsIconId.Add).contentContainerClasses.includes(
-        PADDING_X.paddingWithIcon,
+        TAB_PADDING_X.paddingWithIcon,
       ),
     ).toBe(true);
-    expect(tabItemClassBuilder('secondary', false).contentContainerClasses.includes(PADDING_Y.secondary)).toBe(true);
+    expect(tabItemClassBuilder('secondary', false).contentContainerClasses.includes(TAB_PADDING_Y.secondary)).toBe(
+      true,
+    );
   });
 
   it('should have the proper active classes', () => {
     expect(
-      tabItemClassBuilder('primary', false, undefined, true).contentContainerClasses.includes(ACTIVE_CLASSES.active),
-    ).toBe(true);
-    expect(tabItemClassBuilder('primary', false, undefined, true).borderClasses.includes(BORDER_CLASSES.active)).toBe(
-      true,
-    );
-
-    expect(
-      tabItemClassBuilder('primary', false, undefined, false).contentContainerClasses.includes(ACTIVE_CLASSES.inactive),
+      tabItemClassBuilder('primary', false, undefined, true).contentContainerClasses.includes(
+        TAB_ACTIVE_CLASSES.active,
+      ),
     ).toBe(true);
     expect(
-      tabItemClassBuilder('primary', false, undefined, false).borderClasses.includes(BORDER_CLASSES.inactive),
+      tabItemClassBuilder('primary', false, undefined, true).borderClasses.includes(TAB_BORDER_CLASSES.active),
     ).toBe(true);
 
     expect(
-      tabItemClassBuilder('secondary', false, undefined, true).contentContainerClasses.includes(ACTIVE_CLASSES.active),
+      tabItemClassBuilder('primary', false, undefined, false).contentContainerClasses.includes(
+        TAB_ACTIVE_CLASSES.inactive,
+      ),
+    ).toBe(true);
+    expect(
+      tabItemClassBuilder('primary', false, undefined, false).borderClasses.includes(TAB_BORDER_CLASSES.inactive),
+    ).toBe(true);
+
+    expect(
+      tabItemClassBuilder('secondary', false, undefined, true).contentContainerClasses.includes(
+        TAB_ACTIVE_CLASSES.active,
+      ),
     ).toBe(true);
     expect(
       tabItemClassBuilder('secondary', false, undefined, false).contentContainerClasses.includes(
-        ACTIVE_CLASSES.inactive,
+        TAB_ACTIVE_CLASSES.inactive,
       ),
     ).toBe(true);
   });
   it('should have the proper keyboad active classes', () => {
-    expect(tabItemClassBuilder('primary', true).contentContainerClasses.includes(KEYBOARD_ACTIVE_CLASSES)).toBe(true);
-    expect(tabItemClassBuilder('secondary', true).contentContainerClasses.includes(KEYBOARD_ACTIVE_CLASSES)).toBe(true);
-    expect(tabItemClassBuilder('primary', true).borderClasses.includes(KEYBOARD_BORDER_ACTIVE_CLASSES)).toBe(true);
+    expect(tabItemClassBuilder('primary', true).contentContainerClasses.includes(TAB_KEYBOARD_ACTIVE_CLASSES)).toBe(
+      true,
+    );
+    expect(tabItemClassBuilder('secondary', true).contentContainerClasses.includes(TAB_KEYBOARD_ACTIVE_CLASSES)).toBe(
+      true,
+    );
+    expect(tabItemClassBuilder('primary', true).borderClasses.includes(TAB_KEYBOARD_BORDER_ACTIVE_CLASSES)).toBe(true);
 
-    expect(tabItemClassBuilder('primary', false).contentContainerClasses.includes(KEYBOARD_ACTIVE_CLASSES)).toBe(false);
-    expect(tabItemClassBuilder('secondary', false).contentContainerClasses.includes(KEYBOARD_ACTIVE_CLASSES)).toBe(
+    expect(tabItemClassBuilder('primary', false).contentContainerClasses.includes(TAB_KEYBOARD_ACTIVE_CLASSES)).toBe(
       false,
     );
-    expect(tabItemClassBuilder('primary', false).borderClasses.includes(` ${KEYBOARD_BORDER_ACTIVE_CLASSES}`)).toBe(
+    expect(tabItemClassBuilder('secondary', false).contentContainerClasses.includes(TAB_KEYBOARD_ACTIVE_CLASSES)).toBe(
+      false,
+    );
+    expect(tabItemClassBuilder('primary', false).borderClasses.includes(` ${TAB_KEYBOARD_BORDER_ACTIVE_CLASSES}`)).toBe(
       false,
     );
   });
@@ -137,33 +153,33 @@ describe('tabItemClassBuilder function', () => {
   it('should have the proper disabled classes', () => {
     expect(
       tabItemClassBuilder('primary', true, undefined, undefined, true).contentContainerClasses.includes(
-        DISABLED_CLASSES,
+        TAB_DISABLED_CLASSES,
       ),
     ).toBe(true);
     expect(
       tabItemClassBuilder('secondary', true, undefined, undefined, true).contentContainerClasses.includes(
-        DISABLED_CLASSES,
+        TAB_DISABLED_CLASSES,
       ),
     ).toBe(true);
     expect(
       tabItemClassBuilder('primary', true, undefined, undefined, true).borderClasses.includes(
-        ` ${BORDER_CLASSES.disabled}`,
+        ` ${TAB_BORDER_CLASSES.disabled}`,
       ),
     ).toBe(true);
 
     expect(
       tabItemClassBuilder('primary', true, undefined, undefined, true).contentContainerClasses.includes(
-        ENABLED_CLASSES,
+        TAB_ENABLED_CLASSES,
       ),
     ).toBe(false);
     expect(
       tabItemClassBuilder('secondary', true, undefined, undefined, true).contentContainerClasses.includes(
-        ENABLED_CLASSES,
+        TAB_ENABLED_CLASSES,
       ),
     ).toBe(false);
     expect(
       tabItemClassBuilder('primary', true, undefined, undefined, true).borderClasses.includes(
-        ` ${BORDER_CLASSES.inactive}`,
+        ` ${TAB_BORDER_CLASSES.inactive}`,
       ),
     ).toBe(false);
   });

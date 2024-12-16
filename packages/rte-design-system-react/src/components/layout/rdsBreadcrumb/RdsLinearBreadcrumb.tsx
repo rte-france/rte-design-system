@@ -10,7 +10,7 @@ import { RdsBreadcrumbSeparator } from './RdsBreadcrumbSeparator.tsx';
 
 export const RdsLinearBreadcrumb = ({ items }: { items: BreadcrumbItem[] }) =>
   items.map((item, index) => (
-    <div key={item.key} className="flex gap-0.5 align-middle">
+    <div key={item.key} className="rds-flex rds-gap-0.5 rds-align-middle">
       {index ? <RdsBreadcrumbSeparator /> : ''}
       <RdsBreadcrumbItem label={item.label} target={item.target} id={item.id} />
     </div>

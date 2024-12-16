@@ -9,7 +9,7 @@ import { ModalProvider } from '@/providers/modalProvider.tsx';
 import { render, screen } from '@testing-library/react';
 import { PropsWithChildren } from 'react';
 import { RdsModalOpener } from '../RdsModalOpener.tsx';
-import RdsModal from '../RdsModal.tsx';
+import { RdsModal } from '../RdsModal.tsx';
 
 const TEST_TEXT = 'My component wrapped in the modal';
 const TEST_COMPONENT = <span role="article">{TEST_TEXT}</span>;

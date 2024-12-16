@@ -7,9 +7,9 @@
 import { clsx } from 'clsx';
 import { HeadingSize, HeadingWeight } from './RdsHeading.tsx';
 
-export const COMMON_CLASSES = 'rds-mb-0.5 rds-text-left';
+export const HEADING_COMMON_CLASSES = 'rds-mb-0.5 rds-text-left';
 
-export const SIZE_CLASSES = {
+export const HEADING_SIZE_CLASSES = {
   xl: 'rds-text-heading-xl',
   l: 'rds-text-heading-l',
   m: 'rds-text-heading-m',
@@ -17,11 +17,11 @@ export const SIZE_CLASSES = {
   xs: 'rds-text-heading-xs',
 };
 
-export const WEIGHT_CLASSES = {
+export const HEADING_WEIGHT_CLASSES = {
   semibold: 'rds-font-semibold',
 };
 
 export const headingClassBuilder = (size: HeadingSize, weight: HeadingWeight) =>
   weight === 'regular'
-    ? clsx(COMMON_CLASSES, SIZE_CLASSES[size])
-    : clsx(COMMON_CLASSES, SIZE_CLASSES[size], WEIGHT_CLASSES[weight]);
+    ? clsx(HEADING_COMMON_CLASSES, HEADING_SIZE_CLASSES[size])
+    : clsx(HEADING_COMMON_CLASSES, HEADING_SIZE_CLASSES[size], HEADING_WEIGHT_CLASSES[weight]);

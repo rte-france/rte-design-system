@@ -4,7 +4,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import { useNavigate } from 'react-router-dom';
 import { RdsFloatingWrapper } from '../rdsFloatingWrapper/RdsFloatingWrapper.tsx';
 import { useRdsId } from '@/hooks/index.ts';
 import { RdsLinearBreadcrumb } from './RdsLinearBreadcrumb.tsx';
@@ -28,7 +27,7 @@ type RdsBreadcrumbProps = {
 const { Trigger, Element } = RdsFloatingWrapper;
 
 export const RdsBreadcrumb = ({ items, id: propsId }: RdsBreadcrumbProps) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const id = useRdsId('breadcrumb', propsId);
 
@@ -45,14 +44,14 @@ export const RdsBreadcrumb = ({ items, id: propsId }: RdsBreadcrumbProps) => {
     key: item.key,
     label: item.label,
     value: item.label,
-    onItemClick: () => navigate(item.target),
+    onItemClick: () => {}, //navigate(item.target),
   }));
 
   return (
-    <div id={id} className="flex items-center align-middle">
+    <div id={id} className="rds-flex rds-items-center rds-align-middle">
       <RdsFloatingWrapper placement="bottom-start" autoClose offset={3}>
         <Trigger>
-          <div className="flex items-center">
+          <div className="rds-flex rds-items-center">
             <RdsButton variant="transparent" size="small" color="secondary" icon={RdsIconId.MoreHoriz} />
           </div>
         </Trigger>

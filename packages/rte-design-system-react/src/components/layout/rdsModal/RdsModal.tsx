@@ -33,7 +33,7 @@ export const RdsModalComponent = ({ onClose, size, children = undefined, id: pro
     <RdsModalWrapper onClose={onClose}>
       <div className={modalClassBuilder(size)} id={id}>
         {LateralContentComponent}
-        <div className="flex grow flex-col gap-2">
+        <div className="rds-flex rds-grow rds-flex-col rds-gap-2">
           {TitleComponent}
           {ContentComponent}
           {FooterComponent}
@@ -43,11 +43,9 @@ export const RdsModalComponent = ({ onClose, size, children = undefined, id: pro
   );
 };
 
-const RdsModal = Object.assign(RdsModalComponent, {
+export const RdsModal = Object.assign(RdsModalComponent, {
   Title: RdsModalTitle,
   Content: RdsModalContent,
   LateralContent: RdsModalLateralContent,
   Footer: RdsModalFooter,
 });
-
-export default RdsModal;

@@ -7,7 +7,7 @@
 import { render, screen } from '@testing-library/react';
 import { RdsTabItem } from '../RdsTabItem.tsx';
 import { RdsTabs } from '../RdsTabs.tsx';
-import { ACTIVE_CLASSES, DISABLED_CLASSES } from '../tabClassBuilder.tsx';
+import { TAB_ACTIVE_CLASSES, TAB_DISABLED_CLASSES } from '../tabClassBuilder.tsx';
 import { buildSecondaryTabsState } from '../utils.ts';
 import { tabsGenerator } from '../tabsGenerator/tabsGenerator.ts';
 import { generateFakeTabItems } from '@/tests/mocks/tabs.mock.ts';
@@ -71,7 +71,7 @@ describe('RdsTabs', () => {
       />,
     );
     const tabItems = screen.getAllByRole('tab');
-    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(ACTIVE_CLASSES.active)).toBe(
+    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(TAB_ACTIVE_CLASSES.active)).toBe(
       true,
     );
   });
@@ -104,11 +104,11 @@ describe('RdsTabs', () => {
       />,
     );
     const tabItems = screen.getAllByRole('tab');
-    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(ACTIVE_CLASSES.active)).toBe(
+    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(TAB_ACTIVE_CLASSES.active)).toBe(
       true,
     );
     expect(
-      tabItems.find((tab) => tab.id === TAB_ID_SECONDARY)?.children[0]?.className.includes(ACTIVE_CLASSES.active),
+      tabItems.find((tab) => tab.id === TAB_ID_SECONDARY)?.children[0]?.className.includes(TAB_ACTIVE_CLASSES.active),
     ).toBe(true);
   });
 
@@ -139,11 +139,11 @@ describe('RdsTabs', () => {
       />,
     );
     const tabItems = screen.getAllByRole('tab');
-    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(ACTIVE_CLASSES.active)).toBe(
+    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(TAB_ACTIVE_CLASSES.active)).toBe(
       true,
     );
     expect(
-      tabItems.find((tab) => tab.id === TAB_ID_SECONDARY)?.children[0]?.className.includes(ACTIVE_CLASSES.active),
+      tabItems.find((tab) => tab.id === TAB_ID_SECONDARY)?.children[0]?.className.includes(TAB_ACTIVE_CLASSES.active),
     ).toBe(true);
   });
 
@@ -166,7 +166,7 @@ describe('RdsTabs', () => {
       />,
     );
     const tabItems = screen.getAllByRole('tab');
-    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(DISABLED_CLASSES)).toBe(true);
+    expect(tabItems.find((tab) => tab.id === TAB_ID)?.children[0]?.className.includes(TAB_DISABLED_CLASSES)).toBe(true);
   });
 
   it('renders RdsTabs component with primary and secondary tablist with disabled', () => {
@@ -196,9 +196,9 @@ describe('RdsTabs', () => {
       />,
     );
     const tabItems = screen.getAllByRole('tab');
-    expect(tabItems.find((tab) => tab.id === TAB_ID_SECONDARY)?.children[0]?.className.includes(DISABLED_CLASSES)).toBe(
-      true,
-    );
+    expect(
+      tabItems.find((tab) => tab.id === TAB_ID_SECONDARY)?.children[0]?.className.includes(TAB_DISABLED_CLASSES),
+    ).toBe(true);
   });
 
   it('renders RdsTabs component with primary and secondary tablist with inactive classes', () => {
@@ -229,7 +229,8 @@ describe('RdsTabs', () => {
     expect(
       tabItems.every(
         (tab) =>
-          ![TAB_ID, TAB_ID_SECONDARY].includes(tab.id) && tab.children[0]?.className.includes(ACTIVE_CLASSES.inactive),
+          ![TAB_ID, TAB_ID_SECONDARY].includes(tab.id) &&
+          tab.children[0]?.className.includes(TAB_ACTIVE_CLASSES.inactive),
       ),
     );
   });

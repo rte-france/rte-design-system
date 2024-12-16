@@ -6,9 +6,9 @@
 
 import {
   COMMON_CHECKBOX_CLASSES,
-  ERROR_CLASSES,
-  ERROR_LABEL_TEXT_CLASS,
-  LABEL_TEXT_CLASSES,
+  CHECKBOX_ERROR_CLASSES,
+  CHECKBOX_ERROR_LABEL_TEXT_CLASS,
+  CHECKBOX_LABEL_TEXT_CLASSES,
   OTHER_CHECKBOX_CLASSES,
   checkboxClassBuilder,
 } from '../checkboxClassBuilder.ts';
@@ -31,15 +31,17 @@ describe('checkboxClassBuilder function', () => {
     expect(checkboxClassBuilder(false, true).inputClasses.includes(OTHER_CHECKBOX_CLASSES.enabled)).toBe(true);
   });
   it('should have the error classes if error and not disabled', () => {
-    expect(checkboxClassBuilder(false, true).inputClasses.includes(ERROR_CLASSES)).toBe(true);
-    expect(checkboxClassBuilder(false, true).labelClasses.includes(ERROR_LABEL_TEXT_CLASS)).toBe(true);
+    expect(checkboxClassBuilder(false, true).inputClasses.includes(CHECKBOX_ERROR_CLASSES)).toBe(true);
+    expect(checkboxClassBuilder(false, true).labelClasses.includes(CHECKBOX_ERROR_LABEL_TEXT_CLASS)).toBe(true);
   });
   it('should not have the error classes if disabled or error is false', () => {
-    expect(checkboxClassBuilder(true, true).inputClasses.includes(ERROR_CLASSES)).toBe(false);
-    expect(checkboxClassBuilder(true, false).inputClasses.includes(ERROR_CLASSES)).toBe(false);
-    expect(checkboxClassBuilder(false, false).inputClasses.includes(ERROR_CLASSES)).toBe(false);
+    expect(checkboxClassBuilder(true, true).inputClasses.includes(CHECKBOX_ERROR_CLASSES)).toBe(false);
+    expect(checkboxClassBuilder(true, false).inputClasses.includes(CHECKBOX_ERROR_CLASSES)).toBe(false);
+    expect(checkboxClassBuilder(false, false).inputClasses.includes(CHECKBOX_ERROR_CLASSES)).toBe(false);
   });
   it('should return the disabled text if disabled', () => {
-    expect(checkboxClassBuilder(true, INDIFFERENT_ERROR).labelClasses.includes(LABEL_TEXT_CLASSES.disabled)).toBe(true);
+    expect(
+      checkboxClassBuilder(true, INDIFFERENT_ERROR).labelClasses.includes(CHECKBOX_LABEL_TEXT_CLASSES.disabled),
+    ).toBe(true);
   });
 });

@@ -5,28 +5,28 @@
  */
 
 import modalTitleClassBuilder, {
-  CHILDREN_CLASSES,
-  COMMON_CONTAINER_CLASSES,
-  CONTAINER_STATUS_CLASSES,
-  ICON_STATUS_COLOR_CLASSES,
+  MODAL_CHILDREN_CLASSES,
+  MODAL_COMMON_CONTAINER_CLASSES,
+  MODAL_CONTAINER_STATUS_CLASSES,
+  MODAL_ICON_STATUS_COLOR_CLASSES,
 } from '../modalTitleClassBuilder.ts';
 
 describe('modalTitleClassBuilder function', () => {
   it('should have the common classes', () => {
     const classes = modalTitleClassBuilder('default');
-    expect(classes.containerClasses.includes(COMMON_CONTAINER_CLASSES)).toBe(true);
-    expect(classes.childrenClasses).toBe(CHILDREN_CLASSES);
+    expect(classes.containerClasses.includes(MODAL_COMMON_CONTAINER_CLASSES)).toBe(true);
+    expect(classes.childrenClasses).toBe(MODAL_CHILDREN_CLASSES);
   });
 
   it('should have the default classes', () => {
     const classes = modalTitleClassBuilder('default');
-    expect(classes.containerClasses.includes(CONTAINER_STATUS_CLASSES.default)).toBe(true);
-    expect(classes.iconColor.includes(ICON_STATUS_COLOR_CLASSES.default)).toBe(true);
+    expect(classes.containerClasses.includes(MODAL_CONTAINER_STATUS_CLASSES.default)).toBe(true);
+    expect(classes.iconColor.includes(MODAL_ICON_STATUS_COLOR_CLASSES.default)).toBe(true);
   });
 
   it('should have the danger classes', () => {
     const classes = modalTitleClassBuilder('danger');
-    expect(classes.containerClasses.includes(CONTAINER_STATUS_CLASSES.danger)).toBe(true);
-    expect(classes.iconColor.includes(ICON_STATUS_COLOR_CLASSES.danger)).toBe(true);
+    expect(classes.containerClasses.includes(MODAL_CONTAINER_STATUS_CLASSES.danger)).toBe(true);
+    expect(classes.iconColor.includes(MODAL_ICON_STATUS_COLOR_CLASSES.danger)).toBe(true);
   });
 });

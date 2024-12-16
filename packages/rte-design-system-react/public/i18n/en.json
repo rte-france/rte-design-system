@@ -1,1 +1,26 @@
-{}
+{
+  "components": {
+    "popover": {
+      "@close": "Close"
+    },
+    "tags": {
+      "@tags": "Tags"
+    },
+    "pagination": {
+      "@resultsPerPage": "Results per page"
+    },
+    "tablePagination": {
+      "@of": "of"
+    },
+    "fileInput": {
+      "@error": "Failed to upload file"
+    },
+    "search": {
+      "@empty": "No results found.\n Please modify search"
+    },
+    "navbar": {
+      "@expand": "Expand menu",
+      "@minimize": "Minimize menu"
+    }
+  }
+}
