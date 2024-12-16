@@ -15,7 +15,7 @@ export const countMaxItemsToFitInContainer = (
   if (autoExpends) {
     return itemsRef.current?.length ?? 0;
   }
-  const gap = Number(containerRef.current?.computedStyleMap?.().get('gap')?.toString().replace('px', ''));
+  const gap = Number(containerRef.current?.computedStyleMap?.().get('gap')?.toString().replace('px', '')) || 8;
   const containerWidth = containerRef.current?.clientWidth ?? 0;
   const containerHeight = containerRef.current?.clientHeight ?? 0;
 

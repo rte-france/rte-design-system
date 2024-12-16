@@ -65,7 +65,7 @@ export const RdsCheckbox = ({
       <input
         id={id}
         ref={inputRef}
-        className="peer sr-only"
+        className="rds-peer rds-sr-only"
         type="checkbox"
         name={name}
         disabled={disabled}
@@ -74,13 +74,13 @@ export const RdsCheckbox = ({
         onChange={handleOnChange}
         onMouseDown={(e) => e.preventDefault()}
         onBlur={onBlur}
-        value={checkboxControl ? 'checkbox_control' : value}
+        value={checkboxControl ? `checkbox_control` : value}
       />
       <div className={inputClasses}>
-        <div className="done-icon hidden">
+        <div className="done-icon rds-hidden">
           <RdsIcon name={RdsIconId.Done} color="gray-w" width={14} height={14} />
         </div>
-        <div className="indeterminate-icon hidden">
+        <div className="indeterminate-icon rds-hidden">
           <RdsIcon name={RdsIconId.HorizontalRule} color="gray-w" width={14} height={14} />
         </div>
       </div>

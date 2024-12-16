@@ -13,7 +13,7 @@ export const TreeItemWithSiblingsDashed = (props: IconProps) => {
     height = 32,
     fill = 'none',
     stroke = '#DDDFE0',
-    strokeSecondary = '#2964A0',
+    strokeSecondary = '#225082',
     rotationOptions,
     rotate,
     strokeWidth = 1,

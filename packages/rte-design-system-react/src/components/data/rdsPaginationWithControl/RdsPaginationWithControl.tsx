@@ -5,9 +5,9 @@
  */
 
 import { useRdsId } from '@/hooks/index.ts';
-import { useTranslation } from 'react-i18next';
 import RdsPagination from '../rdsPagination/RdsPagination.tsx';
 import RdsPaginationControl from '../rdsPaginationControl/RdsPaginationControl.tsx';
+import i18n from '@/i18n.ts';
 
 export type RdsPaginationWithControlProps = {
   id?: string;
@@ -32,7 +32,6 @@ export const RdsPaginationWithControl = ({
   resultsPerPageOptions,
   paginationControlLabel,
 }: RdsPaginationWithControlProps) => {
-  const { t } = useTranslation();
   const id = useRdsId('pagination-with-control', propsId);
 
   return (
@@ -41,7 +40,7 @@ export const RdsPaginationWithControl = ({
       <div className="absolute right-0">
         <RdsPaginationControl
           id={`${id}-pagination-control`}
-          label={paginationControlLabel || t('components.pagination.@resultsPerPage')}
+          label={paginationControlLabel || i18n.t('components.pagination.@resultsPerPage')}
           onChange={onItemsPerPageChange}
           options={resultsPerPageOptions || RESULTS_PER_PAGE_OPTIONS}
           selectedOption={itemsPerPage}

@@ -25,7 +25,7 @@ export type RdsIconProps = (ExplicitIconProps | NonExplicitIconProps) & {
 } & Omit<PlainIconProps, 'url'>;
 
 export const RdsIcon = (props: RdsIconProps) => {
-  const { name } = props;
+  const { name, color } = props;
   if (!(name in RdsIconId)) {
     return null;
   }
@@ -33,7 +33,9 @@ export const RdsIcon = (props: RdsIconProps) => {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <Icon {...props} />
+        <div className={color && `rds-text-${color}`}>
+          <Icon {...props} />
+        </div>
       </Suspense>
     </>
   );

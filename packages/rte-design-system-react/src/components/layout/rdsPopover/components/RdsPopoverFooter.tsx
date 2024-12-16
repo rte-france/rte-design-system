@@ -7,7 +7,7 @@
 import { PropsWithChildren } from 'react';
 
 export const RdsPopoverFooter = ({ children }: PropsWithChildren) => (
-  <footer className="flex justify-end" role="group">
+  <footer className="rds-flex rds-justify-end" role="group">
     {children}
   </footer>
 );

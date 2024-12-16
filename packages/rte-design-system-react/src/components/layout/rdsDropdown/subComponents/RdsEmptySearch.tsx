@@ -5,17 +5,16 @@
  */
 
 import { RdsIcon } from '@/components/base/index.ts';
+import i18n from '@/i18n.ts';
 import { RdsIconId } from '@/utils/index.ts';
-import { useTranslation } from 'react-i18next';
 
 const ICON_SIZE = 16;
 export const EMPTY_SEARCH_ID = 'empty-search';
 export const RdsEmptySearch = () => {
-  const { t } = useTranslation();
   return (
     <div id={EMPTY_SEARCH_ID} className="flex w-full gap-1 px-1">
       <RdsIcon color="gray-600" name={RdsIconId.Search} height={ICON_SIZE} width={ICON_SIZE} />
-      <p className="text-pretty text-caption text-gray-700">{t('components.search.@empty')}</p>
+      <p className="text-pretty text-caption text-gray-700">{i18n.t('components.search.@empty')}</p>
     </div>
   );
 };

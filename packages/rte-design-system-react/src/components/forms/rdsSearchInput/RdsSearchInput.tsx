@@ -9,6 +9,7 @@ import { clearClassBuilder, searchClassBuilder } from './SearchInputClassBuilder
 import { useRef, useState } from 'react';
 import { RdsIconId } from '@/utils/index.ts';
 import { RdsButton } from '@/components/base/index.ts';
+import { stopPropagation } from '@/utils/event/stopPropagation.ts';
 
 export type SearchVariant = 'outlined' | 'filled';
 export type SearchInputSize = 'small' | 'medium';
@@ -112,7 +113,7 @@ export const RdsSearchInput = ({
           icon={RdsIconId.Search}
           size="extraSmall"
           variant="text"
-          onClick={() => onSearch(value)}
+          onClick={stopPropagation(() => onSearch(value))}
           color="secondary"
           disabled={disabled}
         />

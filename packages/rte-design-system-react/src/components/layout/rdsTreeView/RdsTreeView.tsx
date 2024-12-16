@@ -15,7 +15,7 @@ export const RdsTreeView = <T extends { id: string }>(props: RdsTreeViewProps<T>
   const id = useRdsId('treeView', propsId);
 
   return (
-    <div id={id} className="flex flex-col items-start">
+    <div id={id} className="rds-flex rds-flex-col rds-items-start">
       <RdsTreeItem {...props} defaultOpen={true} />
     </div>
   );

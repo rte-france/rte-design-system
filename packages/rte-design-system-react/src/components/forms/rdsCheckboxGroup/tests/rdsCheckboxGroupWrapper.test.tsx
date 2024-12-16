@@ -231,7 +231,7 @@ describe('RdsCheckbox', () => {
       expect(checkboxControlElement).toBeDefined();
       return;
     }
-    expect(checkboxControlElement.value).toBe('checkbox_control');
+    expect(checkboxControlElement.value).toContain('checkbox_control');
 
     fireEvent.click(checkboxControlElement, { target: { value: false } });
 

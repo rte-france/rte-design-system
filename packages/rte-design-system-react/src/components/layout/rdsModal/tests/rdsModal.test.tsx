@@ -6,7 +6,7 @@
 
 import { RdsButton } from '@/components/base/index.ts';
 import { render, screen } from '@testing-library/react';
-import RdsModal from '../RdsModal.tsx';
+import { RdsModal } from '../RdsModal.tsx';
 
 const onClose = vitest.fn();
 const TEST_ID = 'some-id';

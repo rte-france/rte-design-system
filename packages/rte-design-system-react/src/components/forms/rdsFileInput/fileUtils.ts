@@ -8,21 +8,9 @@ export type FileInputErrorType = 'sizeError' | 'typeError';
 
 export type FileInputSize = 'small' | 'medium';
 
-export const getFileError = (
-  file: File,
-  acceptedFileTypes: string[],
-  maxSize?: number,
-): FileInputErrorType | undefined => {
-  const acceptedFileTypesSet = new Set(acceptedFileTypes);
-  const fileExtension = `.${file.name.split('.').at(-1)}`;
-
+export const getFileError = (file: File, maxSize?: number): FileInputErrorType | undefined => {
   if (maxSize && file.size > maxSize) {
     return 'sizeError';
   }
-
-  if (!fileExtension || !acceptedFileTypesSet.has(fileExtension)) {
-    return 'typeError';
-  }
-
   return;
 };

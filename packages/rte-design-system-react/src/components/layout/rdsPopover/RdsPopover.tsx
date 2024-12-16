@@ -65,12 +65,12 @@ const RdsPopoverComponent = ({
       placement={placement}
       fallbackPlacements={fallbackPlacement ?? allPossiblePlacements}
       offset={offset}
-      arrowParams={{ enabled: !disableArrow, className: 'fill-gray-w' }}
+      arrowParams={{ enabled: !disableArrow, className: 'rds-fill-gray-w' }}
       id={id}
     >
       <Trigger>{TriggerComponent}</Trigger>
       <Element>
-        <div className="flex flex-col gap-2 rounded bg-gray-w p-2 shadow-4" role="popover">
+        <div className="rds-flex rds-flex-col rds-gap-2 rds-rounded rds-bg-gray-w rds-p-2 rds-shadow-4" role="popover">
           {ContentComponent}
           {FooterComponent}
         </div>

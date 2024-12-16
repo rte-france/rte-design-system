@@ -7,7 +7,7 @@
 import { clsx } from 'clsx';
 
 export const BUTTON_COMMON_CLASSES =
-  'rds-rounded rds-font-semibold rds-text-center rds-inline-flex rds-flex rds-items-center rds-text-gray-700';
+  'rds-rounded rds-font-semibold rds-text-center rds-flex rds-items-center rds-text-gray-700';
 export const BUTTON_FOCUS_CLASSES =
   'focus-visible:rds-outline focus-visible:rds-outline-1 focus-visible:rds-outline-offset-2 focus-visible:rds-outline-gray-900 focus-visible:rds-text-gray-900';
 export const BUTTON_HOVER_CLASSES =

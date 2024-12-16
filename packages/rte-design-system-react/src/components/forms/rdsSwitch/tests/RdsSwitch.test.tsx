@@ -6,7 +6,7 @@
 
 import { render, screen } from '@testing-library/react';
 
-import RdsSwitch from '../RdsSwitch.tsx';
+import { RdsSwitch } from '../RdsSwitch.tsx';
 const TEST_NAME = 'test';
 const TEST_VALUE = '1';
 const TEST_ID = 'my-switch';

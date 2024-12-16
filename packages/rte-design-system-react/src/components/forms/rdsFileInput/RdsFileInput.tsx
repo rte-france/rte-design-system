@@ -68,7 +68,7 @@ export const RdsFileInput = ({
   }, [file]);
 
   const handleFileChange = (newFile: File) => {
-    const errorFile = getFileError(newFile, acceptedFileTypes, maxSizeFile);
+    const errorFile = getFileError(newFile, maxSizeFile);
     if (errorFile) {
       return void onChange(undefined, errorFile);
     }
@@ -143,7 +143,7 @@ export const RdsFileInput = ({
           onChange={handleChange}
           disabled={disabled}
           accept={acceptedFileTypes.join(',')}
-          className="hidden"
+          className="rds-hidden"
         />
       </label>
       {helperText && <span className={helperTextClasses}>{helperText}</span>}

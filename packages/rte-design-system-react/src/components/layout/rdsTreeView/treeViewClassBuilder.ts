@@ -6,10 +6,12 @@
 
 import { clsx } from 'clsx';
 
-export const ACTIVATE = 'bg-primary-100';
-export const TREE_CONTAINER_CLASSES = 'flex h-full w-full flex-row items-center pl-0.5 hover:bg-gray-100';
-export const RENDER_CONTAINER_FOCUSABLE = 'rounded focus-visible:z-10 focus-visible:outline focus-visible:outline-1';
-export const COLLAPSE_CONTAINER_CLASSES = 'absolute h-4 w-2 items-center py-0.75 -ml-0.125';
+export const ACTIVATE = 'rds-bg-primary-100';
+export const TREE_CONTAINER_CLASSES =
+  'rds-flex rds-h-full rds-w-full rds-flex-row rds-items-center rds-pl-0.5 hover:rds-bg-gray-100';
+export const RENDER_CONTAINER_FOCUSABLE =
+  'rds-rounded focus-visible:rds-z-10 focus-visible:rds-outline focus-visible:rds-outline-1';
+export const COLLAPSE_CONTAINER_CLASSES = 'rds-absolute rds-h-4 rds-w-2 rds-items-center rds-py-0.75 -rds-ml-0.125';
 
 export const treeItemContainerClassBuilder = (isActive?: boolean) => {
   const className = {

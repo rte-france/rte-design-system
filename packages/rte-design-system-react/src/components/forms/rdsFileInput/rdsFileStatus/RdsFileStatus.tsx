@@ -6,10 +6,10 @@
 
 import { useRdsId } from '@/hooks/index.ts';
 import { RdsIconId } from '@/utils/index.ts';
-import { useTranslation } from 'react-i18next';
 import { fileStatusClassBuilder } from './fileStatusClassBuilder.ts';
 import { RdsButton, RdsIcon } from '@/components/base/index.ts';
 import { RdsDivider } from '@/components/layout/rdsDivider/RdsDivider.tsx';
+import i18n from '@/i18n.ts';
 
 export type FileInputStatus = 'loading' | 'success' | 'error' | 'empty';
 
@@ -37,7 +37,6 @@ const iconMap = {
 } as const;
 
 export const RdsFileStatus = ({ fileName, status, progress, onDelete, id: propsId }: RdsFileStatusProps) => {
-  const { t } = useTranslation();
   const id = useRdsId('file-status', propsId);
   const { nameClasses } = fileStatusClassBuilder(status);
 
@@ -54,7 +53,7 @@ export const RdsFileStatus = ({ fileName, status, progress, onDelete, id: propsI
       </div>
       {status === 'loading' && <span>{progress}%</span>}
       {status === 'error' && (
-        <span className="rds-font-semibold rds-text-error-600">{t('components.fileInput.@error')}</span>
+        <span className="rds-font-semibold rds-text-error-600">{i18n.t('components.fileInput.@error')}</span>
       )}
       <RdsDivider />
     </div>
