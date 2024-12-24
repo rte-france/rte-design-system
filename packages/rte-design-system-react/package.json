@@ -3,7 +3,7 @@
   "private": false,
   "author": "Rte <[quentin.capy@rte-france.com](mailto:quentin.capy@rte-france.com)>",
   "license": "MPL-2.0",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/main.d.ts",
