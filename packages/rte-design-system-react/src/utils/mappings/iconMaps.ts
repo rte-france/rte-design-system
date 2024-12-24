@@ -31,6 +31,9 @@ const ArrowRight = lazy(() =>
 const ArrowUpward = lazy(() =>
   import('@/assets/icons/ArrowUpward.tsx').then((module) => ({ default: module.ArrowUpward })),
 );
+const ArrowUpwardAlt = lazy(() =>
+  import('@/assets/icons/ArrowUpwardAlt.tsx').then((module) => ({ default: module.ArrowUpwardAlt })),
+);
 const Badge = lazy(() => import('@/assets/icons/Badge.tsx').then((module) => ({ default: module.Badge })));
 const Bolt = lazy(() => import('@/assets/icons/Bolt.tsx').then((module) => ({ default: module.Bolt })));
 const BrandAwareness = lazy(() =>
@@ -254,6 +257,7 @@ export const RdsIconId = {
   ArrowCircleDown: 'ArrowCircleDown',
   ArrowBack: 'ArrowBack',
   ArrowUpward: 'ArrowUpward',
+  ArrowUpwardAlt: 'ArrowUpwardAlt',
   RestoreFromTrashFilled: 'RestoreFromTrashFilled',
   DeleteForeverFilled: 'DeleteForeverFilled',
   DeleteForever: 'DeleteForever',
@@ -390,6 +394,7 @@ export const IconComps: Record<RdsIconIdKey, LazyExoticComponent<(props: IconPro
   [RdsIconId.ArrowRight]: ArrowRight,
   [RdsIconId.Delete]: Delete,
   [RdsIconId.ArrowUpward]: ArrowUpward,
+  [RdsIconId.ArrowUpwardAlt]: ArrowUpwardAlt,
   [RdsIconId.AccountCircleFilled]: AccountCircleFilled,
   [RdsIconId.KeyboardDoubleArrowUp]: KeyboardDoubleArrowUp,
   [RdsIconId.Output]: Output,
