@@ -10,7 +10,8 @@ import tailwindScrollbar from 'tailwind-scrollbar';
 export default {
   darkMode: 'selector',
   prefix: 'rds-',
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,css}'],
+  styleUrls: ['../tailwind.css'],
   safelist: [
     { pattern: /rotate-(0|1|2|3|6|45|90|180)/ },
     { pattern: /delay-(0|75|100|150|200|300|500|700|1000)/ },
@@ -277,7 +278,8 @@ export default {
       7: '0px 2px 6px 0px rgba(0, 0, 0, 0.16), 0px 10px 20px 0px rgba(17, 22, 26, 0.20), 0px 24px 24px 0px rgba(17, 22, 26, 0.12)',
       'switch-unchecked-small': '1px 0px 1px 0px rgba(153, 159, 161, 0.10)',
       'switch-checked-small': '-1px 0px 1px 0px rgba(0, 156, 223, 0.10)',
-      'switch-unchecked-medium': '1.5px 0px 1.5px 0px rgba(153, 159, 161, 0.10)',
+      'switch-unchecked-medium':
+        '1.5px 0px 1.5px 0px rgba(153, 159, 161, 0.10)',
       'switch-checked-medium': '-1.5px 0px 1.5px 0px rgba(0, 156, 223, 0.10)',
     },
     extend: {

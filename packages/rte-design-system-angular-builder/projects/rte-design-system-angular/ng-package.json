@@ -3,5 +3,6 @@
   "dest": "../../../rte-design-system-angular",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["./rte-tailwind.css"]
 }

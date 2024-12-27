@@ -6,6 +6,11 @@
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
   },
+  "exports": {
+    "./rte-design-system-angular": {
+      "default": "./rte-tailwind.css"
+    }
+  },
   "dependencies": {
     "tslib": "^2.3.0"
   },

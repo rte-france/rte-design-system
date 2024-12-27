@@ -8,7 +8,12 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { buttonClassBuilder } from './rds-button-classbuilder';
 
-export type ButtonVariant = 'contained' | 'outlined' | 'dashed' | 'text' | 'transparent';
+export type ButtonVariant =
+  | 'contained'
+  | 'outlined'
+  | 'dashed'
+  | 'text'
+  | 'transparent';
 export type ButtonSize = 'extraSmall' | 'small' | 'medium';
 export type ButtonColor = 'primary' | 'secondary' | 'danger';
 export type IconPosition = 'left' | 'right';
@@ -19,10 +24,9 @@ export type ButtonType = 'button' | 'submit' | 'reset';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './rds-button.component.html',
-  styleUrls: ['../../../../style.css'] // #bricolage (à régler plus tard) todo : find better route
+  styleUrls: ['../../../../../rte-tailwind.css'], // #bricolage (à régler plus tard) todo : find better route
 })
-
-export class RdsButtonComponent{
+export class RdsButtonComponent {
   @Input() label: string = '';
   @Input() disabled: boolean = false;
   @Input() variant: ButtonVariant = 'contained';
@@ -40,7 +44,12 @@ export class RdsButtonComponent{
   }
 
   get buttonClasses(): string {
-    return buttonClassBuilder(this.variant, this.color, this.size, this.disabled, !!this.label);
+    return buttonClassBuilder(
+      this.variant,
+      this.color,
+      this.size,
+      this.disabled,
+      !!this.label,
+    );
   }
-
 }
