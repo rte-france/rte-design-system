@@ -6,8 +6,18 @@
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
   },
+  "exports": {
+    "./rte-design-system-angular": {
+      "default": "./rte-tailwind.css"
+    }
+  },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
 }
