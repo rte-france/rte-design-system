@@ -10,7 +10,11 @@ import tailwindScrollbar from 'tailwind-scrollbar';
 export default {
   darkMode: 'selector',
   prefix: 'rds-',
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,css}'],
+  content: [
+    './index.html',
+    './style.css',
+    './projects/**/*.{js,ts,jsx,tsx,css}',
+  ],
   styleUrls: ['../tailwind.css'],
   safelist: [
     { pattern: /rotate-(0|1|2|3|6|45|90|180)/ },

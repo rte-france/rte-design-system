@@ -24,7 +24,7 @@ export type ButtonType = 'button' | 'submit' | 'reset';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './rds-button.component.html',
-  styleUrls: ['../../../../../rte-tailwind.css'], // #bricolage (à régler plus tard) todo : find better route
+  styleUrls: ['../../../../style.css'], // #bricolage (à régler plus tard) todo : find better route
 })
 export class RdsButtonComponent {
   @Input() label: string = '';

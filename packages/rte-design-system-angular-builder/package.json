@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:tailwind && ng build",
+    "build:tailwind": "npx tailwindcss -c ./projects/rte-design-system-angular/src/tailwind.config.ts -o ../rte-design-system-angular/styles/rte-tailwind.css --minify",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

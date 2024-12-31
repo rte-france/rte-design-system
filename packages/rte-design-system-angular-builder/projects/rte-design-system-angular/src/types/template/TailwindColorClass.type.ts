@@ -11,7 +11,10 @@ type DeepKeyOf<T> = (
     ? ''
     : T extends object
       ? {
-          [K in Exclude<keyof T, symbol>]: `${K}${T[K] extends undefined ? '?' : ''}${DotPrefix<DeepKeyOf<T[K]>>}`;
+          [K in Exclude<
+            keyof T,
+            symbol
+          >]: `${K}${T[K] extends undefined ? '?' : ''}${DotPrefix<DeepKeyOf<T[K]>>}`;
         }[Exclude<keyof T, symbol>]
       : ''
 ) extends infer D
