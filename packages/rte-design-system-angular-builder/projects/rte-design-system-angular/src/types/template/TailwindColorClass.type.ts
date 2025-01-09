@@ -4,17 +4,16 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import tailwindConfig from '../../tailwind.config';
+
+
+import tailwindConfig from './../../tailwind.config';
 
 type DeepKeyOf<T> = (
   [T] extends [never]
     ? ''
     : T extends object
       ? {
-          [K in Exclude<
-            keyof T,
-            symbol
-          >]: `${K}${T[K] extends undefined ? '?' : ''}${DotPrefix<DeepKeyOf<T[K]>>}`;
+          [K in Exclude<keyof T, symbol>]: `${K}${T[K] extends undefined ? '?' : ''}${DotPrefix<DeepKeyOf<T[K]>>}`;
         }[Exclude<keyof T, symbol>]
       : ''
 ) extends infer D

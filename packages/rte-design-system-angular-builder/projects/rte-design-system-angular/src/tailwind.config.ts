@@ -195,8 +195,8 @@ export default {
       transparent: 'transparent',
     },
     fontFamily: {
-      body: ['"Nunito Sans Variable"'],
-      sans: ['"Nunito Sans Variable"'],
+      'body': ['nunito', 'sans-serif'],
+      'sans': ['"Nunito Sans Variable"'],
     },
     spacing: {
       0: '0px',

@@ -6,27 +6,35 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { buttonClassBuilder } from './rds-button-classbuilder';
+import { buttonClassBuilder, labelClassBuilder } from './rds-button-classbuilder';
+import { IconLoaderComponent } from '../../../../assets/iconLoader';
+import { IconIdKey } from '../../../../mappings/iconMap.service';
 
-export type ButtonVariant =
-  | 'contained'
-  | 'outlined'
-  | 'dashed'
-  | 'text'
-  | 'transparent';
+export type ButtonVariant = 'contained' | 'outlined' | 'dashed' | 'text' | 'transparent';
 export type ButtonSize = 'extraSmall' | 'small' | 'medium';
 export type ButtonColor = 'primary' | 'secondary' | 'danger';
 export type IconPosition = 'left' | 'right';
 export type ButtonType = 'button' | 'submit' | 'reset';
 
+
+
+const ICON_SIZE: Record<ButtonSize, number> = {
+  extraSmall: 16,
+  small: 20,
+  medium: 20,
+};
+
+
+
 @Component({
-  selector: 'lib-rds-button',
+  selector: 'rds-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, IconLoaderComponent],
   templateUrl: './rds-button.component.html',
-  styleUrls: ['../../../../style.css'], // #bricolage (à régler plus tard) todo : find better route
 })
-export class RdsButtonComponent {
+
+
+export class RdsButtonComponent{
   @Input() label: string = '';
   @Input() disabled: boolean = false;
   @Input() variant: ButtonVariant = 'contained';
@@ -36,20 +44,24 @@ export class RdsButtonComponent {
   @Input() onClick: (e: MouseEvent) => void = () => {};
   @Input() onKeydown: (e: KeyboardEvent) => void = () => {};
   @Input() id?: string;
-  @Input() icon?: string;
+  @Input() icon?: IconIdKey;
   @Input() position: IconPosition = 'left';
+
+  iconSize = ICON_SIZE
 
   preventDefault(e: MouseEvent): void {
     e.preventDefault();
   }
 
   get buttonClasses(): string {
-    return buttonClassBuilder(
-      this.variant,
-      this.color,
-      this.size,
-      this.disabled,
-      !!this.label,
-    );
+    return buttonClassBuilder(this.variant, this.color, this.size, this.disabled, !!this.label);
   }
+
+  get labelClasses(): string {
+    return labelClassBuilder(this.size);
+  }
+
+
+
 }
+

@@ -1,10 +1,237 @@
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <lib-rds-button label="PRESS ME" [size]="'medium'" />
+<h2> Button States Grid </h2>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+  <div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'extraSmall'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'"/>
+
+      <div>Outlined</div>
+      <rds-button label="Label" [size]="'extraSmall'" [variant]="'outlined'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [variant]="'outlined'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [variant]="'outlined'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [variant]="'outlined'"/>
+
+      <div>Text</div>
+      <rds-button label="Label" [size]="'extraSmall'" [variant]="'text'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [variant]="'text'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [variant]="'text'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [variant]="'text'"/>
+
+      <div>Dashed</div>
+      <rds-button label="Label" [size]="'extraSmall'" [variant]="'dashed'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [variant]="'dashed'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [variant]="'dashed'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [variant]="'dashed'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'extraSmall'" [disabled]="true"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [disabled]="true"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [disabled]="true"/>
     </div>
   </div>
-</main>
+
+  <div>
+    <h2> Button States Grid - Small </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'small'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [position]="'right'"/>
+      <rds-button [size]="'small'" [icon]="'AccountCircle'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'small'" [disabled]="true"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [disabled]="true"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true"/>
+      <rds-button [size]="'small'" [icon]="'AccountCircle'" [disabled]="true"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Medium </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'medium'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [position]="'right'"/>
+      <rds-button [size]="'medium'" [icon]="'AccountCircle'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'medium'" [disabled]="true"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [disabled]="true"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true"/>
+      <rds-button [size]="'medium'" [icon]="'AccountCircle'" [disabled]="true"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Secondary </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'extraSmall'" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [color]="'secondary'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [color]="'secondary'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'extraSmall'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [disabled]="true" [color]="'secondary'"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Small Secondary </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'small'" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [position]="'right'" [color]="'secondary'"/>
+      <rds-button [size]="'small'" [icon]="'AccountCircle'" [color]="'secondary'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'small'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button [size]="'small'" [icon]="'AccountCircle'" [disabled]="true" [color]="'secondary'"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Medium Secondary </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'medium'" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [position]="'right'" [color]="'secondary'"/>
+      <rds-button [size]="'medium'" [icon]="'AccountCircle'" [color]="'secondary'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'medium'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true" [color]="'secondary'"/>
+      <rds-button [size]="'medium'" [icon]="'AccountCircle'" [disabled]="true" [color]="'secondary'"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Danger </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'extraSmall'" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [color]="'danger'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [color]="'danger'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'extraSmall'" [disabled]="true" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [disabled]="true" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'extraSmall'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true" [color]="'danger'"/>
+      <rds-button [size]="'extraSmall'" [icon]="'AccountCircle'" [disabled]="true" [color]="'danger'"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Small Danger </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'small'" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [position]="'right'" [color]="'danger'"/>
+      <rds-button [size]="'small'" [icon]="'AccountCircle'" [color]="'danger'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'small'" [disabled]="true" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [disabled]="true" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'small'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true" [color]="'danger'"/>
+      <rds-button [size]="'small'" [icon]="'AccountCircle'" [disabled]="true" [color]="'danger'"/>
+    </div>
+  </div>
+
+  <div>
+    <h2> Button States Grid - Medium Danger </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; align-items: center;">
+      <div></div>
+      <div>Label Only</div>
+      <div>Icon Left</div>
+      <div>Icon Right</div>
+      <div>Icon Only</div>
+
+      <div>Default</div>
+      <rds-button label="Label" [size]="'medium'" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [position]="'right'" [color]="'danger'"/>
+      <rds-button [size]="'medium'" [icon]="'AccountCircle'" [color]="'danger'"/>
+
+      <div>Disabled</div>
+      <rds-button label="Label" [size]="'medium'" [disabled]="true" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [disabled]="true" [color]="'danger'"/>
+      <rds-button label="Label" [size]="'medium'" [icon]="'AccountCircle'" [position]="'right'" [disabled]="true" [color]="'danger'"/>
+      <rds-button [size]="'medium'" [icon]="'AccountCircle'" [disabled]="true" [color]="'danger'"/>
+    </div>
+  </div>
+</div>
 
 <router-outlet />

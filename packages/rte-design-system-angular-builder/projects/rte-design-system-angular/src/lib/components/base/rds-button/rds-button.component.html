@@ -1,2 +1,13 @@
-<button [disabled]= "disabled" [attr.id]="id" [attr.type]="type" (click)="onClick($event)" (keydown)="onKeydown($event)" (mousedown)="preventDefault($event)" [ngClass]="buttonClasses">  {{label}}  </button>
-<p> classes button : {{buttonClasses}}</p>
+<button 
+    [disabled]= "disabled" 
+    [attr.id]="id" 
+    [attr.type]="type" 
+    (click)="onClick($event)" 
+    (keydown)="onKeydown($event)" 
+    (mousedown)="preventDefault($event)" 
+    [ngClass]="buttonClasses"
+> 
+    <app-icon-loader *ngIf="icon && position === 'left'" [iconId]="icon" [height]="iconSize[size]" [width]="iconSize[size]" />
+    <span *ngIf="label" [ngClass]="labelClasses">{{label}}</span>
+    <app-icon-loader *ngIf="icon && position === 'right'" [iconId]="icon" [height]="iconSize[size]" [width]="iconSize[size]" />
+</button>

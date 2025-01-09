@@ -5,7 +5,7 @@
  */
 
 import { clsx } from 'clsx';
-import { ButtonColor, ButtonSize, ButtonVariant } from './rds-button.component';
+import { ButtonColor, ButtonSize, ButtonVariant } from  './rds-button.component';
 import { buildTailwindClasses } from '../../../../utils/css/tailwindClass';
 
 const EMPTY_PREFIX = '';
@@ -14,9 +14,9 @@ export const COMMON_CLASSES =
   'rds-rounded rds-font-semibold rds-text-center rds-inline-flex rds-flex-row rds-items-center';
 
 export const SIZE_CLASSES = {
-  extraSmall: 'rds-px-0.25 rds-text-button-xs',
-  small: 'rds-px-0.5 rds-py-0.25 rds-text-button-s',
-  medium: 'rds-px-1 rds-py-0.75 rds-text-button-s',
+  extraSmall: 'rds-px-0.5 rds-py-0.25 rds-text-button-xs',
+  small: 'rds-px-1 rds-py-0.5 rds-text-button-s',
+  medium: 'rds-px-2 rds-py-1 rds-text-button-s',
 };
 export const SINGLE_ICON_CLASSES = {
   extraSmall: '[&]:rds-px-0 [&]:rds-py-0',
@@ -34,35 +34,35 @@ export const VARIANT_CLASSES = {
   primary: {
     contained: [
       buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['primary-600'], hover: ['primary-700'], active: ['primary-800'] }),
-      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'primary-600', 'opacity-0'] }),
+      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'primary-700', 'opacity-0'], active: ['primary-900'] }),
       buildTailwindClasses('text', { [EMPTY_PREFIX]: ['gray-w'] }),
     ],
     //stand for rds-bg-primary-600 | hover:rds-bg-primary-700 | active:rds-bg-primary-800 | rds-border |
     //rds-border-primary-600 | rds-border-opacity-0 | rds-text-gray-w
     outlined: [
-      buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['gray-w'], hover: ['primary-50'], active: ['primary-100'] }),
-      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'primary-600'] }),
-      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['primary-600'] }),
+      buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['gray-w'], hover: ['primary-700'], active: ['primary-800'] }),
+      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'primary-700'], active: ['primary-900'] }),
+      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['primary-700'], hover: ['gray-w'], active: ['gray-w'] }),
     ],
     //add rds-bg-gray-w | hover:rds-bg-primary-50 | active:rds-bg-primary-100 | rds-border-primary-600 | rds-text-primary-600
     dashed: [
-      buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['transparent'], hover: ['primary-50'], active: ['primary-100'] }),
-      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'dashed', 'primary-600'] }),
-      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['primary-600'] }),
+      buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['transparent'], hover: ['primary-700'], active: ['primary-800'] }),
+      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'dashed', 'primary-700'], active: ['primary-900'] }),
+      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['primary-700'], hover: ['gray-w'], active: ['gray-w'] }),
     ],
     //add rds-bg-transparent |rds-border-dashed
     text: [
-      buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['transparent'], hover: ['primary-50'], active: ['primary-100'] }),
-      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'opacity-0', 'primary-600'] }),
-      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['primary-600'] }),
+      buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['transparent'], hover: ['primary-50'], active: ['primary-200'] }),
+      buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'opacity-0', 'primary-900'] }),
+      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['primary-900'] }),
     ],
     //add rds-border-opacity-0
     transparent: [
       buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['transparent'] }),
       buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'transparent'] }),
       buildTailwindClasses('text', {
-        [EMPTY_PREFIX]: ['primary-600'],
-        hover: ['primary-700'],
+        [EMPTY_PREFIX]: ['primary-900'],
+        hover: ['primary-950'],
         active: ['primary-900'],
       }),
     ],
@@ -103,10 +103,12 @@ export const VARIANT_CLASSES = {
     contained: [
       buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['error-700'], hover: ['error-800'], active: ['error-900'] }),
       buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'opacity-0', 'gray-200'] }),
+      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['gray-w'] }),
     ],
     outlined: [
       buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['gray-w'], hover: ['error-50'], active: ['error-100'] }),
       buildTailwindClasses('border', { [EMPTY_PREFIX]: [EMPTY_SUFFIX, 'error-700'] }),
+      buildTailwindClasses('text', { [EMPTY_PREFIX]: ['error-700'], hover: ['gray-w'], active: ['gray-w'] }),
     ],
     dashed: [
       buildTailwindClasses('bg', { [EMPTY_PREFIX]: ['gray-w'], hover: ['error-50'], active: ['error-100'] }),
@@ -135,7 +137,7 @@ export const VARIANT_CLASSES_DISABLED = {
   transparent: 'rds-text-gray-500 rds-border-transparent',
 };
 
-export const LABEL_CLASSES_COMMON = 'rds-inline-flex rds-capitalize-first rds-line-clamp-1 rds-text-nowrap';
+export const LABEL_CLASSES_COMMON = 'rds-font-body rds-inline-flex rds-capitalize-first rds-line-clamp-1 rds-text-nowrap';
 export const LABEL_CLASSES_PADDING_SIZE = {
   extraSmall: 'rds-px-0.25 rds-py-0.25',
   small: 'rds-px-0.5 rds-py-0.25',
