@@ -19,8 +19,8 @@
       "@empty": "No results found.\n Please modify search"
     },
     "navbar": {
-      "@expand": "Expand menu",
-      "@minimize": "Minimize menu"
+      "@expand": "Expand",
+      "@minimize": "Minimize"
     }
   }
 }

@@ -5,6 +5,7 @@
  */
 
 /** @type {import('tailwindcss').Config} */
+import { background } from 'storybook/internal/theming';
 import tailwindScrollbar from 'tailwind-scrollbar';
 
 export default {
@@ -42,6 +43,32 @@ export default {
         800: 'var(--colors-primary-800,#214770)',
         900: 'var(--colors-primary-900,#1f3b5b)',
         950: 'var(--colors-primary-950,#15253c)',
+      },
+      navbar: {
+        background: {
+          lowest: 'var(--colors-navbar-background-lowest, #15253C)',
+          low: 'var(--colors-navbar-background-low,#15253C)',
+          high: 'var(--colors-navbar-background-high,#1F3B5B)',
+          highest: 'var(--colors-navbar-background-highest,#214770)',
+        },
+        icon: {
+          default: 'var(--colors-navbar-icon-default,#15253C)',
+          secondary: 'var(--colors-navbar-icon-secondary,#1F3B5B)',
+          tertiary: 'var(--colors-navbar-icon-tertiary, #225082)',
+          hl_tertiary: 'var(--colors-navbar-icon-hl_tertiary,#96BDE3)',
+        },
+        text: {
+          default: 'var(--colors-navbar-text-default,#F9FBFD)',
+          secondary: 'var(--colors-navbar-text-secondary,#E6EEF8)',
+          tertiary: 'var(--colors-navbar-text-tertiary, #96BDE3)',
+          hl_default: 'var(--colors-navbar-text-hl_default,#15253C)',
+          hl_secondary: 'var(--colors-navbar-text-hl_secondary,#1F3B5B)',
+          hl_tertiary: 'var(--colors-navbar-text-hl_tertiary,#225082)',
+        },
+        border: {
+          default: 'var(--colors-navbar-border-default,#96BDE3)',
+          secondary: 'var(--colors-navbar-border-secondary,#F9FBFD)',
+        },
       },
       gray: {
         w: '#ffffff',

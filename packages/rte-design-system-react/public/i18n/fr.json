@@ -19,8 +19,8 @@
       "@empty": "Aucun résultat.\n Veuillez modifier la recherche"
     },
     "navbar": {
-      "@expand": "Agrandir le menu",
-      "@minimize": "Réduire le menu"
+      "@expand": "Agrandir",
+      "@minimize": "Réduire"
     }
   }
 }
