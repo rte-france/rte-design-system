@@ -1,0 +1,160 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    name: 'Default',\n    args: {\n        label: 'Button',\n        variant: 'contained',\n        color: 'primary',\n        size: 'medium',\n        type: 'button',\n    },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<RdsButtonComponent>",
+                "defaultValue": "{\n    title: 'Components/Base/Button',\n    component: RdsButtonComponent,\n    parameters: {\n        layout: 'centered',\n    },\n    argTypes: {\n        variant: {\n            options: ['contained', 'outlined', 'dashed', 'text', 'transparent'],\n            control: { type: 'radio' },\n        },\n        color: {\n            options: ['primary', 'secondary', 'danger'],\n            control: { type: 'radio' },\n        },\n        size: {\n            options: ['extraSmall', 'small', 'medium'],\n            control: { type: 'radio' },\n        },\n        type: {\n            options: ['button', 'submit', 'reset'],\n            control: { type: 'radio' },\n        },\n    },\n} satisfies Meta<RdsButtonComponent>"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n\n  tags: [\"autodocs\"]\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<RdsButtonComponent>",
+                "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    name: 'Default',\n    args: {\n        label: 'Button',\n        variant: 'contained',\n        color: 'primary',\n        size: 'medium',\n        type: 'button',\n    },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<RdsButtonComponent>",
+                    "defaultValue": "{\n    title: 'Components/Base/Button',\n    component: RdsButtonComponent,\n    parameters: {\n        layout: 'centered',\n    },\n    argTypes: {\n        variant: {\n            options: ['contained', 'outlined', 'dashed', 'text', 'transparent'],\n            control: { type: 'radio' },\n        },\n        color: {\n            options: ['primary', 'secondary', 'danger'],\n            control: { type: 'radio' },\n        },\n        size: {\n            options: ['extraSmall', 'small', 'medium'],\n            control: { type: 'radio' },\n        },\n        type: {\n            options: ['button', 'submit', 'reset'],\n            control: { type: 'radio' },\n        },\n    },\n} satisfies Meta<RdsButtonComponent>"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n\n  tags: [\"autodocs\"]\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<RdsButtonComponent>",
+                    "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

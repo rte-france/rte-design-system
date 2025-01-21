@@ -8,7 +8,9 @@
     "build:tailwind": "npx tailwindcss -c ./projects/rte-design-system-angular/src/tailwind.config.ts -o ../rte-design-system-angular/styles/rte-tailwind.css --minify",
     "watch": "ng build --watch --configuration development",
     "watch:tailwind": "npx tailwindcss -c ./projects/rte-design-system-angular/src/tailwind.config.ts -o ../rte-design-system-angular/styles/rte-tailwind.css --watch --minify",
-    "test": "ng test"
+    "test": "ng test",
+    "storybook": "npm run build:tailwind && ng run rte-design-system-angular:storybook",
+    "build-storybook": "ng run rte-design-system-angular:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +31,16 @@
     "@angular-devkit/build-angular": "^17.3.10",
     "@angular/cli": "^17.3.10",
     "@angular/compiler-cli": "^17.3.0",
+    "@chromatic-com/storybook": "^3.2.4",
+    "@compodoc/compodoc": "^1.1.26",
+    "@storybook/addon-docs": "^8.6.0-alpha.0",
+    "@storybook/addon-essentials": "^8.6.0-alpha.0",
+    "@storybook/addon-interactions": "^8.6.0-alpha.0",
+    "@storybook/addon-mdx-gfm": "^8.6.0-alpha.0",
+    "@storybook/addon-onboarding": "^8.6.0-alpha.0",
+    "@storybook/angular": "^8.6.0-alpha.0",
+    "@storybook/blocks": "^8.6.0-alpha.0",
+    "@storybook/test": "^8.6.0-alpha.0",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.20",
     "jasmine-core": "~5.1.0",
@@ -39,6 +51,8 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.3.0",
     "postcss": "^8.4.49",
+    "rte-design-system-angular": "file:projects/rte-design-system-angular",
+    "storybook": "^8.6.0-alpha.0",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.4.2"
   }
