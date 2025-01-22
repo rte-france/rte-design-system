@@ -58,7 +58,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n\n  tags: [\"autodocs\"]\n}"
+                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    docs:{\n      toc: {\n        headingSelector: 'h1, h2, h3',\n        title: 'Table des matières'\n      }\n    }\n  },\n\n  tags: [\"autodocs\"]\n}"
             },
             {
                 "name": "Text",
@@ -148,7 +148,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n\n  tags: [\"autodocs\"]\n}"
+                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    docs:{\n      toc: {\n        headingSelector: 'h1, h2, h3',\n        title: 'Table des matières'\n      }\n    }\n  },\n\n  tags: [\"autodocs\"]\n}"
                 }
             ]
         },

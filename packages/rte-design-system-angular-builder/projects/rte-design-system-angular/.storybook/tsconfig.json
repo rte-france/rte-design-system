@@ -4,8 +4,9 @@
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
+    "jsx": "react",
   },
   "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
-  "include": ["../src/**/*.stories.*", "preview.ts"],
+  "include": ["../src/**/*.stories.*", "preview.ts", "../.storybook/blocks/*.tsx"],
   "files": ["./typings.d.ts"]
 }

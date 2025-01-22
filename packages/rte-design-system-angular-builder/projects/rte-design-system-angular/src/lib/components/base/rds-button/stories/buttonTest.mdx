@@ -1,0 +1,66 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.ts';
+
+import { StoryName, State, StoryBox, DoDont, Pastille, FigmaLink, GithubLink } from '../../../../../../.storybook/blocks/index';
+
+<Meta of={ButtonStories} name="Doc Test" />
+
+# Buttons
+
+[Figma](https://figma.com) [github](https://github.com)
+
+Les boutons communiquent les actions que les utilisateurs peuvent effectuer tout au long d'une interface utilisateur.
+Ils doivent indiquer qu'ils peuvent déclencher une action. Ils doivent être faciles à trouver parmi d'autres éléments, y compris d'autres boutons.
+L'action et l'état d'un bouton doivent être clairs.
+
+## Test Custom blocks
+
+### StoryName
+
+<StoryName of={ButtonStories.Text} />
+
+### State Messages
+
+<State of={ButtonStories.Text} state="success"/>
+<State of={ButtonStories.Text} state="hint"/>
+<State of={ButtonStories.Text} state="warning"/>
+<State of={ButtonStories.Text} state="warning" text="Test du text"/>
+
+### StoryBox
+
+<StoryBox element={<Canvas of={ButtonStories.Contained} />} text="Affichage du bouton dans une boite ici :"/>
+<StoryBox element="texte comme element" text="Affichage du texte dans une boite ici :"/>
+
+### Link Figma et Github
+
+{/* <FigmaLink url="https://www.figma.com"/>
+<GithubLink url="https://www.github.com"/> */}
+
+### Do or Don't
+
+<DoDont element={<Canvas of={ButtonStories.Text} />} state="Do" text="Exemple ou l'utilisation montrée est la bonne"/>
+<DoDont element={<Canvas of={ButtonStories.Outlined} />} state="Dont" text="Exemple ou l'utilisation n'est pas la bonne"/>
+
+### Pastille
+
+<Pastille state="success" text="Success"/>
+<Pastille state="hint" text="Bleu"/>
+<Pastille state="warning" text="Attention !"/>
+<Pastille state="basic" text="Ici c'est basic"/>
+
+## Tests with MDX
+
+{/* ### Link Display
+
+[LinkDisplay](https://www.google.com)
+
+### Link with Google Icon
+
+<div>
+    <a href="https://www.google.com">
+        <img height={40} src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" />
+        <p> Google </p>
+    </a>
+</div> */}
+
