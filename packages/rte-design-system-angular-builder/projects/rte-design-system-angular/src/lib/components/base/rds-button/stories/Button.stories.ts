@@ -54,6 +54,7 @@ export const Contained: Story = {
     },
   };
   export const Outlined: Story = {
+    
     args: {
       label: 'Button',
       variant: 'outlined',

@@ -48,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'outlined',\n    },\n  }"
+                "defaultValue": "{\n    \n    args: {\n      label: 'Button',\n      variant: 'outlined',\n    },\n  }"
             },
             {
                 "name": "preview",
@@ -126,7 +126,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'outlined',\n    },\n  }"
+                    "defaultValue": "{\n    \n    args: {\n      label: 'Button',\n      variant: 'outlined',\n    },\n  }"
                 },
                 {
                     "name": "Text",
