@@ -1,0 +1,56 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.ts';
+
+import { StoryName, State, StoryBox, DoDont, Pastille, FigmaLink, GithubLink } from '../../../../../../.storybook/blocks/index';
+
+<Meta of={ButtonStories} name="Imitation" />
+
+<div style={{display: 'flex', flexDirection: 'row', gap: '1rem'}}>
+
+# Buttons
+<FigmaLink url="https://www.figma.com" />
+<GithubLink url="https://github.com" />
+
+</div>
+
+Blablabla c'est du texte qui sert de sous titre au titre Blablabla
+
+## Usage
+
+### When to Use
+
+- Premier element d'une liste a deux elements
+- Deuxieme element d'une liste a deux elements
+
+### When not to use
+
+- Premier element d'une liste a deux elements encore [mais avec un lien](https://www.google.com)
+- Deuxieme element d'une liste a deux elements encore [avec un autre lien](https://www.google.com)
+
+## Usage Exemple
+
+<DoDont state="Do" text="Exemple ou l'utilisation montrée est la bonne" element={<Canvas of={ButtonStories.Contained} />} />
+
+<DoDont state="Dont" text="Exemple ou l'utilisation n'est pas la bonne" element={<Canvas of={ButtonStories.Outlined} />} />
+
+## Size
+
+Blablabla ca parle de la taille des boutons Blablabla
+
+### Interactive
+
+<State state="warning" text="Blablabla ca c'est un texte dans une boite avec du style ou on cromprend un peu qu'il faut faire attention a quelque chose" />
+
+## Content Type
+
+<State state="hint" text="Blablabla ca c'est un autre texte mais cette fois ci avec une couleur bleu genre c'est un indice" />
+
+On va mettre un peu de texte la aussi voir si la structure est bien respectée
+
+## Pastilles
+
+<Pastille state="success" text="On a des pastilles" />
+<Pastille state="hint" text="Qu'on peut utiliser" />
+<Pastille state="warning" text="Alors on va les " />
+<Pastille state="basic" text="Mettre la pour voir" />

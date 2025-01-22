@@ -35,6 +35,7 @@ const meta: Meta<RdsButtonComponent> = {
 
 export default meta;
 type Story = StoryObj<RdsButtonComponent>;
+
 export const Default: Story = {
     name: 'Default',
     args: {
@@ -45,7 +46,6 @@ export const Default: Story = {
         type: 'button',
     },
 };
-
 
 export const Contained: Story = {
     args: {
