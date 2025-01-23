@@ -18,7 +18,7 @@ export const DoDont = ({ element, text, state }) => {
 
     return React.createElement(
         'div',
-        null,
+        {style: { marginTop:'10px'}},
         React.createElement(
             'div',
             { style: textStyle },
