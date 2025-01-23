@@ -1,6 +1,17 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
 import React from 'react';
 
-export const StoryBox = ({ element, text }) => {
+interface StoryBoxProps {
+    element: any;
+    text?: string;
+}
+
+export const StoryBox = ({ element, text }:StoryBoxProps) => {
 
     const boxStyle = {
         border: '1px solid #ccc',

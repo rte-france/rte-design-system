@@ -7,6 +7,6 @@
     "jsx": "react",
   },
   "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
-  "include": ["../src/**/*.stories.*", "preview.ts", "../.storybook/blocks/*.tsx"],
+  "include": ["../src/**/*.stories.*", "preview.ts", "./blocks/**/*.ts"],
   "files": ["./typings.d.ts"]
 }

@@ -1,12 +1,24 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
 import React from 'react';
 import { useOf } from '@storybook/blocks';
 
-export const State = ({ of, state, text }) => {
+interface StateProps {
+    of?: any;
+    state: string;
+    text?: string;
+}
+
+export const State = ({ of, state, text }: StateProps) => {
 
     const resolvedOf = useOf(of || 'story', ['story', 'meta']);
 
-    let message = '';
-    let boxStyle = {};
+    let message:string = '';
+    let boxStyle:React.CSSProperties = {};
 
     switch (resolvedOf.type) {
         case 'story':
@@ -20,7 +32,7 @@ export const State = ({ of, state, text }) => {
     }
 
 
-    const styles = {
+    const styles:{[key:string]:React.CSSProperties} = {
     warning: { border: '1px solid red', backgroundColor: '#ffe6e6', color: 'red' },
     hint: { border: '1px solid blue', backgroundColor: '#e6f0ff', color: 'blue' },
     success: { border: '1px solid green', backgroundColor: '#e6ffe6', color: 'green' }

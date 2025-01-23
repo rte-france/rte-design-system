@@ -66,3 +66,24 @@ export const Contained: Story = {
       variant: 'text',
     },
   };
+
+  export const Transparent: Story = {
+    args: {
+      label: 'Button',
+      variant: 'transparent',
+    },
+  };
+
+  export const Dashed: Story = {
+    args: {
+      label: 'Button',
+      variant: 'dashed',
+    },
+  };
+
+  export const Primary: Story = {
+    args: {
+      label: 'Button',
+      color: 'primary',
+    },
+  };

@@ -1,0 +1,26 @@
+import {Canvas, Meta} from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.ts';
+
+import {Tabs} from '../../../../../../.storybook/blocks/index';
+
+import ButtonTemplate from './buttonTemplate.mdx';
+import ButtonTest from './buttonTest.mdx';
+import ButtonCopy from './buttonCopy.mdx';
+
+
+<Meta of={ButtonStories} name="Essais Tabs" />
+
+# Buttons Tabs 
+
+Test pour réaliser une page storybook avec des onglets
+
+## Tabs
+
+<Tabs tabs={[
+    {name: 'Texte', content: 'Content 1'},
+    {name: 'Canvas', content: <Canvas of={ButtonStories.Outlined} />},
+    {name: 'MDX Template', content: React.createElement(ButtonTemplate, {children: null})},
+    {name: 'MDX Test', content: React.createElement(ButtonTest, {children: null})},
+    {name: 'MDX Imitation', content: React.createElement(ButtonCopy, {children: null})}
+]} />

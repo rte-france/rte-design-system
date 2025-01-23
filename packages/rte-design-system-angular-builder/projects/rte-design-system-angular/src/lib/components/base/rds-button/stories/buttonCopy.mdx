@@ -2,7 +2,8 @@ import { Canvas, Meta } from '@storybook/blocks';
 
 import * as ButtonStories from './Button.stories.ts';
 
-import {State, StoryBox, DoDont, Pastille, FigmaLink, GithubLink } from '../../../../../../.storybook/blocks/index';
+import {State, StoryBox, DoDont, Pastille, FigmaLink, GithubLink} from '../../../../../../.storybook/blocks/index';
+import { color } from 'storybook/internal/theming';
 
 <Meta of={ButtonStories} name="Imitation" />
 
@@ -15,6 +16,17 @@ import {State, StoryBox, DoDont, Pastille, FigmaLink, GithubLink } from '../../.
 </div>
 
 Blablabla c'est du texte qui sert de sous titre au titre Blablabla
+
+## Table of contents
+
+- [Usage](#usage)
+  - [When to Use](#when-to-use)
+  - [When not to use](#when-not-to-use)
+- [Usage Exemple](#usage-exemple)
+- [Size](#size)
+  - [Interactive](#interactive)
+- [Content Type](#content-type)
+- [Pastilles](#pastilles)
 
 ## Usage
 
@@ -54,3 +66,13 @@ On va mettre un peu de texte la aussi voir si la structure est bien respectée
 <Pastille state="hint" text="Qu'on peut utiliser" />
 <Pastille state="warning" text="Alors on va les " />
 <Pastille state="basic" text="Mettre la pour voir" />
+
+## Versioning exemple
+
+### 1.1.0
+
+La c'est du texte écrit comme si c'était du code : ``` Bla bla bla <p> du texte </p> ```
+
+### 1.0.0
+
+Added ```.storybook``` folder with custom blocks

@@ -1,6 +1,157 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "DoDontProps",
+            "id": "interface-DoDontProps-2b035f7f1b4afe5c4a10204f65dd712647b5cc356cdde3a0189085e6a1ee103af5ae233ee2f0c1bd4cfdf7998b506bce00bdca9371a6bbaa3688801898757694",
+            "file": "projects/rte-design-system-angular/.storybook/blocks/DoDont.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import React from 'react';\n\ninterface DoDontProps {\n    element: any;\n    text: string;\n    state: string;\n}\n\nexport const DoDont = ({ element, text, state }: DoDontProps) => {\n    let message:string = '';\n    let boxStyle:React.CSSProperties = {};\n    let textStyle:React.CSSProperties = {};\n\n    const styles: { [key: string]: React.CSSProperties } = {\n        Dont: { border: '1px solid red', backgroundColor: '#ffe6e6' },\n        Do: { border: '1px solid green', backgroundColor: '#e6ffe6' }\n    };\n\n    boxStyle = { ...styles[state], padding: '10px', borderRadius: '10px', marginTop: '4px' };\n    textStyle = { backgroundColor: state === 'Do' ? 'green' : 'red', color: 'white', paddingInline: '10px', borderRadius: '25px', width: 'fit-content' };\n\n    if (state === 'Do') message = `Do: ${text}`;\n    if (state === 'Dont') message = `Dont: ${text}`;\n\n    return React.createElement(\n        'div',\n        {style: { marginTop:'10px'}},\n        React.createElement(\n            'div',\n            { style: textStyle },\n            state\n        ),\n        React.createElement(\n            'div',\n            { style: boxStyle },\n            React.createElement('div', null, message),\n            React.createElement('div', { style: { marginTop: '5px' } }, element)\n        )\n    );\n};",
+            "properties": [
+                {
+                    "name": "element",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "StateProps",
+            "id": "interface-StateProps-a0b834d2bae4f537999217f067afbe21621a8c83f9263c49e12b5b5efe31a10b317befdbd85223f10090ff8719e364586e65ff6cf16bd0f7603abd6bee2e56fc",
+            "file": "projects/rte-design-system-angular/.storybook/blocks/State.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import React from 'react';\nimport { useOf } from '@storybook/blocks';\n\ninterface StateProps {\n    of?: any;\n    state: string;\n    text?: string;\n}\n\nexport const State = ({ of, state, text }: StateProps) => {\n\n    const resolvedOf = useOf(of || 'story', ['story', 'meta']);\n\n    let message:string = '';\n    let boxStyle:React.CSSProperties = {};\n\n    switch (resolvedOf.type) {\n        case 'story':\n            message = resolvedOf.story.name;\n            break;\n        case 'meta':\n            message = resolvedOf.preparedMeta.title;\n            break;\n        default:\n            return '';\n    }\n\n\n    const styles:{[key:string]:React.CSSProperties} = {\n    warning: { border: '1px solid red', backgroundColor: '#ffe6e6', color: 'red' },\n    hint: { border: '1px solid blue', backgroundColor: '#e6f0ff', color: 'blue' },\n    success: { border: '1px solid green', backgroundColor: '#e6ffe6', color: 'green' }\n    };\n\n    boxStyle = { ...styles[state], padding: '10px', borderRadius: '5px', marginTop: '10px' };\n\n\n    if (state === 'hint') message = `Hint: ${message}`;\n    if (state === 'success') message = `Success: ${message}`;\n    if (state === 'warning') message = `Warning: ${message}`;\n\n    if (text) message = `${message} - ${text}`\n\n    return React.createElement('div', { style: boxStyle }, message);\n};",
+            "properties": [
+                {
+                    "name": "of",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "StoryBoxProps",
+            "id": "interface-StoryBoxProps-c37cb19d70d218a7c6a093b817b2256850c055b5d761d1f598562b3d18b0592955a306b0832673c1547fb50f9a21e593a49e6de25a99e77a0a92321cd865e204",
+            "file": "projects/rte-design-system-angular/.storybook/blocks/StoryBox.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import React from 'react';\n\ninterface StoryBoxProps {\n    element: any;\n    text?: string;\n}\n\nexport const StoryBox = ({ element, text }:StoryBoxProps) => {\n\n    const boxStyle = {\n        border: '1px solid #ccc',\n        backgroundColor: '#f9f9f9',\n        padding: '10px',\n        borderRadius: '5px',\n        marginTop: '10px'\n    };\n\n    return React.createElement(\n        'div',\n        { style: boxStyle },\n        text && React.createElement('div', { style: { marginBottom: '10px' } }, text),\n        React.createElement('div', null, element)\n    );\n};\n",
+            "properties": [
+                {
+                    "name": "element",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "TabsProps",
+            "id": "interface-TabsProps-120cacff94611995abfa7989239f8b4504cb7bf6a3e26f8ccf208979644862c1983cafdb624c60a56b0b6047011fb8c0b553ad04fa04ef452920a65e47b68d41",
+            "file": "projects/rte-design-system-angular/.storybook/blocks/Tabs.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import React from 'react';\n\ninterface TabsProps {\n    tabs: { name: string, content: any }[];\n}\n\nexport const Tabs = ({ tabs }: TabsProps) => {\n    const [selectedTab, setSelectedTab] = React.useState(tabs[0].name);\n\n    const tabStyle = (isSelected: boolean) => ({\n        padding: '10px',\n        border: 'none',\n        backgroundColor: isSelected ? '#dddddd' : 'transparent',\n        cursor: 'pointer'\n    });\n\n    const containerStyle = {\n        display: 'flex',\n        marginBottom: '10px'\n    };\n\n    return React.createElement(\n        'div',\n        null,\n        React.createElement(\n            'div',\n            { style: containerStyle },\n            tabs.map(tab => React.createElement(\n                'div',\n                {\n                    key: tab.name,\n                    style: tabStyle(selectedTab === tab.name),\n                    onClick: () => setSelectedTab(tab.name)\n                },\n                tab.name\n            ))\n        ),\n        tabs.find(tab => tab.name === selectedTab)?.content\n    );\n};",
+            "properties": [
+                {
+                    "name": "tabs",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -10,6 +161,16 @@
     "modules": [],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "colorMap",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type",
+                "defaultValue": "{\n    success: '#1e7e34',\n    warning: '#c82333',\n    hint: '#117a8b',\n    basic: '#5a6268'\n}"
+            },
             {
                 "name": "Contained",
                 "ctype": "miscellaneous",
@@ -21,6 +182,16 @@
                 "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'contained',\n    },\n  }"
             },
             {
+                "name": "Dashed",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'dashed',\n    },\n  }"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -29,6 +200,36 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    name: 'Default',\n    args: {\n        label: 'Button',\n        variant: 'contained',\n        color: 'primary',\n        size: 'medium',\n        type: 'button',\n    },\n}"
+            },
+            {
+                "name": "DoDont",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/DoDont.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "({ element, text, state }: DoDontProps) => {\n    let message:string = '';\n    let boxStyle:React.CSSProperties = {};\n    let textStyle:React.CSSProperties = {};\n\n    const styles: { [key: string]: React.CSSProperties } = {\n        Dont: { border: '1px solid red', backgroundColor: '#ffe6e6' },\n        Do: { border: '1px solid green', backgroundColor: '#e6ffe6' }\n    };\n\n    boxStyle = { ...styles[state], padding: '10px', borderRadius: '10px', marginTop: '4px' };\n    textStyle = { backgroundColor: state === 'Do' ? 'green' : 'red', color: 'white', paddingInline: '10px', borderRadius: '25px', width: 'fit-content' };\n\n    if (state === 'Do') message = `Do: ${text}`;\n    if (state === 'Dont') message = `Dont: ${text}`;\n\n    return React.createElement(\n        'div',\n        {style: { marginTop:'10px'}},\n        React.createElement(\n            'div',\n            { style: textStyle },\n            state\n        ),\n        React.createElement(\n            'div',\n            { style: boxStyle },\n            React.createElement('div', null, message),\n            React.createElement('div', { style: { marginTop: '5px' } }, element)\n        )\n    );\n}"
+            },
+            {
+                "name": "FigmaLink",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/FigmaLink.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(url:string) => {\n    return React.createElement(\n        'a',\n        { href: url, target: '_blank', style: { display: 'flex', alignItems: 'center', marginTop: '10px', width: 'fit-content' } },\n        React.createElement(\n            'svg',\n            { width: '48', height: '48', viewBox: '0 0 1024 1280', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' },\n            React.createElement('rect', { width: '96', height: '320', rx: '80', fill: 'white' }),\n            React.createElement('path', { d: 'M312 840C312 784.772 356.772 740 412 740H512V840C512 895.228 467.228 940 412 940C356.772 940 312 895.228 312 840Z', fill: '#24CB71' }),\n            React.createElement('path', { d: 'M512 340V540H612C667.228 540 712 495.228 712 440C712 384.772 667.228 340 612 340H512Z', fill: '#FF7237' }),\n            React.createElement('path', { d: 'M611.167 740C666.395 740 711.167 695.228 711.167 640C711.167 584.772 666.395 540 611.167 540C555.939 540 511.167 584.772 511.167 640C511.167 695.228 555.939 740 611.167 740Z', fill: '#00B6FF' }),\n            React.createElement('path', { d: 'M312 440C312 495.228 356.772 540 412 540H512V340H412C356.772 340 312 384.772 312 440Z', fill: '#FF3737' }),\n            React.createElement('path', { d: 'M312 640C312 695.228 356.772 740 412 740H512V540H412C356.772 540 312 584.772 312 640Z', fill: '#874FFF' })\n        ),\n        'View in Figma'\n    );\n}"
+            },
+            {
+                "name": "GithubLink",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/GithubLink.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(url:string) => {\n    return React.createElement(\n        'a',\n        { href: url, target: '_blank', style: { display: 'flex', alignItems: 'center', marginTop: '10px', width: 'fit-content' } },\n        React.createElement(\n            'svg',\n            { width: '48', height: '48', xmlns: 'http://www.w3.org/2000/svg', style: { marginRight: '8px' } },\n            React.createElement('path', { stroke: 'null', id: 'svg_1', fill: '#24292f', d: 'm23.96849,0.11202c-13.25395,0 -23.96849,10.70229 -23.96849,23.94248c0,10.58359 6.86517,19.54238 16.38898,22.71317c1.19072,0.23837 1.62688,-0.51517 1.62688,-1.14904c0,-0.55506 -0.03925,-2.45763 -0.03925,-4.43999c-6.66745,1.4273 -8.05589,-2.85411 -8.05589,-2.85411c-1.0715,-2.77481 -2.65913,-3.48797 -2.65913,-3.48797c-2.18225,-1.4667 0.15896,-1.4667 0.15896,-1.4667c2.42069,0.15859 3.69089,2.45763 3.69089,2.45763c2.14251,3.64656 5.59497,2.61622 6.9839,1.98187c0.19821,-1.54599 0.83355,-2.61622 1.50815,-3.21069c-5.31777,-0.55506 -10.91274,-2.61622 -10.91274,-11.81289c0,-2.61622 0.95179,-4.75668 2.45994,-6.42137c-0.23795,-0.59446 -1.0715,-3.05258 0.23844,-6.34257c0,0 2.02379,-0.63435 6.58699,2.45763a23.04417,22.84938 0 0 1 5.99237,-0.79294c2.02379,0 4.08682,0.27777 5.99188,0.79294c4.5637,-3.09199 6.58748,-2.45763 6.58748,-2.45763c1.30994,3.28998 0.4759,5.7481 0.23795,6.34257c1.54789,1.66469 2.46043,3.80515 2.46043,6.42137c0,9.19667 -5.59497,11.21794 -10.95248,11.81289c0.87329,0.75305 1.62688,2.17986 1.62688,4.4395c0,3.21069 -0.03925,5.78751 -0.03925,6.57996c0,0.63435 0.43665,1.38789 1.62688,1.15001c9.52381,-3.17177 16.38898,-12.13007 16.38898,-22.71366c0.03925,-13.24019 -10.71453,-23.94248 -23.92875,-23.94248z', clipRule: 'evenodd', fillRule: 'evenodd' })\n        ),\n        'View in Github'\n    );\n}"
             },
             {
                 "name": "meta",
@@ -51,6 +252,16 @@
                 "defaultValue": "{\n    \n    args: {\n      label: 'Button',\n      variant: 'outlined',\n    },\n  }"
             },
             {
+                "name": "Pastille",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "({ state, text } : {state:string, text:string}) => {\n    const pastilleStyle = {\n        backgroundColor: colorMap[state] || colorMap['basic'],\n        color: 'white',\n        padding: '5px 10px',\n        borderRadius: '25px',\n        width: 'fit-content',\n        display: 'inline-block',\n        fontSize: '12px',\n        fontWeight: 'bold',\n        textTransform: 'uppercase'\n    };\n\n    return React.createElement(\n        'div',\n        { style: pastilleStyle },\n        text\n    );\n}"
+            },
+            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -61,6 +272,46 @@
                 "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    docs:{\n      toc: {\n        headingSelector: 'h1, h2, h3',\n        title: 'Table des matières'\n      }\n    }\n  },\n\n  tags: [\"autodocs\"]\n}"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n      label: 'Button',\n      color: 'primary',\n    },\n  }"
+            },
+            {
+                "name": "State",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/State.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "({ of, state, text }: StateProps) => {\n\n    const resolvedOf = useOf(of || 'story', ['story', 'meta']);\n\n    let message:string = '';\n    let boxStyle:React.CSSProperties = {};\n\n    switch (resolvedOf.type) {\n        case 'story':\n            message = resolvedOf.story.name;\n            break;\n        case 'meta':\n            message = resolvedOf.preparedMeta.title;\n            break;\n        default:\n            return '';\n    }\n\n\n    const styles:{[key:string]:React.CSSProperties} = {\n    warning: { border: '1px solid red', backgroundColor: '#ffe6e6', color: 'red' },\n    hint: { border: '1px solid blue', backgroundColor: '#e6f0ff', color: 'blue' },\n    success: { border: '1px solid green', backgroundColor: '#e6ffe6', color: 'green' }\n    };\n\n    boxStyle = { ...styles[state], padding: '10px', borderRadius: '5px', marginTop: '10px' };\n\n\n    if (state === 'hint') message = `Hint: ${message}`;\n    if (state === 'success') message = `Success: ${message}`;\n    if (state === 'warning') message = `Warning: ${message}`;\n\n    if (text) message = `${message} - ${text}`\n\n    return React.createElement('div', { style: boxStyle }, message);\n}"
+            },
+            {
+                "name": "StoryBox",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/StoryBox.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "({ element, text }:StoryBoxProps) => {\n\n    const boxStyle = {\n        border: '1px solid #ccc',\n        backgroundColor: '#f9f9f9',\n        padding: '10px',\n        borderRadius: '5px',\n        marginTop: '10px'\n    };\n\n    return React.createElement(\n        'div',\n        { style: boxStyle },\n        text && React.createElement('div', { style: { marginBottom: '10px' } }, text),\n        React.createElement('div', null, element)\n    );\n}"
+            },
+            {
+                "name": "Tabs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/.storybook/blocks/Tabs.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "({ tabs }: TabsProps) => {\n    const [selectedTab, setSelectedTab] = React.useState(tabs[0].name);\n\n    const tabStyle = (isSelected: boolean) => ({\n        padding: '10px',\n        border: 'none',\n        backgroundColor: isSelected ? '#dddddd' : 'transparent',\n        cursor: 'pointer'\n    });\n\n    const containerStyle = {\n        display: 'flex',\n        marginBottom: '10px'\n    };\n\n    return React.createElement(\n        'div',\n        null,\n        React.createElement(\n            'div',\n            { style: containerStyle },\n            tabs.map(tab => React.createElement(\n                'div',\n                {\n                    key: tab.name,\n                    style: tabStyle(selectedTab === tab.name),\n                    onClick: () => setSelectedTab(tab.name)\n                },\n                tab.name\n            ))\n        ),\n        tabs.find(tab => tab.name === selectedTab)?.content\n    );\n}"
+            },
+            {
                 "name": "Text",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -69,6 +320,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'text',\n    },\n  }"
+            },
+            {
+                "name": "Transparent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'transparent',\n    },\n  }"
             }
         ],
         "functions": [],
@@ -87,6 +348,28 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts": [
+                {
+                    "name": "colorMap",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "defaultValue": "{\n    success: '#1e7e34',\n    warning: '#c82333',\n    hint: '#117a8b',\n    basic: '#5a6268'\n}"
+                },
+                {
+                    "name": "Pastille",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "({ state, text } : {state:string, text:string}) => {\n    const pastilleStyle = {\n        backgroundColor: colorMap[state] || colorMap['basic'],\n        color: 'white',\n        padding: '5px 10px',\n        borderRadius: '25px',\n        width: 'fit-content',\n        display: 'inline-block',\n        fontSize: '12px',\n        fontWeight: 'bold',\n        textTransform: 'uppercase'\n    };\n\n    return React.createElement(\n        'div',\n        { style: pastilleStyle },\n        text\n    );\n}"
+                }
+            ],
             "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts": [
                 {
                     "name": "Contained",
@@ -97,6 +380,16 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'contained',\n    },\n  }"
+                },
+                {
+                    "name": "Dashed",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'dashed',\n    },\n  }"
                 },
                 {
                     "name": "Default",
@@ -129,6 +422,16 @@
                     "defaultValue": "{\n    \n    args: {\n      label: 'Button',\n      variant: 'outlined',\n    },\n  }"
                 },
                 {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n      label: 'Button',\n      color: 'primary',\n    },\n  }"
+                },
+                {
                     "name": "Text",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -137,6 +440,52 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'text',\n    },\n  }"
+                },
+                {
+                    "name": "Transparent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n      label: 'Button',\n      variant: 'transparent',\n    },\n  }"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/blocks/DoDont.ts": [
+                {
+                    "name": "DoDont",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/DoDont.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "({ element, text, state }: DoDontProps) => {\n    let message:string = '';\n    let boxStyle:React.CSSProperties = {};\n    let textStyle:React.CSSProperties = {};\n\n    const styles: { [key: string]: React.CSSProperties } = {\n        Dont: { border: '1px solid red', backgroundColor: '#ffe6e6' },\n        Do: { border: '1px solid green', backgroundColor: '#e6ffe6' }\n    };\n\n    boxStyle = { ...styles[state], padding: '10px', borderRadius: '10px', marginTop: '4px' };\n    textStyle = { backgroundColor: state === 'Do' ? 'green' : 'red', color: 'white', paddingInline: '10px', borderRadius: '25px', width: 'fit-content' };\n\n    if (state === 'Do') message = `Do: ${text}`;\n    if (state === 'Dont') message = `Dont: ${text}`;\n\n    return React.createElement(\n        'div',\n        {style: { marginTop:'10px'}},\n        React.createElement(\n            'div',\n            { style: textStyle },\n            state\n        ),\n        React.createElement(\n            'div',\n            { style: boxStyle },\n            React.createElement('div', null, message),\n            React.createElement('div', { style: { marginTop: '5px' } }, element)\n        )\n    );\n}"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/blocks/FigmaLink.ts": [
+                {
+                    "name": "FigmaLink",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/FigmaLink.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(url:string) => {\n    return React.createElement(\n        'a',\n        { href: url, target: '_blank', style: { display: 'flex', alignItems: 'center', marginTop: '10px', width: 'fit-content' } },\n        React.createElement(\n            'svg',\n            { width: '48', height: '48', viewBox: '0 0 1024 1280', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' },\n            React.createElement('rect', { width: '96', height: '320', rx: '80', fill: 'white' }),\n            React.createElement('path', { d: 'M312 840C312 784.772 356.772 740 412 740H512V840C512 895.228 467.228 940 412 940C356.772 940 312 895.228 312 840Z', fill: '#24CB71' }),\n            React.createElement('path', { d: 'M512 340V540H612C667.228 540 712 495.228 712 440C712 384.772 667.228 340 612 340H512Z', fill: '#FF7237' }),\n            React.createElement('path', { d: 'M611.167 740C666.395 740 711.167 695.228 711.167 640C711.167 584.772 666.395 540 611.167 540C555.939 540 511.167 584.772 511.167 640C511.167 695.228 555.939 740 611.167 740Z', fill: '#00B6FF' }),\n            React.createElement('path', { d: 'M312 440C312 495.228 356.772 540 412 540H512V340H412C356.772 340 312 384.772 312 440Z', fill: '#FF3737' }),\n            React.createElement('path', { d: 'M312 640C312 695.228 356.772 740 412 740H512V540H412C356.772 540 312 584.772 312 640Z', fill: '#874FFF' })\n        ),\n        'View in Figma'\n    );\n}"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/blocks/GithubLink.ts": [
+                {
+                    "name": "GithubLink",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/GithubLink.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(url:string) => {\n    return React.createElement(\n        'a',\n        { href: url, target: '_blank', style: { display: 'flex', alignItems: 'center', marginTop: '10px', width: 'fit-content' } },\n        React.createElement(\n            'svg',\n            { width: '48', height: '48', xmlns: 'http://www.w3.org/2000/svg', style: { marginRight: '8px' } },\n            React.createElement('path', { stroke: 'null', id: 'svg_1', fill: '#24292f', d: 'm23.96849,0.11202c-13.25395,0 -23.96849,10.70229 -23.96849,23.94248c0,10.58359 6.86517,19.54238 16.38898,22.71317c1.19072,0.23837 1.62688,-0.51517 1.62688,-1.14904c0,-0.55506 -0.03925,-2.45763 -0.03925,-4.43999c-6.66745,1.4273 -8.05589,-2.85411 -8.05589,-2.85411c-1.0715,-2.77481 -2.65913,-3.48797 -2.65913,-3.48797c-2.18225,-1.4667 0.15896,-1.4667 0.15896,-1.4667c2.42069,0.15859 3.69089,2.45763 3.69089,2.45763c2.14251,3.64656 5.59497,2.61622 6.9839,1.98187c0.19821,-1.54599 0.83355,-2.61622 1.50815,-3.21069c-5.31777,-0.55506 -10.91274,-2.61622 -10.91274,-11.81289c0,-2.61622 0.95179,-4.75668 2.45994,-6.42137c-0.23795,-0.59446 -1.0715,-3.05258 0.23844,-6.34257c0,0 2.02379,-0.63435 6.58699,2.45763a23.04417,22.84938 0 0 1 5.99237,-0.79294c2.02379,0 4.08682,0.27777 5.99188,0.79294c4.5637,-3.09199 6.58748,-2.45763 6.58748,-2.45763c1.30994,3.28998 0.4759,5.7481 0.23795,6.34257c1.54789,1.66469 2.46043,3.80515 2.46043,6.42137c0,9.19667 -5.59497,11.21794 -10.95248,11.81289c0.87329,0.75305 1.62688,2.17986 1.62688,4.4395c0,3.21069 -0.03925,5.78751 -0.03925,6.57996c0,0.63435 0.43665,1.38789 1.62688,1.15001c9.52381,-3.17177 16.38898,-12.13007 16.38898,-22.71366c0.03925,-13.24019 -10.71453,-23.94248 -23.92875,-23.94248z', clipRule: 'evenodd', fillRule: 'evenodd' })\n        ),\n        'View in Github'\n    );\n}"
                 }
             ],
             "projects/rte-design-system-angular/.storybook/preview.ts": [
@@ -149,6 +498,42 @@
                     "deprecationMessage": "",
                     "type": "Preview",
                     "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n    docs:{\n      toc: {\n        headingSelector: 'h1, h2, h3',\n        title: 'Table des matières'\n      }\n    }\n  },\n\n  tags: [\"autodocs\"]\n}"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/blocks/State.ts": [
+                {
+                    "name": "State",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/State.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "({ of, state, text }: StateProps) => {\n\n    const resolvedOf = useOf(of || 'story', ['story', 'meta']);\n\n    let message:string = '';\n    let boxStyle:React.CSSProperties = {};\n\n    switch (resolvedOf.type) {\n        case 'story':\n            message = resolvedOf.story.name;\n            break;\n        case 'meta':\n            message = resolvedOf.preparedMeta.title;\n            break;\n        default:\n            return '';\n    }\n\n\n    const styles:{[key:string]:React.CSSProperties} = {\n    warning: { border: '1px solid red', backgroundColor: '#ffe6e6', color: 'red' },\n    hint: { border: '1px solid blue', backgroundColor: '#e6f0ff', color: 'blue' },\n    success: { border: '1px solid green', backgroundColor: '#e6ffe6', color: 'green' }\n    };\n\n    boxStyle = { ...styles[state], padding: '10px', borderRadius: '5px', marginTop: '10px' };\n\n\n    if (state === 'hint') message = `Hint: ${message}`;\n    if (state === 'success') message = `Success: ${message}`;\n    if (state === 'warning') message = `Warning: ${message}`;\n\n    if (text) message = `${message} - ${text}`\n\n    return React.createElement('div', { style: boxStyle }, message);\n}"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/blocks/StoryBox.ts": [
+                {
+                    "name": "StoryBox",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/StoryBox.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "({ element, text }:StoryBoxProps) => {\n\n    const boxStyle = {\n        border: '1px solid #ccc',\n        backgroundColor: '#f9f9f9',\n        padding: '10px',\n        borderRadius: '5px',\n        marginTop: '10px'\n    };\n\n    return React.createElement(\n        'div',\n        { style: boxStyle },\n        text && React.createElement('div', { style: { marginBottom: '10px' } }, text),\n        React.createElement('div', null, element)\n    );\n}"
+                }
+            ],
+            "projects/rte-design-system-angular/.storybook/blocks/Tabs.ts": [
+                {
+                    "name": "Tabs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/rte-design-system-angular/.storybook/blocks/Tabs.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "({ tabs }: TabsProps) => {\n    const [selectedTab, setSelectedTab] = React.useState(tabs[0].name);\n\n    const tabStyle = (isSelected: boolean) => ({\n        padding: '10px',\n        border: 'none',\n        backgroundColor: isSelected ? '#dddddd' : 'transparent',\n        cursor: 'pointer'\n    });\n\n    const containerStyle = {\n        display: 'flex',\n        marginBottom: '10px'\n    };\n\n    return React.createElement(\n        'div',\n        null,\n        React.createElement(\n            'div',\n            { style: containerStyle },\n            tabs.map(tab => React.createElement(\n                'div',\n                {\n                    key: tab.name,\n                    style: tabStyle(selectedTab === tab.name),\n                    onClick: () => setSelectedTab(tab.name)\n                },\n                tab.name\n            ))\n        ),\n        tabs.find(tab => tab.name === selectedTab)?.content\n    );\n}"
                 }
             ]
         },
@@ -176,6 +561,122 @@
         "status": "low",
         "files": [
             {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/DoDont.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "DoDontProps",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/DoDont.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DoDont",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/FigmaLink.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FigmaLink",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/GithubLink.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "GithubLink",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "colorMap",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/Pastille.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Pastille",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/State.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "StateProps",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/State.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "State",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/StoryBox.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "StoryBoxProps",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/StoryBox.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "StoryBox",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/Tabs.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "TabsProps",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/.storybook/blocks/Tabs.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tabs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/rte-design-system-angular/.storybook/preview.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -191,6 +692,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Contained",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dashed",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -230,7 +741,27 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Text",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/rte-design-system-angular/src/lib/components/base/rds-button/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Transparent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
