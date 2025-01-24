@@ -28,7 +28,41 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/rte-design-system-angular/tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/rte-design-system-angular/.storybook",
+            "browserTarget": "rte-design-system-angular:build",
+            "styles": [ "../../packages/rte-design-system-angular/styles/rte-tailwind.css"],
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/rte-design-system-angular"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/rte-design-system-angular/.storybook",
+            "browserTarget": "rte-design-system-angular:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/rte-design-system-angular"
+            ],
+            "outputDir": "storybook-static"
           }
         }
       }
