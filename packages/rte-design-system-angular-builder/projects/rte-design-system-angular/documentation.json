@@ -18,7 +18,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 4
+                    "line": 10
                 },
                 {
                     "name": "state",
@@ -28,7 +28,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 6
+                    "line": 12
                 },
                 {
                     "name": "text",
@@ -38,7 +38,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 5
+                    "line": 11
                 }
             ],
             "indexSignatures": [],
@@ -63,7 +63,7 @@
                     "indexKey": "",
                     "optional": true,
                     "description": "",
-                    "line": 5
+                    "line": 11
                 },
                 {
                     "name": "state",
@@ -73,7 +73,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 6
+                    "line": 12
                 },
                 {
                     "name": "text",
@@ -83,7 +83,7 @@
                     "indexKey": "",
                     "optional": true,
                     "description": "",
-                    "line": 7
+                    "line": 13
                 }
             ],
             "indexSignatures": [],
@@ -108,7 +108,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 4
+                    "line": 10
                 },
                 {
                     "name": "text",
@@ -118,7 +118,7 @@
                     "indexKey": "",
                     "optional": true,
                     "description": "",
-                    "line": 5
+                    "line": 11
                 }
             ],
             "indexSignatures": [],
@@ -143,7 +143,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 4
+                    "line": 10
                 }
             ],
             "indexSignatures": [],
@@ -239,7 +239,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<RdsButtonComponent>",
-                "defaultValue": "{\n    title: 'Components/Base/Button',\n    component: RdsButtonComponent,\n    parameters: {\n        layout: 'centered',\n    },\n    argTypes: {\n        variant: {\n            options: ['contained', 'outlined', 'dashed', 'text', 'transparent'],\n            control: { type: 'radio' },\n        },\n        color: {\n            options: ['primary', 'secondary', 'danger'],\n            control: { type: 'radio' },\n        },\n        size: {\n            options: ['extraSmall', 'small', 'medium'],\n            control: { type: 'radio' },\n        },\n        type: {\n            options: ['button', 'submit', 'reset'],\n            control: { type: 'radio' },\n        },\n    },\n} satisfies Meta<RdsButtonComponent>"
+                "defaultValue": "{\n    title: 'Components/Base/Button',\n    component: RdsButtonComponent,\n    parameters: {\n        layout: 'centered',\n        version: {\n          major: '4',\n          minor: '2',\n          patch: '0',\n          postfix: 'rc3',\n          style: {\n            color: 'red',\n            'font-weight': '900',\n            'font-size': '24px'\n          }\n        }\n    },\n    argTypes: {\n        variant: {\n            options: ['contained', 'outlined', 'dashed', 'text', 'transparent'],\n            control: { type: 'radio' },\n        },\n        color: {\n            options: ['primary', 'secondary', 'danger'],\n            control: { type: 'radio' },\n        },\n        size: {\n            options: ['extraSmall', 'small', 'medium'],\n            control: { type: 'radio' },\n        },\n        type: {\n            options: ['button', 'submit', 'reset'],\n            control: { type: 'radio' },\n        },\n    },\n} satisfies Meta<RdsButtonComponent>"
             },
             {
                 "name": "Outlined",
@@ -409,7 +409,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<RdsButtonComponent>",
-                    "defaultValue": "{\n    title: 'Components/Base/Button',\n    component: RdsButtonComponent,\n    parameters: {\n        layout: 'centered',\n    },\n    argTypes: {\n        variant: {\n            options: ['contained', 'outlined', 'dashed', 'text', 'transparent'],\n            control: { type: 'radio' },\n        },\n        color: {\n            options: ['primary', 'secondary', 'danger'],\n            control: { type: 'radio' },\n        },\n        size: {\n            options: ['extraSmall', 'small', 'medium'],\n            control: { type: 'radio' },\n        },\n        type: {\n            options: ['button', 'submit', 'reset'],\n            control: { type: 'radio' },\n        },\n    },\n} satisfies Meta<RdsButtonComponent>"
+                    "defaultValue": "{\n    title: 'Components/Base/Button',\n    component: RdsButtonComponent,\n    parameters: {\n        layout: 'centered',\n        version: {\n          major: '4',\n          minor: '2',\n          patch: '0',\n          postfix: 'rc3',\n          style: {\n            color: 'red',\n            'font-weight': '900',\n            'font-size': '24px'\n          }\n        }\n    },\n    argTypes: {\n        variant: {\n            options: ['contained', 'outlined', 'dashed', 'text', 'transparent'],\n            control: { type: 'radio' },\n        },\n        color: {\n            options: ['primary', 'secondary', 'danger'],\n            control: { type: 'radio' },\n        },\n        size: {\n            options: ['extraSmall', 'small', 'medium'],\n            control: { type: 'radio' },\n        },\n        type: {\n            options: ['button', 'submit', 'reset'],\n            control: { type: 'radio' },\n        },\n    },\n} satisfies Meta<RdsButtonComponent>"
                 },
                 {
                     "name": "Outlined",

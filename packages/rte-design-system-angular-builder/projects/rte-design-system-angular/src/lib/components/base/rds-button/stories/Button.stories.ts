@@ -12,6 +12,17 @@ const meta: Meta<RdsButtonComponent> = {
     component: RdsButtonComponent,
     parameters: {
         layout: 'centered',
+        version: {
+          major: '4',
+          minor: '2',
+          patch: '0',
+          postfix: 'rc3',
+          style: {
+            color: 'red',
+            'font-weight': '900',
+            'font-size': '24px'
+          }
+        }
     },
     argTypes: {
         variant: {
