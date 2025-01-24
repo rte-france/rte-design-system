@@ -46,3 +46,23 @@ export const Default: Story = {
         type: 'button',
     },
 };
+
+
+export const Contained: Story = {
+    args: {
+      label: 'Button',
+      variant: 'contained',
+    },
+  };
+  export const Outlined: Story = {
+    args: {
+      label: 'Button',
+      variant: 'outlined',
+    },
+  };
+  export const Text: Story = {
+    args: {
+      label: 'Button',
+      variant: 'text',
+    },
+  };
