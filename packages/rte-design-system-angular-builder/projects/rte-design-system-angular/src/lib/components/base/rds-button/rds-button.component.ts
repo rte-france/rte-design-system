@@ -27,10 +27,10 @@ const ICON_SIZE: Record<ButtonSize, number> = {
 
 
 @Component({
-  selector: 'rds-button',
-  standalone: true,
-  imports: [CommonModule, IconLoaderComponent],
-  templateUrl: './rds-button.component.html',
+    standalone : true,
+    selector: 'rds-button',
+    imports: [CommonModule, IconLoaderComponent],
+    templateUrl: './rds-button.component.html'
 })
 
 
