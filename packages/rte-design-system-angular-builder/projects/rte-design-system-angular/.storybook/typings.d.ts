@@ -4,4 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-export * from './tailwindClass';
+declare module '*.md' {
+  const content: string;
+  export default content;
+}
