@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-account-tree',
+    standalone: true,
     template: `
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +18,7 @@ import { CommonModule } from '@angular/common';
             [attr.aria-hidden]="isExplicit"
             aria-labelledby="svgTitle svgDesc"
             viewBox="0 -960 960 960"
-            [ngClass]="iconClasses"
+            class="iconClasses"
             [attr.width]="width"
             [attr.height]="height"
         >
@@ -62,8 +63,7 @@ export class AccountTreeComponent {
 }
 
 @NgModule({
-    declarations: [AccountTreeComponent],
-    imports: [CommonModule],
+    imports: [CommonModule,AccountTreeComponent],
     exports: [AccountTreeComponent]
 })
 

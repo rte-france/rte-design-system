@@ -14,6 +14,7 @@ export default {
     './index.html',
     './style.css',
     './projects/**/*.{js,ts,jsx,tsx,css}',
+    '!./projects/**/node_modules',
   ],
   styleUrls: ['../tailwind.css'],
   safelist: [

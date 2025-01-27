@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-account-circle-filled',
+    standalone: true,
     template: `
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +18,7 @@ import { CommonModule } from '@angular/common';
             [attr.aria-hidden]="isExplicit"
             aria-labelledby="svgTitle svgDesc"
             viewBox="0 -960 960 960"
-            [ngClass]="iconClasses"
+            class="iconClasses"
             [attr.width]="width"
             [attr.height]="height"
         >
@@ -62,8 +63,7 @@ export class AccountCircleFilledComponent {
 }
 
 @NgModule({
-    declarations: [AccountCircleFilledComponent],
-    imports: [CommonModule],
+    imports: [CommonModule, AccountCircleFilledComponent],
     exports: [AccountCircleFilledComponent]
 })
 
