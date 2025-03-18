@@ -3,7 +3,7 @@
 
 ## Content
 
- RTE's design system
+ RTE's design system : Proof of Concept
 
 ## Usage
 
